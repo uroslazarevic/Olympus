@@ -1,0 +1,11 @@
+.greetings .title {
+  font-size: 40px;
+  font-weight: 200;
+  width: 90%;
+  margin-bottom: 0px; }
+
+.greetings .description {
+  width: 90%;
+  padding-top: 40px;
+  font-size: 15px;
+  padding-bottom: 50px; }

@@ -2,7 +2,7 @@ import React from "react";
 
 import backgroundImg from "../../imgs/login_background.jpg";
 
-import { LoginHeader } from "components";
+import { LoginHeader, LoginContent } from "components";
 
 const Login = () => {
   return (
@@ -13,6 +13,7 @@ const Login = () => {
       <div className="bg-layer">
         <div className="container">
           <LoginHeader />
+          <LoginContent />
         </div>
       </div>
     </div>

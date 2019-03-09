@@ -22,3 +22,34 @@
     margin-left: auto;
     color: #fff;
     cursor: pointer; }
+
+.login-content {
+  display: flex;
+  margin-top: 100px; }
+  .login-content .aside-left {
+    width: 50%;
+    color: #fff;
+    margin-top: 100px;
+    flex: 1; }
+  .login-content .aside-right {
+    flex: 1; }
+
+.greetings .title {
+  font-size: 40px;
+  font-weight: 200;
+  width: 90%;
+  margin-bottom: 0px; }
+
+.greetings .description {
+  width: 90%;
+  padding-top: 40px;
+  font-size: 15px;
+  padding-bottom: 50px; }
+
+.register-btn {
+  padding: 9px 30px;
+  background: none;
+  border: 1.5px solid #fff;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500; }

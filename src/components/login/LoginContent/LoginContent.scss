@@ -1,0 +1,15 @@
+.login-content {
+  display: flex;
+  margin-top: 100px;
+
+  .aside-left {
+    width: 50%;
+    color: #fff;
+    margin-top: 100px;
+    flex: 1;
+  }
+
+  .aside-right {
+    flex: 1;
+  }
+}

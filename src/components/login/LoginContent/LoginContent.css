@@ -1,0 +1,10 @@
+.login-content {
+  display: flex;
+  margin-top: 100px; }
+  .login-content .aside-left {
+    width: 50%;
+    color: #fff;
+    margin-top: 100px;
+    flex: 1; }
+  .login-content .aside-right {
+    flex: 1; }
