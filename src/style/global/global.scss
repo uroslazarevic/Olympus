@@ -1,0 +1,18 @@
+body {
+  margin: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
