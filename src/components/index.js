@@ -1,5 +1,6 @@
-import Router from "./router/Router";
-import Login from "./login/Login";
-import Profile from "./profile/Profile";
+import Router from "./Router/Router";
+import Login from "./Login/Login";
+import Profile from "./Profile/Profile";
+import LoginHeader from "./Login/LoginHeader/LoginHeader";
 
-export { Router, Login, Profile };
+export { Router, Login, Profile, LoginHeader };

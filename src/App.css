@@ -1,5 +1,6 @@
 body {
-  margin: none; }
+  margin: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
   body ul {
     margin: 0;
     padding: 0;
@@ -10,3 +11,28 @@ body {
     body a:hover, body a:focus {
       color: #000;
       text-decoration: none; }
+
+.login-page {
+  height: 700px;
+  width: 100%; }
+  .login-page .bg-layer {
+    background-color: rgba(255, 69, 0, 0.9);
+    height: 100%; }
+
+.login-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 10; }
+  .login-header .logo-img {
+    height: 50px; }
+  .login-header .logo-name {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    padding-left: 10px; }
+  .login-header .hamburger {
+    margin-left: auto;
+    color: #fff;
+    cursor: pointer; }
