@@ -1,0 +1,19 @@
+.login-btn {
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  color: #fff; }
+  .login-btn:hover {
+    opacity: 0.9; }
+  .login-btn span {
+    padding-right: 10px; }
+
+.reg-login {
+  background-color: orangered; }
+
+.fb-login {
+  background-color: #3c5a99;
+  margin-bottom: 10px; }
+
+.tw-login {
+  background-color: #38a1f3; }

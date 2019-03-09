@@ -1,0 +1,48 @@
+.form {
+  height: 100%;
+  display: flex;
+  width: 450px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none;
+
+  .select-form-btns {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 100%;
+    flex: 1;
+    border-right: 1px solid #ccc;
+
+    .login-form-btn,
+    .register-form-btn {
+      height: 50%;
+      display: block;
+      position: relative;
+      width: 100%;
+      &:hover {
+        color: orangered;
+        cursor: pointer;
+      }
+
+      i {
+        padding: 5px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .register-form-btn {
+      border-top: 1px solid #ccc;
+      i {
+        transform: translate(-50%, -50%) rotate(180deg);
+      }
+    }
+  }
+
+  .content {
+    flex: 7;
+  }
+}

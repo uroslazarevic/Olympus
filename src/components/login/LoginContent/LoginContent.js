@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Greetings, RegisterBtn } from "components";
+import { Greetings, RegisterBtn, Form } from "components";
 
 const LoginContent = () => {
   return (
@@ -9,7 +9,9 @@ const LoginContent = () => {
         <Greetings />
         <RegisterBtn />
       </div>
-      <div className="aside-right">Login Form</div>
+      <div className="aside-right">
+        <Form />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,8 @@
-import { combineReducers } from 'redux';
-// import SearchedTerms from './reducer_searched_terms'
+import { combineReducers } from "redux";
+import { reducer as formReducer } from "redux-form";
 
 const rootReducer = combineReducers({
+  form: formReducer
   // searchedTerms: SearchedTerms
 });
 

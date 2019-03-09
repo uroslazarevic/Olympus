@@ -1,0 +1,37 @@
+.form {
+  height: 100%;
+  display: flex;
+  width: 450px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: none; }
+  .form .select-form-btns {
+    display: flex;
+    flex-direction: column;
+    width: 30px;
+    height: 100%;
+    flex: 1;
+    border-right: 1px solid #ccc; }
+    .form .select-form-btns .login-form-btn,
+    .form .select-form-btns .register-form-btn {
+      height: 50%;
+      display: block;
+      position: relative;
+      width: 100%; }
+      .form .select-form-btns .login-form-btn:hover,
+      .form .select-form-btns .register-form-btn:hover {
+        color: orangered;
+        cursor: pointer; }
+      .form .select-form-btns .login-form-btn i,
+      .form .select-form-btns .register-form-btn i {
+        padding: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    .form .select-form-btns .register-form-btn {
+      border-top: 1px solid #ccc; }
+      .form .select-form-btns .register-form-btn i {
+        transform: translate(-50%, -50%) rotate(180deg); }
+  .form .content {
+    flex: 7; }

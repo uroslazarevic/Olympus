@@ -1,0 +1,19 @@
+.field {
+  position: relative; }
+  .field label {
+    position: absolute;
+    font-size: 9px;
+    left: 9px;
+    line-height: 9px;
+    margin: 0px;
+    color: #ccc;
+    text-transform: capitalize;
+    top: 5px; }
+  .field input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    font-size: 11px; }
