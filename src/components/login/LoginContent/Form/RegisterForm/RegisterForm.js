@@ -1,5 +1,5 @@
 import React from "react";
-import { Field, reduxForm } from "redux-form";
+// import { Field, reduxForm } from "redux-form";
 
 class RegisterForm extends React.Component {
   render() {

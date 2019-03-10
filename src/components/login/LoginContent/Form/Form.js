@@ -1,29 +1,33 @@
 import React from "react";
 
-import { LoginForm, RegisterForm } from "components";
+import { LoginForm } from "components";
 
 class Form extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      loginForm: true
+      selectForm: true
     };
   }
+
+  onSubmit = formValues => {
+    console.log("formValues", formValues);
+  };
 
   render() {
     return (
       <div className="form">
         <div className="select-form-btns">
-          <span className="login-form-btn">
-            <i class="fas fa-adjust" />
+          <span className="login-form-btn active-form">
+            <i className="fas fa-adjust" />
           </span>
           <span className="register-form-btn">
-            <i class="fas fa-adjust" />
+            <i className="fas fa-adjust" />
           </span>
         </div>
         <div className="content">
-          <LoginForm />
+          <LoginForm onSubmit={this.onSubmit} />
         </div>
       </div>
     );

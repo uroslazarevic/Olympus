@@ -14,11 +14,19 @@
     font-weight: 700;
     color: #fff;
     padding-left: 10px;
+
+    &:hover {
+      color: #ccc;
+    }
   }
 
   .hamburger {
     margin-left: auto;
     color: #fff;
     cursor: pointer;
+
+    &:hover {
+      color: #ccc;
+    }
   }
 }

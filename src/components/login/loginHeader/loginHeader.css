@@ -11,7 +11,11 @@
     font-weight: 700;
     color: #fff;
     padding-left: 10px; }
+    .login-header .logo-name:hover {
+      color: #ccc; }
   .login-header .hamburger {
     margin-left: auto;
     color: #fff;
     cursor: pointer; }
+    .login-header .hamburger:hover {
+      color: #ccc; }

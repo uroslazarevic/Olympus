@@ -1,11 +1,20 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import { FormField, LoginBtn } from "components";
+import { validateForm } from "utilis";
 
 class LoginForm extends React.Component {
+  onSubmit = formValues => {
+    this.props.onSubmit(formValues);
+  };
+
   render() {
     return (
-      <form className="login-form">
+      <form
+        onSubmit={this.props.handleSubmit(this.onSubmit)}
+        className="login-form ui error"
+        noValidate
+      >
         <div className="form-label">Login to your Account</div>
         <div className="login-form-content">
           <Field
@@ -16,13 +25,17 @@ class LoginForm extends React.Component {
           />
           <Field
             name="password"
-            type="text"
+            type="password"
             label="Your password"
             component={FormField}
           />
           <div className="additional-options">
             <label>
-              <Field name="employed" component="input" type="checkbox" />
+              <Field
+                name="rememberLoginedUser"
+                component="input"
+                type="checkbox"
+              />
               <span>Remember me</span>
             </label>
             <div className="forgot-password">Forgot My Password</div>
@@ -57,6 +70,11 @@ class LoginForm extends React.Component {
 }
 
 export default reduxForm({
-  form: "loginForm"
-  // validate
+  form: "loginForm",
+  validate: validateForm,
+  initialValues: {
+    password: "",
+    email: "",
+    rememberLoginedUser: false
+  }
 })(LoginForm);

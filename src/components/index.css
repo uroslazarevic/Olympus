@@ -18,10 +18,14 @@
     font-weight: 700;
     color: #fff;
     padding-left: 10px; }
+    .login-header .logo-name:hover {
+      color: #ccc; }
   .login-header .hamburger {
     margin-left: auto;
     color: #fff;
     cursor: pointer; }
+    .login-header .hamburger:hover {
+      color: #ccc; }
 
 .login-content {
   display: flex;
@@ -52,7 +56,12 @@
   border: 1.5px solid #fff;
   border-radius: 4px;
   font-size: 14px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer; }
+  .register-btn:hover {
+    color: #ccc;
+    border-color: #ccc; }
 
 .form {
   height: 100%;
@@ -91,6 +100,9 @@
         transform: translate(-50%, -50%) rotate(180deg); }
   .form .content {
     flex: 7; }
+
+.active-form {
+  color: orangered; }
 
 .login-form {
   background: #fff; }
@@ -155,7 +167,8 @@
           text-decoration: underline; }
 
 .field {
-  position: relative; }
+  position: relative;
+  margin-bottom: 15px; }
   .field label {
     position: absolute;
     font-size: 9px;
@@ -171,8 +184,25 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0 10px;
-    margin-bottom: 15px;
     font-size: 11px; }
+
+.invalid-feedback,
+.valid-feedback {
+  display: block; }
+
+.is-error input {
+  outline-color: #dc3545;
+  border-color: #dc3545; }
+
+.is-error label {
+  color: #dc3545; }
+
+.is-success input {
+  outline-color: #28a745;
+  border-color: #28a745; }
+
+.is-success label {
+  color: #28a745; }
 
 .login-btn {
   height: 40px;

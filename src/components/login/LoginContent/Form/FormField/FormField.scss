@@ -1,5 +1,6 @@
 .field {
   position: relative;
+  margin-bottom: 15px;
 
   label {
     position: absolute;
@@ -18,8 +19,34 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 0 10px;
-    margin-bottom: 15px;
 
     font-size: 11px;
+  }
+}
+
+.invalid-feedback,
+.valid-feedback {
+  display: block;
+}
+
+.is-error {
+  input {
+    outline-color: #dc3545;
+    border-color: #dc3545;
+  }
+
+  label {
+    color: #dc3545;
+  }
+}
+
+.is-success {
+  input {
+    outline-color: #28a745;
+    border-color: #28a745;
+  }
+
+  label {
+    color: #28a745;
   }
 }
