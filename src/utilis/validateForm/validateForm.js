@@ -1,6 +1,12 @@
 const validateForm = formValues => {
   const errors = {};
 
+  if (!formValues.fullname) {
+    errors.fullname = "Required";
+  } else if (formValues.fullname.length < 3) {
+    errors.fullname = "Please provide a valid fullname.";
+  }
+
   if (!formValues.email) {
     errors.email = "Required";
   } else if (

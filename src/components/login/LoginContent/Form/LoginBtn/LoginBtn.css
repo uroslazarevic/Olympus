@@ -1,11 +1,11 @@
-.login-btn {
+.form-btn {
   height: 40px;
   border-radius: 4px;
   border: none;
   color: #fff; }
-  .login-btn:hover {
+  .form-btn:hover {
     opacity: 0.9; }
-  .login-btn span {
+  .form-btn span {
     padding-right: 10px; }
 
 .reg-login {
@@ -17,3 +17,13 @@
 
 .tw-login {
   background-color: #38a1f3; }
+
+.register {
+  background-color: orangered;
+  width: 100%;
+  margin: 15px 0 30px 0; }
+
+.btn-disabled {
+  background-color: #f0825a; }
+  .btn-disabled:hover {
+    opacity: 1; }

@@ -12,8 +12,7 @@ class LoginForm extends React.Component {
     return (
       <form
         onSubmit={this.props.handleSubmit(this.onSubmit)}
-        className="login-form ui error"
-        noValidate
+        className="login-form"
       >
         <div className="form-label">Login to your Account</div>
         <div className="login-form-content">
@@ -60,8 +59,10 @@ class LoginForm extends React.Component {
           </div>
           <div className="notation">
             Don't you have an account?{" "}
-            <span className="accent">Register Now!</span> It's simple and you
-            can start enjoying all the benefits!{" "}
+            <span className="accent" onClick={this.props.showRegisterForm}>
+              Register Now!
+            </span>{" "}
+            It's simple and you can start enjoying all the benefits!{" "}
           </div>
         </div>
       </form>

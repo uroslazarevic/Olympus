@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 import { signIn } from "actions";
-import { LoginForm } from "components";
+import { LoginForm, RegisterForm } from "components";
 
 class Form extends React.Component {
   constructor(props) {
@@ -18,19 +18,41 @@ class Form extends React.Component {
     this.props.signIn();
   };
 
+  showRegisterForm = () => {
+    this.setState({ selectedForm: "registerForm" });
+  };
+
   render() {
+    const { selectedForm } = this.state;
+
     return (
       <div className="form">
         <div className="select-form-btns">
-          <span className="login-form-btn active-form">
+          <span
+            onClick={() => this.setState({ selectedForm: "loginForm" })}
+            className={`login-form-btn ${
+              selectedForm === "loginForm" ? "active-form" : ""
+            }`}
+          >
             <i className="fas fa-adjust" />
           </span>
-          <span className="register-form-btn">
+          <span
+            onClick={() => this.setState({ selectedForm: "registerForm" })}
+            className={`register-form-btn ${
+              selectedForm === "registerForm" ? "active-form" : ""
+            }`}
+          >
             <i className="fas fa-adjust" />
           </span>
         </div>
         <div className="content">
-          <LoginForm onSubmit={this.onSubmit} />
+          {this.state.selectedForm === "loginForm" && (
+            <LoginForm
+              showRegisterForm={this.showRegisterForm}
+              onSubmit={this.onSubmit}
+            />
+          )}
+          {this.state.selectedForm === "registerForm" && <RegisterForm />}
         </div>
       </div>
     );

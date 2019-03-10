@@ -1,0 +1,27 @@
+.register-form {
+  background: #fff;
+  .form-label {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .register-form-content {
+    padding: 25px 20px;
+
+    .notation {
+      font-size: 12px;
+
+      span {
+        color: orangered;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
