@@ -9,7 +9,7 @@ import Form from "./Login/LoginContent/Form/Form";
 import LoginForm from "./Login/LoginContent/Form/LoginForm/LoginForm";
 import RegisterForm from "./Login/LoginContent/Form/RegisterForm/RegisterForm";
 import FormField from "./Login/LoginContent/Form/FormField/FormField";
-import LoginBtn from "./Login/LoginContent/Form/LoginBtn/LoginBtn";
+import FormBtn from "./Login/LoginContent/Form/FormBtn/FormBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
 
 export {
@@ -24,6 +24,6 @@ export {
   LoginForm,
   RegisterForm,
   FormField,
-  LoginBtn,
+  FormBtn,
   ValidationFeedback
 };

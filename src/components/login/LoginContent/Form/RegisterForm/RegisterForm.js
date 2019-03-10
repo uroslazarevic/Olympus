@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { FormField, LoginBtn } from "components";
+import { FormField } from "components";
 import { validateForm } from "utilis";
 
 class RegisterForm extends React.Component {
@@ -27,12 +27,13 @@ class RegisterForm extends React.Component {
             label="Your password"
             component={FormField}
           />
-          <LoginBtn
+          <button
             name="register"
-            text="Register"
-            btnClass="register"
             disabled={true}
-          />
+            className="form-btn register btn-disabled"
+          >
+            Register
+          </button>
 
           <div className="notation">
             By creating an account, you agree to Olympus's{" "}

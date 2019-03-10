@@ -3,7 +3,9 @@ const validateForm = formValues => {
 
   if (!formValues.fullname) {
     errors.fullname = "Required";
-  } else if (formValues.fullname.length < 3) {
+  } else if (
+    !/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g.test(formValues.fullname)
+  ) {
     errors.fullname = "Please provide a valid fullname.";
   }
 

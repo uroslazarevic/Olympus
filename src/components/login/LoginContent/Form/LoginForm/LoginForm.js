@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { FormField, LoginBtn } from "components";
+import { FormField, FormBtn } from "components";
 import { validateForm } from "utilis";
 
 class LoginForm extends React.Component {
@@ -40,17 +40,17 @@ class LoginForm extends React.Component {
             <div className="forgot-password">Forgot My Password</div>
           </div>
           <div className="login-btns">
-            <LoginBtn name="reg-login" text="Login" btnClass="reg-login" />
+            <FormBtn name="reg-login" text="Login" btnClass="reg-login" />
             <div className="middle-line">
               <span>OR</span>
             </div>
-            <LoginBtn
+            <FormBtn
               name="fb-login"
               icon={<i className="fab fa-facebook-f" />}
               text="Login with Facebook"
               btnClass="fb-login"
             />
-            <LoginBtn
+            <FormBtn
               name="tw-login"
               icon={<i className="fab fa-twitter" />}
               text="Login with Twitter"
