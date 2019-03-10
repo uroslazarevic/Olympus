@@ -7,7 +7,7 @@ import "./App.css";
 
 import reducers from "./reducers";
 import promise from "redux-promise";
-import { Router } from "components";
+import { AppRouter } from "components";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -19,7 +19,7 @@ ReactDOM.render(
         window.__REDUX_DEVTOOLS_EXTENSION__()
     )}
   >
-    <Router />
+    <AppRouter />
   </Provider>,
   document.querySelector("#root")
 );

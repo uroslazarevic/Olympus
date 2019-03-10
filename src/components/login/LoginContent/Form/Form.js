@@ -1,5 +1,7 @@
 import React from "react";
+import { connect } from "react-redux";
 
+import { signIn } from "actions";
 import { LoginForm } from "components";
 
 class Form extends React.Component {
@@ -7,12 +9,13 @@ class Form extends React.Component {
     super(props);
 
     this.state = {
-      selectForm: true
+      selectedForm: "loginForm"
     };
   }
 
   onSubmit = formValues => {
     console.log("formValues", formValues);
+    this.props.signIn();
   };
 
   render() {
@@ -34,4 +37,7 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+export default connect(
+  null,
+  { signIn }
+)(Form);

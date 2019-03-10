@@ -1,4 +1,4 @@
-import Router from "./Router/Router";
+import AppRouter from "./AppRouter/AppRouter";
 import Login from "./Login/Login";
 import Profile from "./Profile/Profile";
 import LoginHeader from "./Login/LoginHeader/LoginHeader";
@@ -13,7 +13,7 @@ import LoginBtn from "./Login/LoginContent/Form/LoginBtn/LoginBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
 
 export {
-  Router,
+  AppRouter,
   Login,
   Profile,
   LoginHeader,

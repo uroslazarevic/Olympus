@@ -1,17 +1,18 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import history from "utilis/history";
 
 import { Login, Profile } from "components";
 
-const Router = () => {
+const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <Router history={history}>
       <div>
         <Route exact path="/" component={Login} />
         <Route path="/profile" component={Profile} />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 
-export default Router;
+export default AppRouter;
