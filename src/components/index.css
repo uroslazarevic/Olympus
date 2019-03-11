@@ -1,6 +1,7 @@
 .login-page {
-  height: 700px;
-  width: 100%; }
+  height: 1000px;
+  width: 100%;
+  background-attachment: fixed; }
   .login-page .bg-layer {
     background-color: rgba(255, 69, 0, 0.9);
     height: 100%; }
@@ -10,16 +11,16 @@
   flex-direction: row;
   align-items: center;
   z-index: 10; }
-  .login-header .logo-img {
+  .login-header a.login-home-link:hover .logo-name {
+    color: #ccc; }
+  .login-header a.login-home-link .logo-img {
     height: 50px; }
-  .login-header .logo-name {
+  .login-header a.login-home-link .logo-name {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
     color: #fff;
     padding-left: 10px; }
-    .login-header .logo-name:hover {
-      color: #ccc; }
   .login-header .hamburger {
     margin-left: auto;
     color: #fff;

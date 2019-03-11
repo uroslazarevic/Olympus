@@ -6,7 +6,7 @@ import logo from "../../../imgs/olympus_logo.png";
 const LoginHeader = () => {
   return (
     <div className="login-header">
-      <Link to="/">
+      <Link className="login-home-link" to="/">
         <img className="logo-img" src={logo} alt="olympus-logo" />
         <span className="logo-name">olympus</span>
       </Link>

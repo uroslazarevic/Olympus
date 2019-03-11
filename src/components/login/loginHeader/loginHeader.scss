@@ -4,19 +4,23 @@
   align-items: center;
   z-index: 10;
 
-  .logo-img {
-    height: 50px;
-  }
-
-  .logo-name {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #fff;
-    padding-left: 10px;
-
+  a.login-home-link {
     &:hover {
-      color: #ccc;
+      .logo-name {
+        color: #ccc;
+      }
+    }
+
+    .logo-img {
+      height: 50px;
+    }
+
+    .logo-name {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+      padding-left: 10px;
     }
   }
 

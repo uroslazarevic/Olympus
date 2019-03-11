@@ -8,7 +8,7 @@ import reduxThunk from "redux-thunk";
 import "./App.css";
 
 import reducers from "./reducers";
-import { AppRouter } from "components";
+import AppRouter from "router/AppRouter";
 
 const createStoreWithMiddleware = applyMiddleware(promise, reduxThunk)(
   createStore
