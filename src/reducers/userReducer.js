@@ -3,7 +3,7 @@ import { FETCH_USER } from "actions/types";
 import mainInfo from "data/mainInfo";
 
 const initialState = {
-  basicInfo: {},
+  basicInfo: null,
   mainInfo
 };
 

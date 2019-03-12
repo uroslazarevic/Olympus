@@ -10,6 +10,17 @@ import RegisterForm from "./Login/LoginContent/Form/RegisterForm/RegisterForm";
 import FormField from "./Login/LoginContent/Form/FormField/FormField";
 import FormBtn from "./Login/LoginContent/Form/FormBtn/FormBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
+import ProfileHeader from "./Profile/ProfileHeader/ProfileHeader";
+import Cover from "./Profile/Cover/Cover";
+import AsideNavigation from "./Profile/AsideNavigation/AsideNavigation";
+import SidebarFriends from "./Profile/SidebarFriends/SidebarFriends";
+import TimelineHeadline from "./Profile/TimelineHeadline/TimelineHeadline";
+import SearchBar from "./Profile/ProfileHeader/SearchBar/SearchBar";
+import SocialNotifications from "./Profile/ProfileHeader/SocialNotifications/SocialNotifications";
+import SocialNotification from "./Profile/ProfileHeader/SocialNotification/SocialNotification";
+import BadgedSocNotification from "./Profile/ProfileHeader/BadgedSocNotification/BadgedSocNotification";
+import SocialNotificationView from "./Profile/ProfileHeader/SocialNotificationView/SocialNotificationView";
+import User from "./Profile/ProfileHeader/User/User";
 
 export {
   Login,
@@ -23,5 +34,16 @@ export {
   RegisterForm,
   FormField,
   FormBtn,
-  ValidationFeedback
+  ValidationFeedback,
+  ProfileHeader,
+  Cover,
+  AsideNavigation,
+  SidebarFriends,
+  TimelineHeadline,
+  SearchBar,
+  SocialNotifications,
+  SocialNotification,
+  BadgedSocNotification,
+  SocialNotificationView,
+  User
 };
