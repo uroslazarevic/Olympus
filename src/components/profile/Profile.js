@@ -1,7 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
+import { fetchUser } from "actions";
 
-const Profile = () => {
-  return <div>Profile</div>;
-};
+class Profile extends React.Component {
+  componentWillMount() {
+    this.props.fetchUser();
+  }
 
-export default Profile;
+  render() {
+    return <div>Profile</div>;
+  }
+}
+
+function mapStateToProps({ user }) {
+  return {
+    user
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  { fetchUser }
+)(Profile);
