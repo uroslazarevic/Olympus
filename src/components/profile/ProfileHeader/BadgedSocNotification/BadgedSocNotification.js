@@ -3,12 +3,13 @@ import React from "react";
 import { Badge } from "components/UI";
 
 const BadgedSocNotification = ({ badge, notification }) => {
+  const hasStatus = badge.status ? "has-status" : "";
   return (
-    <div className="social-notification">
+    <div className={`social-notification ${hasStatus}`}>
       <span className={`social-notification-icon ${notification.className}`}>
         {notification.icon}
       </span>
-      <Badge status={badge.status} className={`badge ${badge.badgePosition}`} />
+      <Badge badge={badge} />
     </div>
   );
 };

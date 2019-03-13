@@ -4,10 +4,6 @@ import logo from "imgs/olympus_logo.png";
 import { SearchBar, SocialNotifications, User } from "components";
 
 class ProfileHeader extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     console.log(this.props.user);
     const { basicInfo, mainInfo } = this.props.user;
@@ -19,7 +15,7 @@ class ProfileHeader extends Component {
         <div className="page-name">Profile page</div>
         <SearchBar />
         <div className="find-friends">Find Friends</div>
-        <SocialNotifications />
+        <SocialNotifications notificationCount={mainInfo.notifications} />
         <User />
       </header>
     );

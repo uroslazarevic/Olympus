@@ -2,7 +2,7 @@ import React from "react";
 
 import { SocialNotificationView } from "components";
 
-const SocialNotifications = () => {
+const SocialNotifications = ({ notificationCount }) => {
   return (
     <div className="social-notifications">
       <SocialNotificationView
@@ -14,7 +14,11 @@ const SocialNotifications = () => {
         className="messages"
       />
       <SocialNotificationView
-        badge={{ badgePosition: "top-right", status: "warning" }}
+        badge={{
+          badgePosition: "top-right",
+          status: "warning",
+          count: notificationCount
+        }}
         icon={<i className="fas fa-exclamation-circle" />}
         className="notifications"
       />

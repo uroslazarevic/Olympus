@@ -1,0 +1,27 @@
+.search-bar {
+  position: relative;
+  box-sizing: border-box;
+  flex: 2;
+  width: 100%;
+  color: #717590; }
+  .search-bar:hover input {
+    background-color: #51536b; }
+  .search-bar input {
+    height: 70px;
+    border: none;
+    background-color: #4a4c63;
+    width: 100%;
+    padding: 0 30px;
+    color: #fff;
+    outline: none; }
+    .search-bar input::placeholder {
+      color: #747893; }
+    .search-bar input:focus ~ span {
+      color: #fff; }
+  .search-bar .search-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 20px; }

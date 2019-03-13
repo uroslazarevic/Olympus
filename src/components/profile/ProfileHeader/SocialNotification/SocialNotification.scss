@@ -1,0 +1,14 @@
+.social-notification {
+  font-size: 23px;
+  color: #747893;
+  position: relative;
+  padding: 3px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &.has-status {
+    color: #fff;
+  }
+}

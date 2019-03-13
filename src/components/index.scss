@@ -11,3 +11,10 @@
 @import "./Login//LoginContent/Form/FormBtn/FormBtn.scss";
 // Profile page
 @import "./Profile/Profile.scss";
+@import "./Profile/ProfileHeader/ProfileHeader.scss";
+@import "./Profile/ProfileHeader/SocialNotification/SocialNotification.scss";
+@import "./Profile/ProfileHeader/SocialNotifications/SocialNotifications.scss";
+@import "./Profile/ProfileHeader/User/User.scss";
+@import "./Profile/ProfileHeader/SearchBar/SearchBar.scss";
+// UI
+@import "./UI/index.scss";

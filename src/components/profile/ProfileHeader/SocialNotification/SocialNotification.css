@@ -1,0 +1,9 @@
+.social-notification {
+  font-size: 23px;
+  color: #747893;
+  position: relative;
+  padding: 3px; }
+  .social-notification:hover {
+    color: #fff; }
+  .social-notification.has-status {
+    color: #fff; }

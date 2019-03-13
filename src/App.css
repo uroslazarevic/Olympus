@@ -266,3 +266,101 @@ body {
   background-color: #f0825a; }
   .btn-disabled:hover {
     opacity: 1; }
+
+.profile-header {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  background: #404257;
+  cursor: pointer; }
+  .profile-header .logo {
+    background-color: #fe5e3a; }
+    .profile-header .logo img {
+      height: 70px;
+      padding: 10px; }
+  .profile-header .page-name {
+    padding-left: 40px;
+    padding-right: 80px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    flex: 1; }
+  .profile-header .find-friends {
+    flex: 1;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 500; }
+
+.social-notification {
+  font-size: 23px;
+  color: #747893;
+  position: relative;
+  padding: 3px; }
+  .social-notification:hover {
+    color: #fff; }
+  .social-notification.has-status {
+    color: #fff; }
+
+.social-notifications {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.user {
+  flex: 1; }
+
+.search-bar {
+  position: relative;
+  box-sizing: border-box;
+  flex: 2;
+  width: 100%;
+  color: #717590; }
+  .search-bar:hover input {
+    background-color: #51536b; }
+  .search-bar input {
+    height: 70px;
+    border: none;
+    background-color: #4a4c63;
+    width: 100%;
+    padding: 0 30px;
+    color: #fff;
+    outline: none; }
+    .search-bar input::placeholder {
+      color: #747893; }
+    .search-bar input:focus ~ span {
+      color: #fff; }
+  .search-bar .search-icon {
+    pointer-events: none;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: 20px; }
+
+.badge-item {
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  background-color: #ccc; }
+  .badge-item .content {
+    font-size: 12px;
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: -2px;
+    transform: translate(-50%, 0); }
+  .badge-item.warning {
+    background-color: #fe5e3a; }
+  .badge-item.top-right {
+    top: 2px;
+    right: -3px; }
+  .badge-item.top-left {
+    top: 2px;
+    left: -3px; }
+  .badge-item.small {
+    height: 10px;
+    width: 10px; }
