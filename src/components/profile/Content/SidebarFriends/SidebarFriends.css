@@ -1,0 +1,10 @@
+.sidebar-friends {
+  background-color: #fff; }
+  .sidebar-friends .friend-item {
+    padding: 18px 0;
+    text-align: center;
+    cursor: pointer; }
+    .sidebar-friends .friend-item:hover {
+      background-color: #f6f5f5; }
+    .sidebar-friends .friend-item .img-avatar {
+      margin: 0 auto; }

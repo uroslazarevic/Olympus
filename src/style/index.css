@@ -395,12 +395,24 @@ body {
 .aside-navigation {
   background-color: #fff; }
   .aside-navigation .nav-item {
-    padding: 10px 0;
+    padding: 18px 0;
     text-align: center;
     cursor: pointer;
     color: #717590; }
     .aside-navigation .nav-item:hover {
-      color: orangered; }
+      color: orangered;
+      background-color: #f6f5f5; }
+
+.sidebar-friends {
+  background-color: #fff; }
+  .sidebar-friends .friend-item {
+    padding: 18px 0;
+    text-align: center;
+    cursor: pointer; }
+    .sidebar-friends .friend-item:hover {
+      background-color: #f6f5f5; }
+    .sidebar-friends .friend-item .img-avatar {
+      margin: 0 auto; }
 
 .badge-item {
   border-radius: 100%;

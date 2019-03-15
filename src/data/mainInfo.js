@@ -41,37 +41,55 @@ export default {
       {
         id: 1,
         src: "https://loremflickr.com/320/240/people?random=1",
-        badgeColor: "green",
+        badgeColor: "bg-success",
         name: "lorem"
       },
       {
         id: 2,
         src: "https://loremflickr.com/320/240/people?random=2",
-        badgeColor: "red",
+        badgeColor: "bg-danger",
         name: "lorem"
       },
       {
         id: 3,
         src: "https://loremflickr.com/320/240/people?random=3",
-        badgeColor: "blue",
+        badgeColor: "bg-primary",
         name: "lorem"
       },
       {
         id: 4,
         src: "https://loremflickr.com/320/240/people?random=4",
-        badgeColor: "yellow",
+        badgeColor: "warning",
         name: "lorem"
       },
       {
         id: 5,
         src: "https://loremflickr.com/320/240/people?random=5",
-        badgeColor: "gray",
+        badgeColor: "bg-info",
         name: "lorem"
       },
       {
         id: 6,
         src: "https://loremflickr.com/320/240/people?random=6",
-        badgeColor: "gray",
+        badgeColor: "bg-info",
+        name: "lorem"
+      },
+      {
+        id: 7,
+        src: "https://loremflickr.com/320/240/people?random=4",
+        badgeColor: "warning",
+        name: "lorem"
+      },
+      {
+        id: 8,
+        src: "https://loremflickr.com/320/240/people?random=5",
+        badgeColor: "bg-success",
+        name: "lorem"
+      },
+      {
+        id: 9,
+        src: "https://loremflickr.com/320/240/people?random=6",
+        badgeColor: "bg-success",
         name: "lorem"
       }
     ]

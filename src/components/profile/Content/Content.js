@@ -5,12 +5,12 @@ import {
   ProfileContentMain
 } from "components";
 
-const Content = () => {
+const Content = ({ user }) => {
   return (
     <div className="profile-content">
       <AsideNavigation />
       <ProfileContentMain />
-      <SidebarFriends />
+      <SidebarFriends friends={user.mainInfo.friends.list} />
     </div>
   );
 };
