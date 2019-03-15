@@ -15,7 +15,7 @@ const SocialNotifications = ({ notificationCount }) => {
       />
       <SocialNotificationView
         badge={{
-          badgePosition: "top-right",
+          badgePosition: "normal-tr",
           status: "warning",
           count: notificationCount
         }}

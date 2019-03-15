@@ -16,7 +16,7 @@ class ProfileHeader extends Component {
         <SearchBar />
         <div className="find-friends">Find Friends</div>
         <SocialNotifications notificationCount={mainInfo.notifications} />
-        <User />
+        <User user={this.props.user} />
       </header>
     );
   }

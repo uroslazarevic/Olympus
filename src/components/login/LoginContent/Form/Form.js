@@ -31,7 +31,7 @@ class Form extends React.Component {
           <span
             onClick={() => this.setState({ selectedForm: "loginForm" })}
             className={`login-form-btn ${
-              selectedForm === "loginForm" ? "active-form" : ""
+              selectedForm === "loginForm" ? "active-item" : ""
             }`}
           >
             <i className="fas fa-adjust" />
@@ -39,7 +39,7 @@ class Form extends React.Component {
           <span
             onClick={() => this.setState({ selectedForm: "registerForm" })}
             className={`register-form-btn ${
-              selectedForm === "registerForm" ? "active-form" : ""
+              selectedForm === "registerForm" ? "active-item" : ""
             }`}
           >
             <i className="fas fa-adjust" />

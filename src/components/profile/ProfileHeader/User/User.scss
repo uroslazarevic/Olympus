@@ -1,3 +1,67 @@
 .user {
   flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+
+  .user-details {
+    display: flex;
+    position: relative;
+
+    .initials {
+      padding-left: 10px;
+      font-weight: 500;
+
+      .fullname {
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        text-transform: capitalize;
+      }
+
+      .pseudonym {
+        font-size: 9px;
+        line-height: 9px;
+        color: #717590;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+    }
+
+    .user-options {
+      margin-left: 9px;
+      font-size: 8px;
+      margin-top: 5px;
+      color: #fff;
+    }
+
+    .user-options-list {
+      position: absolute;
+      bottom: -70px;
+      right: 0px;
+      background: #404257;
+      width: 100px;
+      border: 1px solid #51536b;
+      border-radius: 2px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      .user-option {
+        font-size: 12px;
+        line-height: 18px;
+        color: #ccc;
+        color: #717590;
+        padding: 2px 5px;
+
+        &:hover {
+          background-color: #51536b;
+          color: #fe5e3a;
+        }
+      }
+    }
+  }
 }

@@ -13,12 +13,26 @@
     transform: translate(-50%, 0); }
   .badge-item.warning {
     background-color: #fe5e3a; }
-  .badge-item.top-right {
+  .badge-item.normal-tr {
     top: 2px;
     right: -3px; }
-  .badge-item.top-left {
+  .badge-item.normal-tl {
     top: 2px;
     left: -3px; }
   .badge-item.small {
-    height: 10px;
-    width: 10px; }
+    height: 8px;
+    width: 8px;
+    top: 0px; }
+  .badge-item.small-tl {
+    left: 0px; }
+  .badge-item.small-tr {
+    right: 0px; }
+
+.img-avatar {
+  position: relative;
+  height: 30px;
+  width: 30px; }
+  .img-avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%; }

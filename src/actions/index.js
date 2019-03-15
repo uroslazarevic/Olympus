@@ -1,4 +1,4 @@
-import { SIGN_IN, FETCH_USER } from "./types";
+import { SIGN_IN, SIGN_OUT, FETCH_USER } from "./types";
 
 import history from "utilis/history";
 import { user } from "apis";
@@ -9,6 +9,13 @@ export const signIn = () => dispatch => {
     payload: true
   });
   history.push("/profile");
+};
+
+export const signOut = () => {
+  return {
+    type: SIGN_OUT,
+    payload: false
+  };
 };
 
 export const fetchUser = () => {

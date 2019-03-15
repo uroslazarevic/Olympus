@@ -102,9 +102,6 @@
   .form .content {
     flex: 7; }
 
-.active-form {
-  color: orangered; }
-
 .login-form {
   background: #fff; }
   .login-form .form-label {
@@ -296,7 +293,55 @@
   align-items: center; }
 
 .user {
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 25px; }
+  .user .user-details {
+    display: flex;
+    position: relative; }
+    .user .user-details .initials {
+      padding-left: 10px;
+      font-weight: 500; }
+      .user .user-details .initials .fullname {
+        font-size: 14px;
+        line-height: 20px;
+        color: #fff;
+        text-transform: capitalize; }
+      .user .user-details .initials .pseudonym {
+        font-size: 9px;
+        line-height: 9px;
+        color: #717590;
+        text-transform: uppercase;
+        font-weight: 500; }
+    .user .user-details .user-options {
+      margin-left: 9px;
+      font-size: 8px;
+      margin-top: 5px;
+      color: #fff; }
+    .user .user-details .user-options-list {
+      position: absolute;
+      bottom: -70px;
+      right: 0px;
+      background: #404257;
+      width: 100px;
+      border: 1px solid #51536b;
+      border-radius: 2px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none; }
+      .user .user-details .user-options-list .user-option {
+        font-size: 12px;
+        line-height: 18px;
+        color: #ccc;
+        color: #717590;
+        padding: 2px 5px; }
+        .user .user-details .user-options-list .user-option:hover {
+          background-color: #51536b;
+          color: #fe5e3a; }
 
 .search-bar {
   position: relative;
@@ -341,12 +386,26 @@
     transform: translate(-50%, 0); }
   .badge-item.warning {
     background-color: #fe5e3a; }
-  .badge-item.top-right {
+  .badge-item.normal-tr {
     top: 2px;
     right: -3px; }
-  .badge-item.top-left {
+  .badge-item.normal-tl {
     top: 2px;
     left: -3px; }
   .badge-item.small {
-    height: 10px;
-    width: 10px; }
+    height: 8px;
+    width: 8px;
+    top: 0px; }
+  .badge-item.small-tl {
+    left: 0px; }
+  .badge-item.small-tr {
+    right: 0px; }
+
+.img-avatar {
+  position: relative;
+  height: 30px;
+  width: 30px; }
+  .img-avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%; }

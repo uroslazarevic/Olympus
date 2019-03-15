@@ -35,6 +35,3 @@
         transform: translate(-50%, -50%) rotate(180deg); }
   .form .content {
     flex: 7; }
-
-.active-form {
-  color: orangered; }
