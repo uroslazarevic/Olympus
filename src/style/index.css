@@ -388,6 +388,20 @@ body {
     transform: translate(0%, -50%);
     font-size: 20px; }
 
+.profile-content {
+  display: grid;
+  grid-template-columns: 70px auto 70px; }
+
+.aside-navigation {
+  background-color: #fff; }
+  .aside-navigation .nav-item {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    color: #717590; }
+    .aside-navigation .nav-item:hover {
+      color: orangered; }
+
 .badge-item {
   border-radius: 100%;
   height: 15px;

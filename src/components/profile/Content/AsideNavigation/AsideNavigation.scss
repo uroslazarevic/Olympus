@@ -1,0 +1,14 @@
+.aside-navigation {
+  background-color: #fff;
+
+  .nav-item {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    color: #717590;
+
+    &:hover {
+      color: orangered;
+    }
+  }
+}

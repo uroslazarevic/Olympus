@@ -11,16 +11,18 @@ import FormField from "./Login/LoginContent/Form/FormField/FormField";
 import FormBtn from "./Login/LoginContent/Form/FormBtn/FormBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
 import ProfileHeader from "./Profile/ProfileHeader/ProfileHeader";
-import Cover from "./Profile/Cover/Cover";
-import AsideNavigation from "./Profile/AsideNavigation/AsideNavigation";
-import SidebarFriends from "./Profile/SidebarFriends/SidebarFriends";
-import TimelineHeadline from "./Profile/TimelineHeadline/TimelineHeadline";
+import Cover from "./Profile/Content/Main/Cover/Cover";
+import AsideNavigation from "./Profile/Content/AsideNavigation/AsideNavigation";
+import SidebarFriends from "./Profile/Content/SidebarFriends/SidebarFriends";
+import ProfileContent from "./Profile/Content/Content";
+import TimelineHeadline from "./Profile/Content/Main/TimelineHeadline/TimelineHeadline";
 import SearchBar from "./Profile/ProfileHeader/SearchBar/SearchBar";
 import SocialNotifications from "./Profile/ProfileHeader/SocialNotifications/SocialNotifications";
 import SocialNotification from "./Profile/ProfileHeader/SocialNotification/SocialNotification";
 import BadgedSocNotification from "./Profile/ProfileHeader/BadgedSocNotification/BadgedSocNotification";
 import SocialNotificationView from "./Profile/ProfileHeader/SocialNotificationView/SocialNotificationView";
 import User from "./Profile/ProfileHeader/User/User";
+import ProfileContentMain from "./Profile/Content/Main/Main";
 
 export {
   Login,
@@ -45,5 +47,7 @@ export {
   SocialNotification,
   BadgedSocNotification,
   SocialNotificationView,
-  User
+  User,
+  ProfileContent,
+  ProfileContentMain
 };

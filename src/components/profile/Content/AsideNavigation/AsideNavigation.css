@@ -1,0 +1,9 @@
+.aside-navigation {
+  background-color: #fff; }
+  .aside-navigation .nav-item {
+    padding: 10px 0;
+    text-align: center;
+    cursor: pointer;
+    color: #717590; }
+    .aside-navigation .nav-item:hover {
+      color: orangered; }
