@@ -11,11 +11,11 @@ import FormField from "./Login/LoginContent/Form/FormField/FormField";
 import FormBtn from "./Login/LoginContent/Form/FormBtn/FormBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
 import ProfileHeader from "./Profile/ProfileHeader/ProfileHeader";
-import Cover from "./Profile/Content/Main/Cover/Cover";
+import ProfileContentMainCover from "./Profile/Content/Main/Cover/Cover";
 import AsideNavigation from "./Profile/Content/AsideNavigation/AsideNavigation";
 import SidebarFriends from "./Profile/Content/SidebarFriends/SidebarFriends";
 import ProfileContent from "./Profile/Content/Content";
-import TimelineHeadline from "./Profile/Content/Main/TimelineHeadline/TimelineHeadline";
+import ProfileContentMainTimelineHeadline from "./Profile/Content/Main/TimelineHeadline/TimelineHeadline";
 import SearchBar from "./Profile/ProfileHeader/SearchBar/SearchBar";
 import SocialNotifications from "./Profile/ProfileHeader/SocialNotifications/SocialNotifications";
 import SocialNotification from "./Profile/ProfileHeader/SocialNotification/SocialNotification";
@@ -23,6 +23,8 @@ import BadgedSocNotification from "./Profile/ProfileHeader/BadgedSocNotification
 import SocialNotificationView from "./Profile/ProfileHeader/SocialNotificationView/SocialNotificationView";
 import User from "./Profile/ProfileHeader/User/User";
 import ProfileContentMain from "./Profile/Content/Main/Main";
+import ProfileContentMainTimelineHeadlineUser from "./Profile/Content/Main/TimelineHeadline/User/User";
+import ProfileContentMainTimelineHeadlineSocialBtns from "./Profile/Content/Main/TimelineHeadline/SocialBtns/SocialBtns";
 
 export {
   Login,
@@ -38,10 +40,10 @@ export {
   FormBtn,
   ValidationFeedback,
   ProfileHeader,
-  Cover,
+  ProfileContentMainCover,
   AsideNavigation,
   SidebarFriends,
-  TimelineHeadline,
+  ProfileContentMainTimelineHeadline,
   SearchBar,
   SocialNotifications,
   SocialNotification,
@@ -49,5 +51,7 @@ export {
   SocialNotificationView,
   User,
   ProfileContent,
-  ProfileContentMain
+  ProfileContentMain,
+  ProfileContentMainTimelineHeadlineUser,
+  ProfileContentMainTimelineHeadlineSocialBtns
 };

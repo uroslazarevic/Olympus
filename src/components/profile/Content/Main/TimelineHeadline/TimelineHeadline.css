@@ -1,0 +1,16 @@
+.timeline-headline {
+  background: #fff;
+  position: relative; }
+  .timeline-headline .list {
+    display: flex;
+    flex-direction: row;
+    padding: 35px 35px; }
+    .timeline-headline .list .item {
+      flex: 1;
+      text-align: center;
+      font-weight: 500;
+      font-size: 15px; }
+      .timeline-headline .list .item a {
+        color: #717590; }
+        .timeline-headline .list .item a:hover {
+          color: #000; }

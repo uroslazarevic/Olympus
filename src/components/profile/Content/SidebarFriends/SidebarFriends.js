@@ -18,6 +18,7 @@ class SidebarFriends extends React.Component {
                     badgePosition: "small small-tl",
                     status: badgeColor
                   }}
+                  className="friend-avatar"
                 />
               </li>
             );

@@ -76,19 +76,19 @@ export default {
       },
       {
         id: 7,
-        src: "https://loremflickr.com/320/240/people?random=4",
+        src: "https://loremflickr.com/320/240/people?random=7",
         badgeColor: "warning",
         name: "lorem"
       },
       {
         id: 8,
-        src: "https://loremflickr.com/320/240/people?random=5",
+        src: "https://loremflickr.com/320/240/people?random=8",
         badgeColor: "bg-success",
         name: "lorem"
       },
       {
         id: 9,
-        src: "https://loremflickr.com/320/240/people?random=6",
+        src: "https://loremflickr.com/320/240/people?random=9",
         badgeColor: "bg-success",
         name: "lorem"
       }

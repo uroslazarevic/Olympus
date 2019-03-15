@@ -1,0 +1,23 @@
+.social-btn {
+  border-radius: 100%;
+  background: gray;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  position: relative;
+  cursor: pointer; }
+  .social-btn:hover {
+    opacity: 0.9; }
+  .social-btn i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: #fff; }
+  .social-btn.new-friend {
+    background-color: #38a1f3; }
+  .social-btn.new-message {
+    background-color: #3c5a99; }
+  .social-btn.new-something {
+    background-color: orangered; }

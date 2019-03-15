@@ -1,0 +1,16 @@
+.headline-timeline-user {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -7px; }
+  .headline-timeline-user .details .fullname {
+    font-size: 25px;
+    color: #525365;
+    line-height: 25px;
+    font-weight: 700;
+    text-transform: capitalize; }
+  .headline-timeline-user .details .location {
+    color: #525365;
+    font-size: 13px;
+    text-transform: capitalize;
+    line-height: 24px; }

@@ -9,7 +9,7 @@ const Content = ({ user }) => {
   return (
     <div className="profile-content">
       <AsideNavigation />
-      <ProfileContentMain />
+      <ProfileContentMain user={user} />
       <SidebarFriends friends={user.mainInfo.friends.list} />
     </div>
   );
