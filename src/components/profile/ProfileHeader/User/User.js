@@ -49,7 +49,11 @@ class User extends React.Component {
             onClick={this.handleUserOptionsList}
             className={`user-options ${showUserOptList && "active-item"}`}
           >
-            <i className="fas fa-chevron-down" />
+            {showUserOptList ? (
+              <i className="fas fa-angle-up" />
+            ) : (
+              <i className="fas fa-chevron-down" />
+            )}
           </span>
         </div>
       </div>

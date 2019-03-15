@@ -4,6 +4,7 @@ import {
   ProfileContentMainTimelineHeadlineUser,
   ProfileContentMainTimelineHeadlineSocialBtns
 } from "components";
+import { ElipsisBtn } from "components/UI";
 
 const TimelineHeadline = ({ user }) => {
   return (
@@ -32,7 +33,9 @@ const TimelineHeadline = ({ user }) => {
           <a href="javascript:void(0)">Videos</a>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">...</a>
+          <a href="javascript:void(0)">
+            <ElipsisBtn />
+          </a>
         </li>
       </ul>
       <ProfileContentMainTimelineHeadlineSocialBtns />

@@ -319,6 +319,8 @@
       font-size: 8px;
       margin-top: 5px;
       color: #fff; }
+      .user .user-details .user-options .fa-angle-up {
+        font-size: 12px; }
     .user .user-details .user-options-list {
       position: absolute;
       bottom: -70px;
@@ -522,3 +524,7 @@
     background-color: #3c5a99; }
   .social-btn.new-something {
     background-color: orangered; }
+
+.elipsis-btn {
+  font-size: 24px;
+  line-height: 24px; }

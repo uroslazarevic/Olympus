@@ -25,6 +25,8 @@
       font-size: 8px;
       margin-top: 5px;
       color: #fff; }
+      .user .user-details .user-options .fa-angle-up {
+        font-size: 12px; }
     .user .user-details .user-options-list {
       position: absolute;
       bottom: -70px;
