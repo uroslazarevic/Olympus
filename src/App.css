@@ -457,7 +457,10 @@ body {
     text-transform: capitalize;
     font-weight: 500;
     font-size: 15px;
-    padding-bottom: 5px; }
+    padding-bottom: 5px;
+    cursor: pointer; }
+    .profile-intro-item .profile-intro-item-title:hover {
+      color: #717590; }
   .profile-intro-item .profile-intro-item-description {
     color: #ccc;
     font-size: 15px; }
@@ -483,6 +486,10 @@ body {
   .user-badges .info-block-content .badge-avatar {
     margin: 0 auto;
     cursor: pointer; }
+    .user-badges .info-block-content .badge-avatar img {
+      border: 1px solid #fff; }
+      .user-badges .info-block-content .badge-avatar img:hover {
+        border: 1px solid #404257; }
 
 .spotify-song-item {
   display: flex;
@@ -535,7 +542,10 @@ body {
         color: #72d6fa; }
   .twit-item .twit-created {
     color: #ddd;
-    font-size: 14px; }
+    font-size: 14px;
+    cursor: pointer; }
+    .twit-item .twit-created:hover {
+      color: #000; }
 
 .profile-photos .profile-photos-list {
   display: grid;
@@ -580,6 +590,36 @@ body {
     cursor: pointer; }
     .blog-post .created:hover {
       color: #000; }
+
+.profile-friends .profile-friends-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-row-gap: 20px; }
+  .profile-friends .profile-friends-list .img-avatar {
+    margin: 0 auto;
+    cursor: pointer; }
+    .profile-friends .profile-friends-list .img-avatar img {
+      border: 1px solid #fff; }
+      .profile-friends .profile-friends-list .img-avatar img:hover {
+        border: 1px solid #404257; }
+  .profile-friends .profile-friends-list .show-more-friends {
+    border-radius: 100%;
+    background-color: orangered;
+    color: #fff;
+    place-self: center;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid orangered; }
+    .profile-friends .profile-friends-list .show-more-friends:hover {
+      border: 1px solid #404257; }
+    .profile-friends .profile-friends-list .show-more-friends .friends-remaining {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 800; }
 
 .ui-btn {
   height: 40px;

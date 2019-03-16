@@ -5,3 +5,7 @@
   .user-badges .info-block-content .badge-avatar {
     margin: 0 auto;
     cursor: pointer; }
+    .user-badges .info-block-content .badge-avatar img {
+      border: 1px solid #fff; }
+      .user-badges .info-block-content .badge-avatar img:hover {
+        border: 1px solid #404257; }

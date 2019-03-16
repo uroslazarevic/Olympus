@@ -7,6 +7,13 @@
     .badge-avatar {
       margin: 0 auto;
       cursor: pointer;
+
+      img {
+        border: 1px solid #fff;
+        &:hover {
+          border: 1px solid #404257;
+        }
+      }
     }
   }
 }

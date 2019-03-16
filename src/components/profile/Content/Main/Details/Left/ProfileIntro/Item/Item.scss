@@ -6,6 +6,10 @@
     font-weight: 500;
     font-size: 15px;
     padding-bottom: 5px;
+    cursor: pointer;
+    &:hover {
+      color: #717590;
+    }
   }
 
   .profile-intro-item-description {

@@ -42,6 +42,7 @@ import ProfileContentMainDetailsRightPhotos from "./Profile/Content/Main/Details
 import ProfileContentMainDetailsRightPhotosItem from "./Profile/Content/Main/Details/Right/Photos/Item/Item";
 import ProfileContentMainDetailsRightBlog from "./Profile/Content/Main/Details/Right/Blog/Blog";
 import ProfileContentMainDetailsRightBlogPost from "./Profile/Content/Main/Details/Right/Blog/Post/Post";
+import ProfileContentMainDetailsRightFriends from "./Profile/Content/Main/Details/Right/Friends/Friends";
 export {
   Login,
   Profile,
@@ -84,5 +85,6 @@ export {
   ProfileContentMainDetailsRightPhotos,
   ProfileContentMainDetailsRightPhotosItem,
   ProfileContentMainDetailsRightBlog,
-  ProfileContentMainDetailsRightBlogPost
+  ProfileContentMainDetailsRightBlogPost,
+  ProfileContentMainDetailsRightFriends
 };

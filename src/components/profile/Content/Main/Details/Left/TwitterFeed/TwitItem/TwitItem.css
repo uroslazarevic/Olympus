@@ -18,4 +18,7 @@
         color: #72d6fa; }
   .twit-item .twit-created {
     color: #ddd;
-    font-size: 14px; }
+    font-size: 14px;
+    cursor: pointer; }
+    .twit-item .twit-created:hover {
+      color: #000; }

@@ -36,7 +36,7 @@ export default {
     { id: 9, src: "https://loremflickr.com/320/240/nature?random=9" }
   ],
   friends: {
-    total: 28,
+    count: 28,
     list: [
       {
         id: 1,
