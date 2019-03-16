@@ -38,7 +38,8 @@ import ProfileContentMainDetailsLeftSpotifyPlaylist from "./Profile/Content/Main
 import ProfileContentMainDetailsLeftSpotifyPlaylistSongItem from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SongItem/SongItem";
 import ProfileContentMainDetailsLeftTwitterFeed from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitterFeed";
 import ProfileContentMainDetailsLeftTwitterFeedTwitItem from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitItem/TwitItem";
-
+import ProfileContentMainDetailsRightPhotos from "./Profile/Content/Main/Details/Right/Photos/Photos";
+import ProfileContentMainDetailsRightPhotosItem from "./Profile/Content/Main/Details/Right/Photos/Item/Item";
 export {
   Login,
   Profile,
@@ -77,5 +78,7 @@ export {
   ProfileContentMainDetailsLeftSpotifyPlaylist,
   ProfileContentMainDetailsLeftSpotifyPlaylistSongItem,
   ProfileContentMainDetailsLeftTwitterFeed,
-  ProfileContentMainDetailsLeftTwitterFeedTwitItem
+  ProfileContentMainDetailsLeftTwitterFeedTwitItem,
+  ProfileContentMainDetailsRightPhotos,
+  ProfileContentMainDetailsRightPhotosItem
 };
