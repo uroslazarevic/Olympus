@@ -6,6 +6,7 @@ import ElipsisBtn from "./ElipsisBtn/ElipsisBtn";
 import InfoBlock from "./InfoBlock/InfoBlock";
 import InfoBlockHeader from "./InfoBlock/Header/Header";
 import InfoBlockContent from "./InfoBlock/Content/Content";
+import InfoBlockItem from "./InfoBlockItem/InfoBlockItem";
 
 export {
   Btn,
@@ -15,5 +16,6 @@ export {
   ElipsisBtn,
   InfoBlock,
   InfoBlockHeader,
-  InfoBlockContent
+  InfoBlockContent,
+  InfoBlockItem
 };

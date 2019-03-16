@@ -1,0 +1,47 @@
+.info-block-item {
+  align-items: center;
+  display: flex;
+  .item-img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+
+    &.square {
+      border-radius: 6px;
+    }
+
+    .circle {
+      border-radius: 100%;
+    }
+  }
+
+  .item-info {
+    margin-left: 10px;
+    .title {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 15px;
+      padding-bottom: 5px;
+      line-height: 15px;
+      cursor: pointer;
+      width: 170px
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .description {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer;
+      width: 200px;
+
+      &:hover {
+        opacity: 0.9;
+        color: #000;
+      }
+    }
+  }
+}

@@ -484,6 +484,28 @@ body {
     margin: 0 auto;
     cursor: pointer; }
 
+.spotify-song-item {
+  display: flex;
+  margin-bottom: 25px;
+  flex-direction: row; }
+  .spotify-song-item .song-index {
+    align-self: center;
+    font-size: 14px;
+    color: #ccc;
+    margin-right: 15px;
+    cursor: pointer; }
+    .spotify-song-item .song-index:hover {
+      color: #000; }
+  .spotify-song-item .song-duration {
+    width: 40px;
+    text-align: center;
+    margin-left: auto;
+    color: #ccc;
+    font-size: 14px;
+    cursor: pointer; }
+    .spotify-song-item .song-duration:hover {
+      color: #000; }
+
 .ui-btn {
   height: 40px;
   border-radius: 4px;
@@ -629,3 +651,38 @@ body {
   border: 1px solid #e7ebf4;
   background-color: #fff;
   padding: 25px 20px; }
+
+.info-block-item {
+  align-items: center;
+  display: flex; }
+  .info-block-item .item-img {
+    height: 40px;
+    width: 40px;
+    cursor: pointer; }
+    .info-block-item .item-img.square {
+      border-radius: 6px; }
+    .info-block-item .item-img .circle {
+      border-radius: 100%; }
+  .info-block-item .item-info {
+    margin-left: 10px; }
+    .info-block-item .item-info .title {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 15px;
+      padding-bottom: 5px;
+      line-height: 15px;
+      cursor: pointer;
+      width: 150px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .info-block-item .item-info .description {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer;
+      width: 200px; }
+      .info-block-item .item-info .description:hover {
+        opacity: 0.9;
+        color: #000; }

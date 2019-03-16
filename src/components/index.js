@@ -1,3 +1,4 @@
+// Login
 import Login from "./Login/Login";
 import Profile from "./Profile/Profile";
 import LoginHeader from "./Login/LoginHeader/LoginHeader";
@@ -9,6 +10,7 @@ import LoginForm from "./Login/LoginContent/Form/LoginForm/LoginForm";
 import RegisterForm from "./Login/LoginContent/Form/RegisterForm/RegisterForm";
 import FormField from "./Login/LoginContent/Form/FormField/FormField";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
+// Profile
 import ProfileHeader from "./Profile/ProfileHeader/ProfileHeader";
 import ProfileContentMainCover from "./Profile/Content/Main/Cover/Cover";
 import AsideNavigation from "./Profile/Content/AsideNavigation/AsideNavigation";
@@ -32,6 +34,8 @@ import ProfileContentMainDetailsRight from "./Profile/Content/Main/Details/Right
 import ProfileContentMainDetailsMiddle from "./Profile/Content/Main/Details/Middle/Middle";
 import ProfileContentMainDetailsLeftProfileIntroSocialNetworks from "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks";
 import ProfileContentMainDetailsLeftUserBadges from "./Profile/Content/Main/Details/Left/UserBadges/UserBadges";
+import ProfileContentMainDetailsLeftSpotifyPlaylist from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SpotifyPlaylist";
+import ProfileContentMainDetailsLeftSpotifyPlaylistSongItem from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SongItem/SongItem";
 
 export {
   Login,
@@ -67,5 +71,7 @@ export {
   ProfileContentMainDetailsRight,
   ProfileContentMainDetailsMiddle,
   ProfileContentMainDetailsLeftProfileIntroSocialNetworks,
-  ProfileContentMainDetailsLeftUserBadges
+  ProfileContentMainDetailsLeftUserBadges,
+  ProfileContentMainDetailsLeftSpotifyPlaylist,
+  ProfileContentMainDetailsLeftSpotifyPlaylistSongItem
 };

@@ -3,11 +3,12 @@ import { connect } from "react-redux";
 
 import {
   ProfileContentMainDetailsLeftProfileIntro,
-  ProfileContentMainDetailsLeftUserBadges
+  ProfileContentMainDetailsLeftUserBadges,
+  ProfileContentMainDetailsLeftSpotifyPlaylist
 } from "components";
 
 const Left = props => {
-  const { details, badges } = props.details;
+  const { details, badges, spotifyList } = props.details;
   return (
     <div className="left">
       <ProfileContentMainDetailsLeftProfileIntro details={details} />
@@ -15,6 +16,7 @@ const Left = props => {
         badges={badges}
         username={props.username}
       />
+      <ProfileContentMainDetailsLeftSpotifyPlaylist spotifyList={spotifyList} />
     </div>
   );
 };

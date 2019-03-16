@@ -155,31 +155,36 @@ export default {
       id: 1,
       src: "https://loremflickr.com/320/240/random?random=1",
       title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      description: "Some description about song",
+      duration: "3:20"
     },
     {
       id: 2,
       src: "https://loremflickr.com/320/240/random?random=2",
-      title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      title: "Lorem ipsum Dolor lorem",
+      description: "Some description about song",
+      duration: "..."
     },
     {
       id: 3,
       src: "https://loremflickr.com/320/240/random?random=3",
       title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      description: "Some description about song",
+      duration: "2:00"
     },
     {
       id: 4,
       src: "https://loremflickr.com/320/240/random?random=4",
       title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      description: "Some description about song",
+      duration: "1:50"
     },
     {
       id: 5,
       src: "https://loremflickr.com/320/240/random?random=5",
       title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      description: "Some description about song",
+      duration: "4:00"
     }
   ],
   twitterFeed: [
