@@ -1,0 +1,25 @@
+.favourite-page-item {
+  display: flex;
+  align-items: center;
+  padding: 20px; }
+  .favourite-page-item:hover {
+    background-color: #f6f5f5; }
+  .favourite-page-item .tooltip-target {
+    margin-left: auto; }
+    .favourite-page-item .tooltip-target .add-to-favorites {
+      font-size: 22px;
+      color: #ccc;
+      cursor: pointer; }
+      .favourite-page-item .tooltip-target .add-to-favorites:hover {
+        color: orangered; }
+
+.react-tooltip-lite {
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500; }
+
+.react-tooltip-lite-arrow {
+  border-color: #333; }

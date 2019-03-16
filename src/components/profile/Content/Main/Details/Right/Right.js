@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import {
   ProfileContentMainDetailsRightPhotos,
   ProfileContentMainDetailsRightBlog,
-  ProfileContentMainDetailsRightFriends
+  ProfileContentMainDetailsRightFriends,
+  ProfileContentMainDetailsRightFavouritePages
 } from "components";
 
 const Left = props => {
@@ -14,6 +15,7 @@ const Left = props => {
       <ProfileContentMainDetailsRightPhotos photos={photos} />
       <ProfileContentMainDetailsRightBlog blog={blog} />
       <ProfileContentMainDetailsRightFriends friends={friends} />
+      <ProfileContentMainDetailsRightFavouritePages favPages={favPages} />
     </div>
   );
 };

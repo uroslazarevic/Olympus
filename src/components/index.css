@@ -591,7 +591,8 @@
     cursor: pointer;
     border: 1px solid orangered; }
     .profile-friends .profile-friends-list .show-more-friends:hover {
-      border: 1px solid #404257; }
+      border: 1px solid #404257;
+      background-color: #f75d25; }
     .profile-friends .profile-friends-list .show-more-friends .friends-remaining {
       position: absolute;
       top: 50%;
@@ -600,6 +601,35 @@
       font-size: 14px;
       line-height: 15px;
       font-weight: 800; }
+
+.favourite-pages .info-block-content {
+  padding: 0px; }
+
+.favourite-page-item {
+  display: flex;
+  align-items: center;
+  padding: 20px; }
+  .favourite-page-item:hover {
+    background-color: #f6f5f5; }
+  .favourite-page-item .tooltip-target {
+    margin-left: auto; }
+    .favourite-page-item .tooltip-target .add-to-favorites {
+      font-size: 22px;
+      color: #ccc;
+      cursor: pointer; }
+      .favourite-page-item .tooltip-target .add-to-favorites:hover {
+        color: orangered; }
+
+.react-tooltip-lite {
+  background: #333;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500; }
+
+.react-tooltip-lite-arrow {
+  border-color: #333; }
 
 .ui-btn {
   height: 40px;
@@ -756,7 +786,7 @@
     cursor: pointer; }
     .info-block-item .item-img.square {
       border-radius: 6px; }
-    .info-block-item .item-img .circle {
+    .info-block-item .item-img.circle {
       border-radius: 100%; }
   .info-block-item .item-info {
     margin-left: 10px; }

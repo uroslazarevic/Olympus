@@ -18,7 +18,8 @@
     cursor: pointer;
     border: 1px solid orangered; }
     .profile-friends .profile-friends-list .show-more-friends:hover {
-      border: 1px solid #404257; }
+      border: 1px solid #404257;
+      background-color: #f75d25; }
     .profile-friends .profile-friends-list .show-more-friends .friends-remaining {
       position: absolute;
       top: 50%;

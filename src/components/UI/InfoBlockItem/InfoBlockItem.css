@@ -7,7 +7,7 @@
     cursor: pointer; }
     .info-block-item .item-img.square {
       border-radius: 6px; }
-    .info-block-item .item-img .circle {
+    .info-block-item .item-img.circle {
       border-radius: 100%; }
   .info-block-item .item-info {
     margin-left: 10px; }

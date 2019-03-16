@@ -7,6 +7,7 @@ import InfoBlock from "./InfoBlock/InfoBlock";
 import InfoBlockHeader from "./InfoBlock/Header/Header";
 import InfoBlockContent from "./InfoBlock/Content/Content";
 import InfoBlockItem from "./InfoBlockItem/InfoBlockItem";
+import Tooltip from "react-tooltip-lite";
 
 export {
   Btn,
@@ -17,5 +18,6 @@ export {
   InfoBlock,
   InfoBlockHeader,
   InfoBlockContent,
-  InfoBlockItem
+  InfoBlockItem,
+  Tooltip
 };

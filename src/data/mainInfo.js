@@ -256,8 +256,32 @@ export default {
     {
       id: 1,
       src: "https://loremflickr.com/320/240/random?random=1",
-      title: "Lorem ipsum Dolor",
-      description: "Some description about song"
+      title: "The Marina Bar",
+      description: "Restaurant / Bar"
+    },
+    {
+      id: 2,
+      src: "https://loremflickr.com/320/240/random?random=2",
+      title: "Tapronus Rock",
+      description: "Rock Band"
+    },
+    {
+      id: 3,
+      src: "https://loremflickr.com/320/240/random?random=3",
+      title: "Pixel Digital Design",
+      description: "Company"
+    },
+    {
+      id: 4,
+      src: "https://loremflickr.com/320/240/random?random=4",
+      title: "Ray Bar & Gril",
+      description: "Restaurant / Bar"
+    },
+    {
+      id: 5,
+      src: "https://loremflickr.com/320/240/random?random=5",
+      title: "Crimson Agency",
+      description: "Company"
     }
   ],
   pools: [
