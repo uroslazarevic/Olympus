@@ -486,14 +486,16 @@ body {
 
 .spotify-song-item {
   display: flex;
-  margin-bottom: 25px;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 15px;
+  cursor: pointer; }
+  .spotify-song-item:hover {
+    background-color: #f6f5f5; }
   .spotify-song-item .song-index {
     align-self: center;
     font-size: 14px;
     color: #ccc;
-    margin-right: 15px;
-    cursor: pointer; }
+    margin-right: 15px; }
     .spotify-song-item .song-index:hover {
       color: #000; }
   .spotify-song-item .song-duration {
@@ -501,10 +503,41 @@ body {
     text-align: center;
     margin-left: auto;
     color: #ccc;
-    font-size: 14px;
-    cursor: pointer; }
+    font-size: 14px; }
     .spotify-song-item .song-duration:hover {
       color: #000; }
+
+.spotify-playlist .info-block-content {
+  padding: 0px; }
+
+.twitter-feed .info-block-content {
+  padding: 0px; }
+  .twitter-feed .info-block-content .twitter-feed-list .twit-item:last-child {
+    margin-bottom: 0px;
+    border-bottom: none; }
+
+.twit-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e7ebf4;
+  padding: 20px; }
+  .twit-item .info-block-item img {
+    height: 50px;
+    width: 50px; }
+  .twit-item .twit-text {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #ccc;
+    font-size: 15px; }
+    .twit-item .twit-text .twit-tag {
+      color: #37bfef;
+      font-weight: 500;
+      cursor: pointer;
+      margin-left: 3px; }
+      .twit-item .twit-text .twit-tag:hover {
+        color: #72d6fa; }
+  .twit-item .twit-created {
+    color: #ddd;
+    font-size: 14px; }
 
 .ui-btn {
   height: 40px;
@@ -673,7 +706,7 @@ body {
       padding-bottom: 5px;
       line-height: 15px;
       cursor: pointer;
-      width: 150px;
+      width: 170px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }

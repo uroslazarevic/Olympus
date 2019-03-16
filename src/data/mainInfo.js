@@ -191,37 +191,47 @@ export default {
     {
       id: 1,
       pseudonym: "Space Cowboy",
-      src: "https://loremflickr.com/320/240/random",
       author: "author",
-      tags: ["tag1", "tag2"]
+      tags: ["tag1", "tag2"],
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago"
     },
     {
       id: 2,
       pseudonym: "Space Cowboy",
-      src: "https://loremflickr.com/320/240/random",
       author: "author",
-      tags: ["tag1", "tag2"]
+      tags: ["tag1", "tag2"],
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago"
     },
     {
       id: 3,
       pseudonym: "Space Cowboy",
-      src: "https://loremflickr.com/320/240/random",
       author: "author",
-      tags: ["tag1", "tag2"]
+      tags: ["tag1", "tag2"],
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago"
     },
     {
       id: 4,
       pseudonym: "Space Cowboy",
-      src: "https://loremflickr.com/320/240/random",
       author: "author",
-      tags: ["tag1", "tag2"]
+      tags: ["tag1", "tag2"],
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago"
     },
     {
       id: 5,
       pseudonym: "Space Cowboy",
-      src: "https://loremflickr.com/320/240/random",
       author: "author",
-      tags: ["tag1", "tag2"]
+      tags: ["tag1", "tag2"],
+      text:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago"
     }
   ],
   blogs: [

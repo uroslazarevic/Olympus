@@ -36,6 +36,8 @@ import ProfileContentMainDetailsLeftProfileIntroSocialNetworks from "./Profile/C
 import ProfileContentMainDetailsLeftUserBadges from "./Profile/Content/Main/Details/Left/UserBadges/UserBadges";
 import ProfileContentMainDetailsLeftSpotifyPlaylist from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SpotifyPlaylist";
 import ProfileContentMainDetailsLeftSpotifyPlaylistSongItem from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SongItem/SongItem";
+import ProfileContentMainDetailsLeftTwitterFeed from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitterFeed";
+import ProfileContentMainDetailsLeftTwitterFeedTwitItem from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitItem/TwitItem";
 
 export {
   Login,
@@ -73,5 +75,7 @@ export {
   ProfileContentMainDetailsLeftProfileIntroSocialNetworks,
   ProfileContentMainDetailsLeftUserBadges,
   ProfileContentMainDetailsLeftSpotifyPlaylist,
-  ProfileContentMainDetailsLeftSpotifyPlaylistSongItem
+  ProfileContentMainDetailsLeftSpotifyPlaylistSongItem,
+  ProfileContentMainDetailsLeftTwitterFeed,
+  ProfileContentMainDetailsLeftTwitterFeedTwitItem
 };

@@ -1,0 +1,22 @@
+.twit-item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #e7ebf4;
+  padding: 20px; }
+  .twit-item .info-block-item img {
+    height: 50px;
+    width: 50px; }
+  .twit-item .twit-text {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: #ccc;
+    font-size: 15px; }
+    .twit-item .twit-text .twit-tag {
+      color: #37bfef;
+      font-weight: 500;
+      cursor: pointer;
+      margin-left: 3px; }
+      .twit-item .twit-text .twit-tag:hover {
+        color: #72d6fa; }
+  .twit-item .twit-created {
+    color: #ddd;
+    font-size: 14px; }

@@ -1,14 +1,18 @@
 .spotify-song-item {
   display: flex;
-  margin-bottom: 25px;
   flex-direction: row;
+  padding: 15px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f5f5;
+  }
 
   .song-index {
     align-self: center;
     font-size: 14px;
     color: #ccc;
     margin-right: 15px;
-    cursor: pointer;
     &:hover {
       color: #000;
     }
@@ -23,6 +27,5 @@
     &:hover {
       color: #000;
     }
-    cursor: pointer;
   }
 }

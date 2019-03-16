@@ -1,14 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import { ProfileContentMainDetailsLeftProfileIntro } from "components";
+// import {
+// } from "components";
 
-const Right = () => {
-  return (
-    <div className="right">
-      {/* <ProfileContentMainDetailsRightProfileIntro/> */}
-      Profile Details right
-    </div>
-  );
+const Left = props => {
+  const { photos, blogs, friends, pools, favPages } = props.details;
+  return <div className="right">RIGHT</div>;
 };
-
-export default Right;
+function mapStateToProps({ user }) {
+  return { details: user.mainInfo, basicInfo: user.basicInfo };
+}
+export default connect(
+  mapStateToProps,
+  null
+)(Left);

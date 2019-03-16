@@ -1,13 +1,15 @@
 .spotify-song-item {
   display: flex;
-  margin-bottom: 25px;
-  flex-direction: row; }
+  flex-direction: row;
+  padding: 15px;
+  cursor: pointer; }
+  .spotify-song-item:hover {
+    background-color: #f6f5f5; }
   .spotify-song-item .song-index {
     align-self: center;
     font-size: 14px;
     color: #ccc;
-    margin-right: 15px;
-    cursor: pointer; }
+    margin-right: 15px; }
     .spotify-song-item .song-index:hover {
       color: #000; }
   .spotify-song-item .song-duration {
@@ -15,7 +17,6 @@
     text-align: center;
     margin-left: auto;
     color: #ccc;
-    font-size: 14px;
-    cursor: pointer; }
+    font-size: 14px; }
     .spotify-song-item .song-duration:hover {
       color: #000; }
