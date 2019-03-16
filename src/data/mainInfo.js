@@ -98,44 +98,57 @@ export default {
     {
       id: 1,
       src: "https://loremflickr.com/320/240/random?random=1",
-      number: 1
+      count: 1,
+      status: "bg-warning"
     },
     {
       id: 2,
       src: "https://loremflickr.com/320/240/random?random=2",
-      number: ""
+      count: "",
+      status: ""
     },
     {
       id: 3,
       src: "https://loremflickr.com/320/240/random?random=3",
-      number: ""
+      count: "",
+      status: ""
     },
     {
       id: 4,
       src: "https://loremflickr.com/320/240/random?random=4",
-      number: ""
+      count: "",
+      status: ""
     },
     {
       id: 5,
       src: "https://loremflickr.com/320/240/random?random=5",
-      number: 1
+      count: 1,
+      status: "bg-primary"
     },
     {
       id: 6,
       src: "https://loremflickr.com/320/240/random?random=6",
-      number: ""
+      count: "",
+      status: ""
     },
     {
       id: 7,
       src: "https://loremflickr.com/320/240/random?random=7",
-      number: ""
+      count: "",
+      status: ""
     },
     {
       id: 8,
       src: "https://loremflickr.com/320/240/random?random=8",
-      number: 2
+      count: 2,
+      status: "bg-primary"
     },
-    { id: 9, src: "https://loremflickr.com/320/240/random?random=9", number: 2 }
+    {
+      id: 9,
+      src: "https://loremflickr.com/320/240/random?random=9",
+      count: 2,
+      status: "bg-success"
+    }
   ],
   spotifyList: [
     {

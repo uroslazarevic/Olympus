@@ -8,7 +8,8 @@
   .info-block-header .block-title {
     color: #404257;
     font-weight: 500;
-    font-size: 18px; }
+    font-size: 18px;
+    text-transform: capitalize; }
   .info-block-header .show-options {
     margin-left: auto;
     color: #ccc; }

@@ -21,7 +21,7 @@ const SocialNetworks = () => {
         />
         <SocialNetworkBtn
           name="dribbble-profile-link"
-          icon={<i class="fab fa-dribbble" />}
+          icon={<i className="fab fa-dribbble" />}
           text="Dribbble"
           btnClass="dribbble-btn"
         />

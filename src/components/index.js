@@ -31,6 +31,7 @@ import ProfileContentMainDetailsLeft from "./Profile/Content/Main/Details/Left/L
 import ProfileContentMainDetailsRight from "./Profile/Content/Main/Details/Right/Right";
 import ProfileContentMainDetailsMiddle from "./Profile/Content/Main/Details/Middle/Middle";
 import ProfileContentMainDetailsLeftProfileIntroSocialNetworks from "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks";
+import ProfileContentMainDetailsLeftUserBadges from "./Profile/Content/Main/Details/Left/UserBadges/UserBadges";
 
 export {
   Login,
@@ -65,5 +66,6 @@ export {
   ProfileContentMainDetailsLeft,
   ProfileContentMainDetailsRight,
   ProfileContentMainDetailsMiddle,
-  ProfileContentMainDetailsLeftProfileIntroSocialNetworks
+  ProfileContentMainDetailsLeftProfileIntroSocialNetworks,
+  ProfileContentMainDetailsLeftUserBadges
 };

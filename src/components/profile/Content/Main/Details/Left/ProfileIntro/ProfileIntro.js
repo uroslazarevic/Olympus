@@ -1,16 +1,15 @@
 import React from "react";
-import { connect } from "react-redux";
 import { InfoBlock } from "components/UI";
 import {
   ProfileContentMainDetailsLeftProfileIntroItem,
   ProfileContentMainDetailsLeftProfileIntroSocialNetworks
 } from "components";
 
-const ProfileIntro = props => {
+const ProfileIntro = ({ details }) => {
   return (
     <div className="profile-intro">
       <InfoBlock name="Profile Intro">
-        {props.details.details.map(item => {
+        {details.map(item => {
           return (
             <ProfileContentMainDetailsLeftProfileIntroItem
               key={item.id}
@@ -24,11 +23,4 @@ const ProfileIntro = props => {
   );
 };
 
-function mapStateToProps({ user }) {
-  return { details: user.mainInfo };
-}
-
-export default connect(
-  mapStateToProps,
-  null
-)(ProfileIntro);
+export default ProfileIntro;
