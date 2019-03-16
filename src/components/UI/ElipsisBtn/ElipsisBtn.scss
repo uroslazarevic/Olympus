@@ -1,4 +1,6 @@
 .elipsis-btn {
-  font-size: 24px;
-  line-height: 24px;
+  $size: 22px;
+  font-size: $size;
+  line-height: $size;
+  cursor: pointer;
 }

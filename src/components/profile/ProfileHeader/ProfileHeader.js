@@ -10,7 +10,7 @@ class ProfileHeader extends Component {
     return (
       <header className="profile-header">
         <div className="logo">
-          <img src={logo} />
+          <img src={logo} alt="logo" />
         </div>
         <div className="page-name">Profile page</div>
         <SearchBar />

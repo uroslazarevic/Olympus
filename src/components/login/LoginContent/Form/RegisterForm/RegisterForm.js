@@ -30,7 +30,7 @@ class RegisterForm extends React.Component {
           <button
             name="register"
             disabled={true}
-            className="form-btn register btn-disabled"
+            className="ui-btn register btn-disabled"
           >
             Register
           </button>

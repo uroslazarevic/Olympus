@@ -1,0 +1,11 @@
+.profile-intro-item {
+  margin-bottom: 25px; }
+  .profile-intro-item .profile-intro-item-title {
+    color: #404257;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 5px; }
+  .profile-intro-item .profile-intro-item-description {
+    color: #ccc;
+    font-size: 15px; }

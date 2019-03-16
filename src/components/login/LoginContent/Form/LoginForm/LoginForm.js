@@ -1,6 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { FormField, FormBtn } from "components";
+import { FormField } from "components";
+import { Btn as FormBtn } from "components/UI";
 import { validateForm } from "utilis";
 
 class LoginForm extends React.Component {
@@ -48,13 +49,13 @@ class LoginForm extends React.Component {
               name="fb-login"
               icon={<i className="fab fa-facebook-f" />}
               text="Login with Facebook"
-              btnClass="fb-login"
+              btnClass="fb-btn"
             />
             <FormBtn
               name="tw-login"
               icon={<i className="fab fa-twitter" />}
               text="Login with Twitter"
-              btnClass="tw-login"
+              btnClass="tw-btn"
             />
           </div>
           <div className="notation">

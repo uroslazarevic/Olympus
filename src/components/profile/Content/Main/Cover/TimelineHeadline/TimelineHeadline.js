@@ -1,10 +1,10 @@
 import React from "react";
 
 import {
-  ProfileContentMainTimelineHeadlineUser,
-  ProfileContentMainTimelineHeadlineSocialBtns
+  ProfileContentMainCoverTimelineHeadlineUser,
+  ProfileContentMainCoverTimelineHeadlineSocialBtns
 } from "components";
-import { ElipsisBtn } from "components/UI";
+import { ElipsisBtn as TimelineHeadlinOptions } from "components/UI";
 
 const TimelineHeadline = ({ user }) => {
   return (
@@ -23,7 +23,7 @@ const TimelineHeadline = ({ user }) => {
         </li>
         <li className="item">
           <a href="javascript:void(0)">
-            <ProfileContentMainTimelineHeadlineUser user={user} />
+            <ProfileContentMainCoverTimelineHeadlineUser user={user} />
           </a>
         </li>
         <li className="item">
@@ -34,11 +34,11 @@ const TimelineHeadline = ({ user }) => {
         </li>
         <li className="item">
           <a href="javascript:void(0)">
-            <ElipsisBtn />
+            <TimelineHeadlinOptions />
           </a>
         </li>
       </ul>
-      <ProfileContentMainTimelineHeadlineSocialBtns />
+      <ProfileContentMainCoverTimelineHeadlineSocialBtns />
     </nav>
   );
 };

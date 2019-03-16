@@ -1,22 +1,25 @@
-.form-btn {
+.ui-btn {
   height: 40px;
   border-radius: 4px;
   border: none;
   color: #fff; }
-  .form-btn:hover {
+  .ui-btn:hover {
     opacity: 0.9; }
-  .form-btn span {
+  .ui-btn span {
     padding-right: 10px; }
 
 .reg-login {
   background-color: orangered; }
 
-.fb-login {
+.fb-btn {
   background-color: #3c5a99;
   margin-bottom: 10px; }
 
-.tw-login {
+.tw-btn {
   background-color: #38a1f3; }
+
+.dribbble-btn {
+  background-color: #f74881; }
 
 .register {
   background-color: orangered;

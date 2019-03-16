@@ -8,14 +8,13 @@ import Form from "./Login/LoginContent/Form/Form";
 import LoginForm from "./Login/LoginContent/Form/LoginForm/LoginForm";
 import RegisterForm from "./Login/LoginContent/Form/RegisterForm/RegisterForm";
 import FormField from "./Login/LoginContent/Form/FormField/FormField";
-import FormBtn from "./Login/LoginContent/Form/FormBtn/FormBtn";
 import ValidationFeedback from "./Login/LoginContent/Form/ValidationFeedback/ValidationFeedback";
 import ProfileHeader from "./Profile/ProfileHeader/ProfileHeader";
 import ProfileContentMainCover from "./Profile/Content/Main/Cover/Cover";
 import AsideNavigation from "./Profile/Content/AsideNavigation/AsideNavigation";
 import SidebarFriends from "./Profile/Content/SidebarFriends/SidebarFriends";
 import ProfileContent from "./Profile/Content/Content";
-import ProfileContentMainTimelineHeadline from "./Profile/Content/Main/TimelineHeadline/TimelineHeadline";
+import ProfileContentMainCoverTimelineHeadline from "./Profile/Content/Main/Cover/TimelineHeadline/TimelineHeadline";
 import SearchBar from "./Profile/ProfileHeader/SearchBar/SearchBar";
 import SocialNotifications from "./Profile/ProfileHeader/SocialNotifications/SocialNotifications";
 import SocialNotification from "./Profile/ProfileHeader/SocialNotification/SocialNotification";
@@ -23,8 +22,15 @@ import BadgedSocNotification from "./Profile/ProfileHeader/BadgedSocNotification
 import SocialNotificationView from "./Profile/ProfileHeader/SocialNotificationView/SocialNotificationView";
 import User from "./Profile/ProfileHeader/User/User";
 import ProfileContentMain from "./Profile/Content/Main/Main";
-import ProfileContentMainTimelineHeadlineUser from "./Profile/Content/Main/TimelineHeadline/User/User";
-import ProfileContentMainTimelineHeadlineSocialBtns from "./Profile/Content/Main/TimelineHeadline/SocialBtns/SocialBtns";
+import ProfileContentMainCoverTimelineHeadlineUser from "./Profile/Content/Main/Cover/TimelineHeadline/User/User";
+import ProfileContentMainCoverTimelineHeadlineSocialBtns from "./Profile/Content/Main/Cover/TimelineHeadline/SocialBtns/SocialBtns";
+import ProfileContentMainDetailsLeftProfileIntro from "./Profile/Content/Main/Details/Left/ProfileIntro/ProfileIntro";
+import ProfileContentMainDetailsLeftProfileIntroItem from "./Profile/Content/Main/Details/Left/ProfileIntro/Item/Item";
+import ProfileContentMainDetails from "./Profile/Content/Main/Details/Details";
+import ProfileContentMainDetailsLeft from "./Profile/Content/Main/Details/Left/Left";
+import ProfileContentMainDetailsRight from "./Profile/Content/Main/Details/Right/Right";
+import ProfileContentMainDetailsMiddle from "./Profile/Content/Main/Details/Middle/Middle";
+import ProfileContentMainDetailsLeftProfileIntroSocialNetworks from "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks";
 
 export {
   Login,
@@ -37,13 +43,12 @@ export {
   LoginForm,
   RegisterForm,
   FormField,
-  FormBtn,
   ValidationFeedback,
   ProfileHeader,
   ProfileContentMainCover,
   AsideNavigation,
   SidebarFriends,
-  ProfileContentMainTimelineHeadline,
+  ProfileContentMainCoverTimelineHeadline,
   SearchBar,
   SocialNotifications,
   SocialNotification,
@@ -52,6 +57,13 @@ export {
   User,
   ProfileContent,
   ProfileContentMain,
-  ProfileContentMainTimelineHeadlineUser,
-  ProfileContentMainTimelineHeadlineSocialBtns
+  ProfileContentMainCoverTimelineHeadlineUser,
+  ProfileContentMainCoverTimelineHeadlineSocialBtns,
+  ProfileContentMainDetailsLeftProfileIntro,
+  ProfileContentMainDetailsLeftProfileIntroItem,
+  ProfileContentMainDetails,
+  ProfileContentMainDetailsLeft,
+  ProfileContentMainDetailsRight,
+  ProfileContentMainDetailsMiddle,
+  ProfileContentMainDetailsLeftProfileIntroSocialNetworks
 };

@@ -1,0 +1,23 @@
+.info-block-header {
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  display: flex;
+  padding: 25px 20px;
+  margin-bottom: 1px;
+
+  .block-title {
+    color: #404257;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .show-options {
+    margin-left: auto;
+    color: #ccc;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

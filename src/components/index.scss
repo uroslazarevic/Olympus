@@ -8,7 +8,6 @@
 @import "./Login//LoginContent/Form/LoginForm/LoginForm.scss";
 @import "./Login//LoginContent/Form/RegisterForm/RegisterForm.scss";
 @import "./Login//LoginContent/Form/FormField/FormField.scss";
-@import "./Login//LoginContent/Form/FormBtn/FormBtn.scss";
 // Profile page
 @import "./Profile/Profile.scss";
 @import "./Profile/ProfileHeader/ProfileHeader.scss";
@@ -21,8 +20,14 @@
 @import "./Profile/Content/SidebarFriends/SidebarFriends.scss";
 @import "./Profile/Content/Main/Main.scss";
 @import "./Profile/Content/Main/Cover/Cover.scss";
-@import "./Profile/Content/Main/TimelineHeadline/TimelineHeadline.scss";
-@import "./Profile/Content/Main/TimelineHeadline/User/User.scss";
-@import "./Profile/Content/Main/TimelineHeadline/SocialBtns/SocialBtns.scss";
+@import "./Profile/Content/Main/Cover/TimelineHeadline/TimelineHeadline.scss";
+@import "./Profile/Content/Main/Cover/TimelineHeadline/User/User.scss";
+@import "./Profile/Content/Main/Cover/TimelineHeadline/SocialBtns/SocialBtns.scss";
+@import "./Profile/Content/Main/Details/Details.scss";
+@import "./Profile/Content/Main/Details/Left/Left.scss";
+@import "./Profile/Content/Main/Details/Middle/Middle.scss";
+@import "./Profile/Content/Main/Details/Right/Right.scss";
+@import "./Profile/Content/Main/Details/Left/ProfileIntro/Item/Item.scss";
+@import "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks.scss";
 // UI
 @import "./UI/index.scss";

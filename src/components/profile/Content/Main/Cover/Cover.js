@@ -1,7 +1,7 @@
 import React from "react";
 import coverImg from "imgs/user-cover-img.jpg";
 
-import { ProfileContentMainTimelineHeadline } from "components";
+import { ProfileContentMainCoverTimelineHeadline } from "components";
 
 const Cover = ({ user }) => {
   return (
@@ -11,7 +11,7 @@ const Cover = ({ user }) => {
         style={{ backgroundImage: `url("${coverImg}")` }}
       />
 
-      <ProfileContentMainTimelineHeadline user={user} />
+      <ProfileContentMainCoverTimelineHeadline user={user} />
     </div>
   );
 };

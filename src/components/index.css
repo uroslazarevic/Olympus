@@ -220,36 +220,6 @@
 .is-success label {
   color: #28a745; }
 
-.form-btn {
-  height: 40px;
-  border-radius: 4px;
-  border: none;
-  color: #fff; }
-  .form-btn:hover {
-    opacity: 0.9; }
-  .form-btn span {
-    padding-right: 10px; }
-
-.reg-login {
-  background-color: orangered; }
-
-.fb-login {
-  background-color: #3c5a99;
-  margin-bottom: 10px; }
-
-.tw-login {
-  background-color: #38a1f3; }
-
-.register {
-  background-color: orangered;
-  width: 100%;
-  margin: 15px 0 30px 0; }
-
-.btn-disabled {
-  background-color: #f0825a; }
-  .btn-disabled:hover {
-    opacity: 1; }
-
 .profile-header {
   display: flex;
   height: 70px;
@@ -405,7 +375,10 @@
 
 .cover {
   border-radius: 2px;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4; }
   .cover .cover-img {
     height: 600px;
     width: 100%;
@@ -424,9 +397,9 @@
       font-weight: 500;
       font-size: 15px; }
       .timeline-headline .list .item a {
-        color: #717590; }
+        color: #ccc; }
         .timeline-headline .list .item a:hover {
-          color: #000; }
+          color: #000 !important; }
 
 .headline-timeline-user {
   display: flex;
@@ -451,6 +424,70 @@
   top: -40px;
   display: flex;
   flex-direction: row; }
+
+.profile-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-gap: 30px; }
+
+.profile-intro-item {
+  margin-bottom: 25px; }
+  .profile-intro-item .profile-intro-item-title {
+    color: #404257;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 5px; }
+  .profile-intro-item .profile-intro-item-description {
+    color: #ccc;
+    font-size: 15px; }
+
+.social-networks .social-networks-header {
+  color: #404257;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 5px; }
+
+.social-networks .social-networks-body {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column; }
+  .social-networks .social-networks-body button:nth-child(-n + 2) {
+    margin-bottom: 15px; }
+
+.ui-btn {
+  height: 40px;
+  border-radius: 4px;
+  border: none;
+  color: #fff; }
+  .ui-btn:hover {
+    opacity: 0.9; }
+  .ui-btn span {
+    padding-right: 10px; }
+
+.reg-login {
+  background-color: orangered; }
+
+.fb-btn {
+  background-color: #3c5a99;
+  margin-bottom: 10px; }
+
+.tw-btn {
+  background-color: #38a1f3; }
+
+.dribbble-btn {
+  background-color: #f74881; }
+
+.register {
+  background-color: orangered;
+  width: 100%;
+  margin: 15px 0 30px 0; }
+
+.btn-disabled {
+  background-color: #f0825a; }
+  .btn-disabled:hover {
+    opacity: 1; }
 
 .badge-item {
   border-radius: 100%;
@@ -526,5 +563,29 @@
     background-color: orangered; }
 
 .elipsis-btn {
-  font-size: 24px;
-  line-height: 24px; }
+  font-size: 22px;
+  line-height: 22px;
+  cursor: pointer; }
+
+.info-block-header {
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  display: flex;
+  padding: 25px 20px;
+  margin-bottom: 1px; }
+  .info-block-header .block-title {
+    color: #404257;
+    font-weight: 500;
+    font-size: 18px; }
+  .info-block-header .show-options {
+    margin-left: auto;
+    color: #ccc; }
+    .info-block-header .show-options:hover {
+      color: #000; }
+
+.info-block-content {
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  padding: 25px 20px; }

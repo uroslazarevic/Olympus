@@ -1,0 +1,13 @@
+.social-networks .social-networks-header {
+  color: #404257;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 5px; }
+
+.social-networks .social-networks-body {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column; }
+  .social-networks .social-networks-body button:nth-child(-n + 2) {
+    margin-bottom: 15px; }
