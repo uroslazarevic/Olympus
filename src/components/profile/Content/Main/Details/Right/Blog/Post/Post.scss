@@ -1,0 +1,36 @@
+.blog-post {
+  border-bottom: 1px solid #e7ebf4;
+  padding: 20px;
+
+  .topic {
+    font-size: 29px;
+    line-height: 35px;
+    color: #717590;
+    cursor: pointer;
+    width: 90%;
+
+    &:hover {
+      color: #404257;
+    }
+  }
+
+  .text {
+    font-size: 15px;
+    color: #747893;
+    width: 90%;
+    padding: {
+      top: 20px;
+      bottom: 20px;
+    }
+  }
+
+  .created {
+    font-size: 14px;
+    color: #ccc;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

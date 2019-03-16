@@ -1,13 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { ProfileContentMainDetailsRightPhotos } from "components";
+import {
+  ProfileContentMainDetailsRightPhotos,
+  ProfileContentMainDetailsRightBlog
+} from "components";
 
 const Left = props => {
-  const { photos, blogs, friends, pools, favPages } = props.details;
+  const { photos, blog, friends, pools, favPages } = props.details;
   return (
     <div className="right">
       <ProfileContentMainDetailsRightPhotos photos={photos} />
+      <ProfileContentMainDetailsRightBlog blog={blog} />
     </div>
   );
 };

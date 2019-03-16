@@ -40,6 +40,8 @@ import ProfileContentMainDetailsLeftTwitterFeed from "./Profile/Content/Main/Det
 import ProfileContentMainDetailsLeftTwitterFeedTwitItem from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitItem/TwitItem";
 import ProfileContentMainDetailsRightPhotos from "./Profile/Content/Main/Details/Right/Photos/Photos";
 import ProfileContentMainDetailsRightPhotosItem from "./Profile/Content/Main/Details/Right/Photos/Item/Item";
+import ProfileContentMainDetailsRightBlog from "./Profile/Content/Main/Details/Right/Blog/Blog";
+import ProfileContentMainDetailsRightBlogPost from "./Profile/Content/Main/Details/Right/Blog/Post/Post";
 export {
   Login,
   Profile,
@@ -80,5 +82,7 @@ export {
   ProfileContentMainDetailsLeftTwitterFeed,
   ProfileContentMainDetailsLeftTwitterFeedTwitItem,
   ProfileContentMainDetailsRightPhotos,
-  ProfileContentMainDetailsRightPhotosItem
+  ProfileContentMainDetailsRightPhotosItem,
+  ProfileContentMainDetailsRightBlog,
+  ProfileContentMainDetailsRightBlogPost
 };

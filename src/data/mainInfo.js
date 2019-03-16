@@ -234,18 +234,20 @@ export default {
       created: "2 hours ago"
     }
   ],
-  blogs: [
+  blog: [
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet",
-      body: "Lorem ipsum dolor sit amet lorem ipsum dolor",
+      topic: "My Perfect Vacations in South America and Europe",
+      text:
+        "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum dolor.",
       date: "March 18th 2018",
       time: "19:00h"
     },
     {
-      id: 1,
-      title: "Lorem ipsum dolor sit amet",
-      body: "Lorem ipsum dolor sit amet lorem ipsum dolor",
+      id: 2,
+      topic: "The Big Experience of Traveling Alone",
+      text:
+        "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum ime lorem ipsum.",
       date: "March 18th 2018",
       time: "19:00h"
     }
