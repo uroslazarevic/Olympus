@@ -5,17 +5,22 @@ import {
   ProfileContentMainDetailsRightPhotos,
   ProfileContentMainDetailsRightBlog,
   ProfileContentMainDetailsRightFriends,
-  ProfileContentMainDetailsRightFavouritePages
+  ProfileContentMainDetailsRightFavouritePages,
+  ProfileContentMainDetailsRightUserPool
 } from "components";
 
-const Left = props => {
-  const { photos, blog, friends, pools, favPages } = props.details;
+const Right = props => {
+  const { photos, blog, friends, pool, favPages } = props.details;
   return (
     <div className="right">
       <ProfileContentMainDetailsRightPhotos photos={photos} />
       <ProfileContentMainDetailsRightBlog blog={blog} />
       <ProfileContentMainDetailsRightFriends friends={friends} />
       <ProfileContentMainDetailsRightFavouritePages favPages={favPages} />
+      <ProfileContentMainDetailsRightUserPool
+        pool={pool}
+        name={props.basicInfo.name.first}
+      />
     </div>
   );
 };
@@ -25,4 +30,4 @@ function mapStateToProps({ user }) {
 export default connect(
   mapStateToProps,
   null
-)(Left);
+)(Right);

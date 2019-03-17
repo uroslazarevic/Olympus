@@ -12,7 +12,7 @@ const Item = ({ page }) => {
         content="ADD TO YOUR FAVS"
       >
         <span className="add-to-favorites">
-          <i class="far fa-star" />
+          <i className="far fa-star" />
         </span>
       </Tooltip>
     </li>

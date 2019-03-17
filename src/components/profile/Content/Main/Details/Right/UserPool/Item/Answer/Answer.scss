@@ -1,0 +1,43 @@
+.answer {
+  display: flex;
+
+  label {
+    font-size: 15px;
+    color: #404257;
+    text-transform: capitalize;
+    font-weight: 600;
+
+    .radio-btn {
+      margin-right: 10px;
+      height: 20px;
+      display: inline-block;
+      width: 20px;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      cursor: pointer;
+
+      .radio-btn-target {
+        pointer-events: none;
+        height: 8px;
+        width: 8px;
+        background: orangered;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        opacity: 1;
+      }
+    }
+  }
+
+  .vote-percentage {
+    font-size: 15px;
+    color: #404257;
+    font-weight: 600;
+    margin-left: auto;
+  }
+}

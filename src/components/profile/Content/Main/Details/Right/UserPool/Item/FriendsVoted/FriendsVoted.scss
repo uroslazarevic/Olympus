@@ -1,0 +1,21 @@
+.friends-voted {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 10px;
+
+  .choice-voter {
+    position: relative;
+    margin-left: -10px;
+    overflow: hidden;
+
+    .voter-avatar {
+      img {
+        cursor: pointer;
+        border: 1px solid #fff;
+        &:hover {
+          border: 1px solid #404257;
+        }
+      }
+    }
+  }
+}

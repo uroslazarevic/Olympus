@@ -1,0 +1,25 @@
+.pool-item .question {
+  color: #747893;
+  font-size: 16px; }
+
+.pool-item .answers {
+  padding-top: 25px;
+  padding-bottom: 10px; }
+  .pool-item .answers .vote-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #717590;
+    padding: 5px; }
+    .pool-item .answers .vote-btn:hover {
+      background: orangered;
+      color: #fff; }
+  .pool-item .answers .proposed-choice {
+    padding-bottom: 15px; }
+    .pool-item .answers .proposed-choice .choice-votes {
+      color: #ccc;
+      font-size: 14px;
+      padding: 5px 0; }

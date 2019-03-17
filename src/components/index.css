@@ -631,6 +631,112 @@
 .react-tooltip-lite-arrow {
   border-color: #333; }
 
+.user-pool .user-pool-list .pool-item {
+  margin-top: 20px; }
+  .user-pool .user-pool-list .pool-item:first-child {
+    margin-top: 0; }
+  .user-pool .user-pool-list .pool-item .proposed-choice:last-child {
+    padding-bottom: 0px; }
+
+.pool-item .question {
+  color: #747893;
+  font-size: 16px; }
+
+.pool-item .answers {
+  padding-top: 25px;
+  padding-bottom: 10px; }
+  .pool-item .answers .vote-btn {
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #717590;
+    padding: 5px; }
+    .pool-item .answers .vote-btn:hover {
+      background: orangered;
+      color: #fff; }
+  .pool-item .answers .proposed-choice {
+    padding-bottom: 15px; }
+    .pool-item .answers .proposed-choice .choice-votes {
+      color: #ccc;
+      font-size: 14px;
+      padding: 5px 0; }
+
+.answer {
+  display: flex; }
+  .answer label {
+    font-size: 15px;
+    color: #404257;
+    text-transform: capitalize;
+    font-weight: 600; }
+    .answer label .radio-btn {
+      margin-right: 10px;
+      height: 20px;
+      display: inline-block;
+      width: 20px;
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      cursor: pointer; }
+      .answer label .radio-btn .radio-btn-target {
+        pointer-events: none;
+        height: 8px;
+        width: 8px;
+        background: orangered;
+        border-radius: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        opacity: 1; }
+  .answer .vote-percentage {
+    font-size: 15px;
+    color: #404257;
+    font-weight: 600;
+    margin-left: auto; }
+
+.friends-voted {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 10px; }
+  .friends-voted .choice-voter {
+    position: relative;
+    margin-left: -10px;
+    overflow: hidden; }
+    .friends-voted .choice-voter .voter-avatar img {
+      cursor: pointer;
+      border: 1px solid #fff; }
+      .friends-voted .choice-voter .voter-avatar img:hover {
+        border: 1px solid #404257; }
+
+.pool-progress {
+  height: 15px;
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  border-radius: 6px;
+  cursor: pointer; }
+  .pool-progress:hover .pool-progress-bar .progress-bar-percentage {
+    opacity: 1; }
+  .pool-progress .pool-progress-bar {
+    height: 100%;
+    background-color: orangered;
+    position: relative; }
+    .pool-progress .pool-progress-bar .progress-bar-percentage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      opacity: 0; }
+
 .ui-btn {
   height: 40px;
   border-radius: 4px;

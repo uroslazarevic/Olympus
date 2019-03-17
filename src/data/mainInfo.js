@@ -284,7 +284,7 @@ export default {
       description: "Company"
     }
   ],
-  pools: [
+  pool: [
     {
       id: 1,
       question: "Lorem ipsum dolor?",

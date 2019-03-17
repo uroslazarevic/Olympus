@@ -45,6 +45,11 @@ import ProfileContentMainDetailsRightBlogPost from "./Profile/Content/Main/Detai
 import ProfileContentMainDetailsRightFriends from "./Profile/Content/Main/Details/Right/Friends/Friends";
 import ProfileContentMainDetailsRightFavouritePages from "./Profile/Content/Main/Details/Right/FavouritePages/FavouritePages";
 import ProfileContentMainDetailsRightFavouritePagesItem from "./Profile/Content/Main/Details/Right/FavouritePages/Item/Item";
+import ProfileContentMainDetailsRightUserPool from "./Profile/Content/Main/Details/Right/UserPool/UserPool";
+import ProfileContentMainDetailsRightUserPoolItem from "./Profile/Content/Main/Details/Right/UserPool/Item/Item";
+import ProfileContentMainDetailsRightUserPoolItemAnswer from "./Profile/Content/Main/Details/Right/UserPool/Item/Answer/Answer";
+import ProfileContentMainDetailsRightUserPoolItemPoolProgressBar from "./Profile/Content/Main/Details/Right/UserPool/Item/PoolProgressBar/PoolProgressBar";
+import ProfileContentMainDetailsRightUserPoolItemFriendsVoted from "./Profile/Content/Main/Details/Right/UserPool/Item/FriendsVoted/FriendsVoted";
 export {
   Login,
   Profile,
@@ -90,5 +95,10 @@ export {
   ProfileContentMainDetailsRightBlogPost,
   ProfileContentMainDetailsRightFriends,
   ProfileContentMainDetailsRightFavouritePages,
-  ProfileContentMainDetailsRightFavouritePagesItem
+  ProfileContentMainDetailsRightFavouritePagesItem,
+  ProfileContentMainDetailsRightUserPool,
+  ProfileContentMainDetailsRightUserPoolItem,
+  ProfileContentMainDetailsRightUserPoolItemAnswer,
+  ProfileContentMainDetailsRightUserPoolItemPoolProgressBar,
+  ProfileContentMainDetailsRightUserPoolItemFriendsVoted
 };

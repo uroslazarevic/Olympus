@@ -1,0 +1,16 @@
+.user-pool {
+  .user-pool-list {
+    .pool-item {
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .proposed-choice {
+        &:last-child {
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
