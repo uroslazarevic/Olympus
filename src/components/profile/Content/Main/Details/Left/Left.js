@@ -2,23 +2,20 @@ import React from "react";
 import { connect } from "react-redux";
 
 import {
-  ProfileContentMainDetailsLeftProfileIntro,
-  ProfileContentMainDetailsLeftUserBadges,
-  ProfileContentMainDetailsLeftSpotifyPlaylist,
-  ProfileContentMainDetailsLeftTwitterFeed
+  ProfileIntro,
+  UserBadges,
+  SpotifyPlaylist,
+  TwitterFeed
 } from "components";
 
 const Left = props => {
   const { details, badges, spotifyList, twitterFeed } = props.details;
   return (
     <div className="left">
-      <ProfileContentMainDetailsLeftProfileIntro details={details} />
-      <ProfileContentMainDetailsLeftUserBadges
-        badges={badges}
-        username={props.basicInfo.name.first}
-      />
-      <ProfileContentMainDetailsLeftSpotifyPlaylist spotifyList={spotifyList} />
-      <ProfileContentMainDetailsLeftTwitterFeed
+      <ProfileIntro details={details} />
+      <UserBadges badges={badges} username={props.basicInfo.name.first} />
+      <SpotifyPlaylist spotifyList={spotifyList} />
+      <TwitterFeed
         twitterFeed={twitterFeed}
         authorSrc={props.basicInfo.picture.thumbnail}
       />

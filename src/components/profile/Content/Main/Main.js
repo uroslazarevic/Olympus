@@ -1,12 +1,12 @@
 import React from "react";
 
-import { ProfileContentMainCover, ProfileContentMainDetails } from "components";
+import { ProfileCover, ProfileDetails } from "components";
 
 const Main = ({ user }) => {
   return (
     <div className="content-main">
-      <ProfileContentMainCover user={user} />
-      <ProfileContentMainDetails />
+      <ProfileCover user={user} />
+      <ProfileDetails />
     </div>
   );
 };

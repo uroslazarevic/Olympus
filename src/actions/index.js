@@ -1,6 +1,6 @@
 import { SIGN_IN, SIGN_OUT, FETCH_USER } from "./types";
 
-import history from "utilis/history";
+import { history } from "utilis";
 import { user } from "apis";
 
 export const signIn = () => dispatch => {

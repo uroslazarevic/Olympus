@@ -1,6 +1,6 @@
 import React from "react";
 
-const PoolProgressBar = props => {
+const ProgressBar = props => {
   return (
     <div className="pool-progress">
       <div
@@ -16,4 +16,4 @@ const PoolProgressBar = props => {
   );
 };
 
-export default PoolProgressBar;
+export default ProgressBar;

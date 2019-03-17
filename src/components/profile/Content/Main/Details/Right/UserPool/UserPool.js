@@ -1,7 +1,7 @@
 import React from "react";
 
 import { InfoBlock } from "components/UI";
-import { ProfileContentMainDetailsRightUserPoolItem } from "components";
+import { UserPoolItem } from "components";
 
 const UserPool = ({ pool, name }) => {
   return (
@@ -9,12 +9,7 @@ const UserPool = ({ pool, name }) => {
       <InfoBlock name={`${name}'s Pool`}>
         <ul className="user-pool-list">
           {pool.map(poolItem => {
-            return (
-              <ProfileContentMainDetailsRightUserPoolItem
-                key={poolItem.id}
-                poolItem={poolItem}
-              />
-            );
+            return <UserPoolItem key={poolItem.id} poolItem={poolItem} />;
           })}
         </ul>
       </InfoBlock>

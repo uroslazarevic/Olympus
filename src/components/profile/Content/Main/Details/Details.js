@@ -2,16 +2,16 @@ import React from "react";
 
 import {
   ProfileContentMainDetailsLeft,
-  ProfileContentMainDetailsMiddle,
-  ProfileContentMainDetailsRight
+  DetailsMiddle,
+  DetailsRight
 } from "components";
 
 const Details = () => {
   return (
     <div className="profile-details">
       <ProfileContentMainDetailsLeft />
-      <ProfileContentMainDetailsMiddle />
-      <ProfileContentMainDetailsRight />
+      <DetailsMiddle />
+      <DetailsRight />
     </div>
   );
 };

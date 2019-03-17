@@ -1,6 +1,6 @@
 import React from "react";
 import { InfoBlock } from "components/UI";
-import { ProfileContentMainDetailsLeftSpotifyPlaylistSongItem } from "components";
+import { SpotifyPlaylistSongItem } from "components";
 
 const SpotifyPlaylist = ({ spotifyList }) => {
   return (
@@ -9,7 +9,7 @@ const SpotifyPlaylist = ({ spotifyList }) => {
         <ul className="spotify-songs-list">
           {spotifyList.map((song, index) => {
             return (
-              <ProfileContentMainDetailsLeftSpotifyPlaylistSongItem
+              <SpotifyPlaylistSongItem
                 key={song.id}
                 song={song}
                 index={index}

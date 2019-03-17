@@ -2,9 +2,9 @@ import React from "react";
 
 import { calculateSharePercentageInTotal } from "utilis";
 import {
-  ProfileContentMainDetailsRightUserPoolItemAnswer,
-  ProfileContentMainDetailsRightUserPoolItemPoolProgressBar,
-  ProfileContentMainDetailsRightUserPoolItemFriendsVoted
+  PoolItemAnswer,
+  PoolItemProgressBar,
+  PoolItemFriendsVoted
 } from "components";
 
 class Item extends React.Component {
@@ -35,7 +35,7 @@ class Item extends React.Component {
 
             return (
               <div key={choice.id} className="proposed-choice">
-                <ProfileContentMainDetailsRightUserPoolItemAnswer
+                <PoolItemAnswer
                   radioBtnId={radioBtnId}
                   clickedRadioBtnId={clickedRadioBtnId}
                   handlePoolVoting={this.handlePoolVoting}
@@ -43,9 +43,7 @@ class Item extends React.Component {
                   votePercentage={votePercentage}
                 />
 
-                <ProfileContentMainDetailsRightUserPoolItemPoolProgressBar
-                  votePercentage={votePercentage}
-                />
+                <PoolItemProgressBar votePercentage={votePercentage} />
 
                 <div className="choice-votes">
                   {choice.votes > 1
@@ -53,9 +51,7 @@ class Item extends React.Component {
                     : `${choice.votes} friend voted for this`}
                 </div>
 
-                <ProfileContentMainDetailsRightUserPoolItemFriendsVoted
-                  voters={choice.voters}
-                />
+                <PoolItemFriendsVoted voters={choice.voters} />
               </div>
             );
           })}

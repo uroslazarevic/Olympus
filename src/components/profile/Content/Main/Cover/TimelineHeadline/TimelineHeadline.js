@@ -1,9 +1,6 @@
 import React from "react";
 
-import {
-  ProfileContentMainCoverTimelineHeadlineUser,
-  ProfileContentMainCoverTimelineHeadlineSocialBtns
-} from "components";
+import { TimelineHeadlineUser, TimelineHeadlineSocialBtns } from "components";
 import { ElipsisBtn as TimelineHeadlinOptions } from "components/UI";
 
 const TimelineHeadline = ({ user }) => {
@@ -23,7 +20,7 @@ const TimelineHeadline = ({ user }) => {
         </li>
         <li className="item">
           <a href="javascript:void(0)">
-            <ProfileContentMainCoverTimelineHeadlineUser user={user} />
+            <TimelineHeadlineUser user={user} />
           </a>
         </li>
         <li className="item">
@@ -38,7 +35,7 @@ const TimelineHeadline = ({ user }) => {
           </a>
         </li>
       </ul>
-      <ProfileContentMainCoverTimelineHeadlineSocialBtns />
+      <TimelineHeadlineSocialBtns />
     </nav>
   );
 };

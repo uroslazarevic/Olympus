@@ -1,6 +1,6 @@
 import React from "react";
 import { InfoBlock } from "components/UI";
-import { ProfileContentMainDetailsRightBlogPost } from "components";
+import { BlogPost } from "components";
 
 const Blog = ({ blog }) => {
   return (
@@ -8,12 +8,7 @@ const Blog = ({ blog }) => {
       <InfoBlock name="Blog Posts">
         <ul className="profile-blog-posts">
           {blog.map(post => {
-            return (
-              <ProfileContentMainDetailsRightBlogPost
-                key={post.id}
-                post={post}
-              />
-            );
+            return <BlogPost key={post.id} post={post} />;
           })}
         </ul>
       </InfoBlock>

@@ -1,26 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import {
-  ProfileContentMainDetailsRightPhotos,
-  ProfileContentMainDetailsRightBlog,
-  ProfileContentMainDetailsRightFriends,
-  ProfileContentMainDetailsRightFavouritePages,
-  ProfileContentMainDetailsRightUserPool
-} from "components";
+import { Photos, Blog, Friends, FavouritePages, UserPool } from "components";
 
 const Right = props => {
   const { photos, blog, friends, pool, favPages } = props.details;
   return (
     <div className="right">
-      <ProfileContentMainDetailsRightPhotos photos={photos} />
-      <ProfileContentMainDetailsRightBlog blog={blog} />
-      <ProfileContentMainDetailsRightFriends friends={friends} />
-      <ProfileContentMainDetailsRightFavouritePages favPages={favPages} />
-      <ProfileContentMainDetailsRightUserPool
-        pool={pool}
-        name={props.basicInfo.name.first}
-      />
+      <Photos photos={photos} />
+      <Blog blog={blog} />
+      <Friends friends={friends} />
+      <FavouritePages favPages={favPages} />
+      <UserPool pool={pool} name={props.basicInfo.name.first} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProfileContentMainDetailsLeftProfileIntro } from "components";
+import { ProfileIntro } from "components";
 
 const Middle = () => {
   return (

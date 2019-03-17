@@ -3,7 +3,7 @@ import logo from "imgs/olympus_logo.png";
 
 import { SearchBar, SocialNotifications, User } from "components";
 
-class ProfileHeader extends Component {
+class Header extends Component {
   render() {
     console.log(this.props.user);
     const { mainInfo } = this.props.user;
@@ -22,4 +22,4 @@ class ProfileHeader extends Component {
   }
 }
 
-export default ProfileHeader;
+export default Header;

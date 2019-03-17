@@ -1,6 +1,6 @@
 import React from "react";
 import { InfoBlock } from "components/UI";
-import { ProfileContentMainDetailsLeftTwitterFeedTwitItem } from "components";
+import { TwitterFeedTwitItem } from "components";
 
 const TwitterFeed = ({ twitterFeed, authorSrc }) => {
   return (
@@ -9,11 +9,7 @@ const TwitterFeed = ({ twitterFeed, authorSrc }) => {
         <ul className="twitter-feed-list">
           {twitterFeed.map(twit => {
             return (
-              <ProfileContentMainDetailsLeftTwitterFeedTwitItem
-                key={twit.id}
-                twit={twit}
-                src={authorSrc}
-              />
+              <TwitterFeedTwitItem key={twit.id} twit={twit} src={authorSrc} />
             );
           })}
         </ul>

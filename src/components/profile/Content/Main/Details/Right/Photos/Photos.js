@@ -1,6 +1,6 @@
 import React from "react";
 import { InfoBlock } from "components/UI";
-import { ProfileContentMainDetailsRightPhotosItem } from "components";
+import { PhotosItem } from "components";
 
 const Photos = ({ photos }) => {
   return (
@@ -8,12 +8,7 @@ const Photos = ({ photos }) => {
       <InfoBlock name="Last Photos">
         <ul className="profile-photos-list">
           {photos.map(photo => {
-            return (
-              <ProfileContentMainDetailsRightPhotosItem
-                key={photo.id}
-                photo={photo}
-              />
-            );
+            return <PhotosItem key={photo.id} photo={photo} />;
           })}
         </ul>
       </InfoBlock>

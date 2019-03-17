@@ -2,7 +2,7 @@ import React from "react";
 
 import { Greetings, RegisterBtn, Form } from "components";
 
-const LoginContent = () => {
+const Content = () => {
   return (
     <div className="login-content">
       <div className="aside-left">
@@ -16,4 +16,4 @@ const LoginContent = () => {
   );
 };
 
-export default LoginContent;
+export default Content;

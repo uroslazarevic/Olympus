@@ -1,7 +1,7 @@
 import React from "react";
 import { Router, Route } from "react-router-dom";
-import history from "utilis/history";
 
+import { history } from "utilis";
 import { ProfileRoute } from "router";
 import { Login, Profile } from "components";
 

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../../../imgs/olympus_logo.png";
 
-const LoginHeader = () => {
+const Header = () => {
   return (
     <div className="login-header">
       <Link className="login-home-link" to="/">
@@ -17,4 +17,4 @@ const LoginHeader = () => {
   );
 };
 
-export default LoginHeader;
+export default Header;

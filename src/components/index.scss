@@ -1,22 +1,22 @@
 // Login page
 @import "./Login/Login.scss";
-@import "./Login/LoginHeader/LoginHeader.scss";
-@import "./Login//LoginContent/LoginContent.scss";
-@import "./Login//LoginContent/Greetings/Greetings.scss";
-@import "./Login//LoginContent/RegisterBtn/RegisterBtn.scss";
-@import "./Login//LoginContent/Form//Form.scss";
-@import "./Login//LoginContent/Form/LoginForm/LoginForm.scss";
-@import "./Login//LoginContent/Form/RegisterForm/RegisterForm.scss";
-@import "./Login//LoginContent/Form/FormField/FormField.scss";
+@import "./Login/Header/Header.scss";
+@import "./Login/Content/Content.scss";
+@import "./Login/Content/Greetings/Greetings.scss";
+@import "./Login/Content/RegisterBtn/RegisterBtn.scss";
+@import "./Login/Content/Form/Form.scss";
+@import "./Login/Content/Form/LoginForm/LoginForm.scss";
+@import "./Login/Content/Form/RegisterForm/RegisterForm.scss";
+@import "./Login/Content/Form/FormField/FormField.scss";
 // Profile page
 @import "./Profile/Profile.scss";
-@import "./Profile/ProfileHeader/ProfileHeader.scss";
-@import "./Profile/ProfileHeader/SocialNotification/SocialNotification.scss";
-@import "./Profile/ProfileHeader/SocialNotifications/SocialNotifications.scss";
-@import "./Profile/ProfileHeader/User/User.scss";
-@import "./Profile/ProfileHeader/SearchBar/SearchBar.scss";
+@import "./Profile/Header/Header.scss";
+@import "./Profile/Header/SocialNotification/SocialNotification.scss";
+@import "./Profile/Header/SocialNotifications/SocialNotifications.scss";
+@import "./Profile/Header/User/User.scss";
+@import "./Profile/Header/SearchBar/SearchBar.scss";
 @import "./Profile/Content/Content.scss";
-@import "./Profile/Content/AsideNavigation//AsideNavigation.scss";
+@import "./Profile/Content/AsideNavigation/AsideNavigation.scss";
 @import "./Profile/Content/SidebarFriends/SidebarFriends.scss";
 @import "./Profile/Content/Main/Main.scss";
 @import "./Profile/Content/Main/Cover/Cover.scss";
@@ -45,6 +45,6 @@
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/Item.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/Answer/Answer.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/FriendsVoted/FriendsVoted.scss";
-@import "./Profile/Content/Main/Details/Right/UserPool/Item/PoolProgressBar/PoolProgressBar.scss";
+@import "./Profile/Content/Main/Details/Right/UserPool/Item/ProgressBar/ProgressBar.scss";
 // UI
 @import "./UI/index.scss";
