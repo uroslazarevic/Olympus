@@ -1,0 +1,7 @@
+.post-header {
+  display: flex; }
+  .post-header .show-options {
+    margin-left: auto;
+    color: #ccc; }
+    .post-header .show-options:hover {
+      color: #000; }

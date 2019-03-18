@@ -1,6 +1,8 @@
-// Login page
+// Login Page
 @import "./Login/Login.scss";
+// Login Header
 @import "./Login/Header/Header.scss";
+// Login Content
 @import "./Login/Content/Content.scss";
 @import "./Login/Content/Greetings/Greetings.scss";
 @import "./Login/Content/RegisterBtn/RegisterBtn.scss";
@@ -8,25 +10,31 @@
 @import "./Login/Content/Form/LoginForm/LoginForm.scss";
 @import "./Login/Content/Form/RegisterForm/RegisterForm.scss";
 @import "./Login/Content/Form/FormField/FormField.scss";
-// Profile page
+
+// Profile Page
 @import "./Profile/Profile.scss";
+// Profile Header
 @import "./Profile/Header/Header.scss";
 @import "./Profile/Header/SocialNotification/SocialNotification.scss";
 @import "./Profile/Header/SocialNotifications/SocialNotifications.scss";
 @import "./Profile/Header/User/User.scss";
 @import "./Profile/Header/SearchBar/SearchBar.scss";
+// Profile Content
 @import "./Profile/Content/Content.scss";
 @import "./Profile/Content/AsideNavigation/AsideNavigation.scss";
 @import "./Profile/Content/SidebarFriends/SidebarFriends.scss";
+// Profile Main Content
 @import "./Profile/Content/Main/Main.scss";
 @import "./Profile/Content/Main/Cover/Cover.scss";
 @import "./Profile/Content/Main/Cover/TimelineHeadline/TimelineHeadline.scss";
 @import "./Profile/Content/Main/Cover/TimelineHeadline/User/User.scss";
 @import "./Profile/Content/Main/Cover/TimelineHeadline/SocialBtns/SocialBtns.scss";
+// Details
 @import "./Profile/Content/Main/Details/Details.scss";
 @import "./Profile/Content/Main/Details/Left/Left.scss";
 @import "./Profile/Content/Main/Details/Middle/Middle.scss";
 @import "./Profile/Content/Main/Details/Right/Right.scss";
+// Details left
 @import "./Profile/Content/Main/Details/Left/ProfileIntro/Item/Item.scss";
 @import "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks.scss";
 @import "./Profile/Content/Main/Details/Left/UserBadges/UserBadges.scss";
@@ -34,6 +42,7 @@
 @import "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SpotifyPlaylist.scss";
 @import "./Profile/Content/Main/Details/Left/TwitterFeed/TwitterFeed.scss";
 @import "./Profile/Content/Main/Details/Left/TwitterFeed/TwitItem/TwitItem.scss";
+// Details Right
 @import "./Profile/Content/Main/Details/Right/Photos/Photos.scss";
 @import "./Profile/Content/Main/Details/Right/Photos/Item/Item.scss";
 @import "./Profile/Content/Main/Details/Right/Blog/Blog.scss";
@@ -46,5 +55,15 @@
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/Answer/Answer.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/FriendsVoted/FriendsVoted.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/ProgressBar/ProgressBar.scss";
+// Details Middle
+@import "./Profile/Content/Main/Details/Middle/UserPosts/UserPosts.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Post.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Header.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/Creator.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/PostOrigin/PostOrigin.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Content/Content.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/CommentReply/CommentReply.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Comment/Comment.scss";
 // UI
 @import "./UI/index.scss";

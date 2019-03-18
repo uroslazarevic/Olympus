@@ -322,5 +322,345 @@ export default {
         }
       ]
     }
+  ],
+  posts: [
+    {
+      id: 1,
+      shareType: "text",
+      sharedFrom: "",
+      created: "19 hours ago",
+      content:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt, libero error aliquam quos ipsam accusamus expedita quam tempore ab beatae? Repellendus nisi natus eos ab minima quod tenetur?",
+      likes: {
+        count: 7,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "lorem"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "lorem"
+          },
+          {
+            id: 3,
+            src: "https://loremflickr.com/320/240/people?random=3",
+            name: "lorem"
+          },
+          {
+            id: 4,
+            src: "https://loremflickr.com/320/240/people?random=4",
+            name: "lorem"
+          },
+          {
+            id: 5,
+            src: "https://loremflickr.com/320/240/people?random=5",
+            name: "lorem"
+          },
+          {
+            id: 6,
+            src: "https://loremflickr.com/320/240/people?random=6",
+            name: "lorem"
+          },
+          {
+            id: 7,
+            src: "https://loremflickr.com/320/240/people?random=7",
+            name: "lorem"
+          }
+        ]
+      },
+      comments: {
+        count: 2,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1",
+            comment:
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            created: "2 hours ago",
+            likes: {
+              count: 2,
+              list: [
+                {
+                  id: 1,
+                  src: "https://loremflickr.com/320/240/people?random=4",
+                  name: "Person 4"
+                },
+                {
+                  id: 2,
+                  src: "https://loremflickr.com/320/240/people?random=5",
+                  name: "Person 5"
+                }
+              ]
+            },
+            comments: {
+              count: 2,
+              list: [
+                {
+                  id: 1,
+                  src: "https://loremflickr.com/320/240/people?random=7",
+                  created: "1 hours ago",
+                  name: "Person 7",
+                  comment: "",
+                  likes: {
+                    count: 0,
+                    list: []
+                  },
+                  comments: {
+                    count: 0,
+                    list: []
+                  }
+                },
+                {
+                  id: 2,
+                  src: "https://loremflickr.com/320/240/people?random=8",
+                  name: "Person 8",
+                  created: "12 hours ago",
+                  comment: "",
+                  likes: {
+                    count: 0,
+                    list: []
+                  },
+                  comments: {
+                    count: 0,
+                    list: []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2",
+            comment: "",
+            created: "1 hours ago",
+            likes: {
+              count: 0,
+              list: []
+            },
+            comments: {
+              count: 0,
+              list: []
+            }
+          }
+        ]
+      },
+      shares: {
+        count: 2,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
+          }
+        ]
+      }
+    },
+    {
+      id: 2,
+      shareType: "text",
+      sharedFrom: "",
+      created: "7 hours ago",
+      content:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt, libero error aliquam !",
+      likes: {
+        count: 2,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person1"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person2"
+          }
+        ]
+      },
+      comments: {
+        count: 2,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1",
+            comment:
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            created: "2 hours ago",
+            likes: {
+              count: 2,
+              list: [
+                {
+                  id: 1,
+                  src: "https://loremflickr.com/320/240/people?random=4",
+                  name: "Person 4"
+                },
+                {
+                  id: 2,
+                  src: "https://loremflickr.com/320/240/people?random=5",
+                  name: "Person 5"
+                }
+              ]
+            },
+            comments: {
+              count: 0,
+              list: []
+            }
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2",
+            comment: "Lorem ipsum, dolor sit amet consectetur!",
+            created: "5 hours ago",
+            likes: {
+              count: 0,
+              list: []
+            },
+            comments: {
+              count: 0,
+              list: []
+            }
+          }
+        ]
+      },
+      shares: {
+        count: 1,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
+          }
+        ]
+      }
+    },
+    {
+      id: 3,
+      shareType: "video",
+      sharedFrom: "link",
+      videoUrl: "https://www.youtube.com/watch?v=tAGnKpE4NCI",
+      created: "12 hours ago",
+      content:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
+      likes: {
+        count: 3,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "You"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1"
+          },
+          {
+            id: 3,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
+          }
+        ]
+      },
+      comments: {
+        count: 0,
+        list: []
+      },
+      shares: {
+        count: 2,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=5",
+            name: "Person 5"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=8",
+            name: "Person 8"
+          }
+        ]
+      }
+    },
+    {
+      id: 4,
+      shareType: "image",
+      sharedFrom: "Person 1",
+      created: "7 hours ago",
+      content:
+        "Hey, everyone! Check out this fine piece of art produced by Person1! :)",
+      likes: {
+        count: 3,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "You"
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1"
+          },
+          {
+            id: 3,
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
+          }
+        ]
+      },
+      comments: {
+        count: 1,
+        list: [
+          {
+            id: 1,
+            src: "https://loremflickr.com/320/240/people?random=1",
+            name: "Person 1",
+            comment:
+              "That is a amazing photo, I wonder what genius is behind that mastery!",
+            created: "25 minutes ago",
+            likes: {
+              count: 2,
+              list: [
+                {
+                  id: 1,
+                  src: "https://loremflickr.com/320/240/people?random=4",
+                  name: "Person 4"
+                },
+                {
+                  id: 2,
+                  src: "https://loremflickr.com/320/240/people?random=5",
+                  name: "Person 5"
+                }
+              ]
+            },
+            comments: {
+              count: 0,
+              list: []
+            }
+          }
+        ]
+      },
+      shares: {
+        count: 0,
+        list: []
+      }
+    }
   ]
 };

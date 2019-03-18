@@ -2,12 +2,12 @@
   display: inline-flex;
   flex-direction: row;
   padding-left: 10px; }
-  .friends-voted .choice-voter {
+  .friends-voted .voter {
     position: relative;
     margin-left: -10px;
     overflow: hidden; }
-    .friends-voted .choice-voter .voter-avatar img {
+    .friends-voted .voter .voter-avatar img {
       cursor: pointer;
       border: 1px solid #fff; }
-      .friends-voted .choice-voter .voter-avatar img:hover {
+      .friends-voted .voter .voter-avatar img:hover {
         border: 1px solid #404257; }

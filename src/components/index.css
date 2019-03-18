@@ -703,14 +703,14 @@
   display: inline-flex;
   flex-direction: row;
   padding-left: 10px; }
-  .friends-voted .choice-voter {
+  .friends-voted .voter {
     position: relative;
     margin-left: -10px;
     overflow: hidden; }
-    .friends-voted .choice-voter .voter-avatar img {
+    .friends-voted .voter .voter-avatar img {
       cursor: pointer;
       border: 1px solid #fff; }
-      .friends-voted .choice-voter .voter-avatar img:hover {
+      .friends-voted .voter .voter-avatar img:hover {
         border: 1px solid #404257; }
 
 .pool-progress {
@@ -736,6 +736,60 @@
       font-size: 11px;
       font-weight: bold;
       opacity: 0; }
+
+.user-post {
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff; }
+
+.post-header {
+  display: flex; }
+  .post-header .show-options {
+    margin-left: auto;
+    color: #ccc; }
+    .post-header .show-options:hover {
+      color: #000; }
+
+.post-creator {
+  align-items: center;
+  display: flex; }
+  .post-creator .creator-img {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 100%; }
+  .post-creator .info {
+    margin-left: 10px;
+    display: flex;
+    align-items: baseline; }
+    .post-creator .info .creator .fullname {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 17px;
+      padding-bottom: 5px;
+      line-height: 17px;
+      cursor: pointer; }
+    .post-creator .info .creator .post-created {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer; }
+      .post-creator .info .creator .post-created:hover {
+        opacity: 0.9;
+        color: #000; }
+
+.post-origin {
+  color: #717590;
+  font-size: 17px;
+  padding-left: 5px; }
+  .post-origin .text-stress {
+    color: orangered;
+    font-weight: 500;
+    cursor: pointer; }
+    .post-origin .text-stress:hover {
+      color: #f88526; }
 
 .ui-btn {
   height: 40px;

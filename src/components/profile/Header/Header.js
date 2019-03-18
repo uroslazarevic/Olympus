@@ -5,8 +5,8 @@ import { SearchBar, SocialNotifications, User } from "components";
 
 class Header extends Component {
   render() {
-    console.log(this.props.user);
     const { mainInfo } = this.props.user;
+
     return (
       <header className="profile-header">
         <div className="logo">

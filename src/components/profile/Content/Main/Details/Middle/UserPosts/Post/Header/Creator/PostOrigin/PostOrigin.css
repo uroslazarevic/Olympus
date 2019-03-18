@@ -1,0 +1,10 @@
+.post-origin {
+  color: #717590;
+  font-size: 17px;
+  padding-left: 5px; }
+  .post-origin .text-stress {
+    color: orangered;
+    font-weight: 500;
+    cursor: pointer; }
+    .post-origin .text-stress:hover {
+      color: #f88526; }

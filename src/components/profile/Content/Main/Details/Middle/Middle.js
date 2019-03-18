@@ -1,14 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import { ProfileIntro } from "components";
+import { UserPosts } from "components";
 
-const Middle = () => {
+const Middle = props => {
+  const { posts, user } = props;
+
   return (
     <div className="middle">
-      {/* <ProfileContentMainDetailsMiddleProfileIntro/> */}
-      Profile Details Middle
+      <UserPosts posts={posts} user={user} />
     </div>
   );
 };
 
-export default Middle;
+function mapStateToProps({ user }) {
+  return { posts: user.mainInfo.posts, user: user.basicInfo };
+}
+export default connect(
+  mapStateToProps,
+  null
+)(Middle);

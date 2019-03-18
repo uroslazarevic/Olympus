@@ -1,0 +1,28 @@
+.post-creator {
+  align-items: center;
+  display: flex; }
+  .post-creator .creator-img {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 100%; }
+  .post-creator .info {
+    margin-left: 10px;
+    display: flex;
+    align-items: baseline; }
+    .post-creator .info .creator .fullname {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 17px;
+      padding-bottom: 5px;
+      line-height: 17px;
+      cursor: pointer; }
+    .post-creator .info .creator .post-created {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer; }
+      .post-creator .info .creator .post-created:hover {
+        opacity: 0.9;
+        color: #000; }

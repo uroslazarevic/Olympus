@@ -7,7 +7,7 @@ const FriendsVoted = props => {
     <ul className="friends-voted">
       {props.voters.map(voter => {
         return (
-          <li key={voter.id} className="choice-voter">
+          <li key={voter.id} className="voter">
             <VoterAvatar imgSrc={voter.src} className="voter-avatar" />
           </li>
         );
