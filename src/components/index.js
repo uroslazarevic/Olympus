@@ -49,11 +49,12 @@ import UserPool from "./Profile/Content/Main/Details/Right/UserPool/UserPool";
 import UserPoolItem from "./Profile/Content/Main/Details/Right/UserPool/Item/Item";
 import PoolItemAnswer from "./Profile/Content/Main/Details/Right/UserPool/Item/Answer/Answer";
 import PoolItemProgressBar from "./Profile/Content/Main/Details/Right/UserPool/Item/ProgressBar/ProgressBar";
-import PoolItemFriendsVoted from "./Profile/Content/Main/Details/Right/UserPool/Item/FriendsVoted/FriendsVoted";
 import UserPosts from "./Profile/Content/Main/Details/Middle/UserPosts/UserPosts";
 import Post from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Post";
 import PostContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Content/Content";
 import PostFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer";
+import PostBtn from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/PostBtn/PostBtn";
+import EndorsedBy from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy";
 import PostHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Header";
 import PostCreator from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/Creator";
 import PostOrigin from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/PostOrigin/PostOrigin";
@@ -112,11 +113,12 @@ export {
   UserPoolItem,
   PoolItemAnswer,
   PoolItemProgressBar,
-  PoolItemFriendsVoted,
   UserPosts,
   Post,
   PostContent,
   PostFooter,
+  PostBtn,
+  EndorsedBy,
   PostHeader,
   PostComment,
   PostCommentReply,

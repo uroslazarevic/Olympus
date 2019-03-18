@@ -1,0 +1,26 @@
+.post-btn {
+  margin-right: 10px;
+  color: #ccc;
+
+  .post-btn-icon {
+    cursor: pointer;
+    margin-right: 5px;
+    i {
+      font-size: 20px;
+    }
+
+    &:hover {
+      color: orangered;
+    }
+  }
+
+  .post-btn-count {
+    font-size: 15px;
+  }
+
+  &.my-endorse {
+    .post-btn-icon {
+      color: orangered;
+    }
+  }
+}

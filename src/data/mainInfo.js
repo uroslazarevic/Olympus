@@ -295,10 +295,26 @@ export default {
           answer: "Lorem ipsum",
           votes: 4,
           voters: [
-            { id: 1, src: "https://loremflickr.com/320/240/people?random=1" },
-            { id: 2, src: "https://loremflickr.com/320/240/people?random=2" },
-            { id: 3, src: "https://loremflickr.com/320/240/people?random=3" },
-            { id: 4, src: "https://loremflickr.com/320/240/people?random=4" }
+            {
+              id: 1,
+              src: "https://loremflickr.com/320/240/people?random=1",
+              name: "Person 1"
+            },
+            {
+              id: 2,
+              src: "https://loremflickr.com/320/240/people?random=2",
+              name: "Person 2"
+            },
+            {
+              id: 3,
+              src: "https://loremflickr.com/320/240/people?random=3",
+              name: "Person 3"
+            },
+            {
+              id: 4,
+              src: "https://loremflickr.com/320/240/people?random=4",
+              name: "Person 4"
+            }
           ]
         },
         {
@@ -306,9 +322,21 @@ export default {
           answer: "Lorem ipsum dolor",
           votes: 3,
           voters: [
-            { id: 5, src: "https://loremflickr.com/320/240/people?random=5" },
-            { id: 6, src: "https://loremflickr.com/320/240/people?random=6" },
-            { id: 7, src: "https://loremflickr.com/320/240/people?random=7" }
+            {
+              id: 5,
+              src: "https://loremflickr.com/320/240/people?random=5",
+              name: "Person 5"
+            },
+            {
+              id: 6,
+              src: "https://loremflickr.com/320/240/people?random=6",
+              name: "Person 6"
+            },
+            {
+              id: 7,
+              src: "https://loremflickr.com/320/240/people?random=7",
+              name: "Person 7"
+            }
           ]
         },
         {
@@ -337,37 +365,37 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "lorem"
+            name: "Person 1"
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "lorem"
+            name: "Person 2"
           },
           {
             id: 3,
             src: "https://loremflickr.com/320/240/people?random=3",
-            name: "lorem"
+            name: "Person 3"
           },
           {
             id: 4,
             src: "https://loremflickr.com/320/240/people?random=4",
-            name: "lorem"
+            name: "Person 4"
           },
           {
             id: 5,
             src: "https://loremflickr.com/320/240/people?random=5",
-            name: "lorem"
+            name: "Person 5"
           },
           {
             id: 6,
             src: "https://loremflickr.com/320/240/people?random=6",
-            name: "lorem"
+            name: "Person 6"
           },
           {
             id: 7,
             src: "https://loremflickr.com/320/240/people?random=7",
-            name: "lorem"
+            name: "Person 7"
           }
         ]
       },
@@ -478,12 +506,12 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person1"
+            name: "Person 1"
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person2"
+            name: "Person 2"
           }
         ]
       },
@@ -568,13 +596,13 @@ export default {
           },
           {
             id: 2,
-            src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
           },
           {
             id: 3,
-            src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
+            src: "https://loremflickr.com/320/240/people?random=3",
+            name: "Person 3"
           }
         ]
       },
@@ -610,18 +638,18 @@ export default {
         list: [
           {
             id: 1,
-            src: "https://loremflickr.com/320/240/people?random=1",
-            name: "You"
+            src: "https://loremflickr.com/320/240/people?random=2",
+            name: "Person 2"
           },
           {
             id: 2,
-            src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            src: "https://loremflickr.com/320/240/people?random=5",
+            name: "Person 5"
           },
           {
             id: 3,
-            src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
+            src: "https://loremflickr.com/320/240/people?random=7",
+            name: "Person 7"
           }
         ]
       },

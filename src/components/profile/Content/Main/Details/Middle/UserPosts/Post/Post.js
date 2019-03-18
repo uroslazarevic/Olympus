@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PostHeader } from "components";
+import { PostHeader, PostFooter } from "components";
 
 const Post = props => {
   // console.log("POST:", props);
@@ -8,6 +8,7 @@ const Post = props => {
   return (
     <li className="user-post">
       <PostHeader props={props} />
+      <PostFooter post={props.post} />
     </li>
   );
 };

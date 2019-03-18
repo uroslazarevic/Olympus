@@ -53,7 +53,6 @@
 @import "./Profile/Content/Main/Details/Right/UserPool/UserPool.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/Item.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/Answer/Answer.scss";
-@import "./Profile/Content/Main/Details/Right/UserPool/Item/FriendsVoted/FriendsVoted.scss";
 @import "./Profile/Content/Main/Details/Right/UserPool/Item/ProgressBar/ProgressBar.scss";
 // Details Middle
 @import "./Profile/Content/Main/Details/Middle/UserPosts/UserPosts.scss";
@@ -62,6 +61,8 @@
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/Creator.scss";
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/PostOrigin/PostOrigin.scss";
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/PostBtn/PostBtn.scss";
+@import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy.scss";
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Content/Content.scss";
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/CommentReply/CommentReply.scss";
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Post/Comment/Comment.scss";

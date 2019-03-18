@@ -1,0 +1,20 @@
+.post-footer {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f6;
+
+  .post-footer-left {
+    align-items: center;
+    display: flex;
+  }
+
+  .post-footer-right {
+    display: flex;
+    margin-left: auto;
+
+    .post-btn:last-child {
+      margin-right: 0px;
+    }
+  }
+}

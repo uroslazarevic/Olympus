@@ -178,3 +178,17 @@
       .info-block-item .item-info .description:hover {
         opacity: 0.9;
         color: #000; }
+
+.friends-voted {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 10px; }
+  .friends-voted .voter {
+    position: relative;
+    margin-left: -10px;
+    overflow: hidden; }
+    .friends-voted .voter .voter-avatar img {
+      cursor: pointer;
+      border: 1px solid #fff; }
+      .friends-voted .voter .voter-avatar img:hover {
+        border: 1px solid #404257; }

@@ -1,11 +1,8 @@
 import React from "react";
 
 import { calculateSharePercentageInTotal } from "utilis";
-import {
-  PoolItemAnswer,
-  PoolItemProgressBar,
-  PoolItemFriendsVoted
-} from "components";
+import { PoolItemAnswer, PoolItemProgressBar } from "components";
+import { FriendsVoted } from "components/UI";
 
 class Item extends React.Component {
   constructor(props) {
@@ -51,7 +48,7 @@ class Item extends React.Component {
                     : `${choice.votes} friend voted for this`}
                 </div>
 
-                <PoolItemFriendsVoted voters={choice.voters} />
+                <FriendsVoted voters={choice.voters} />
               </div>
             );
           })}

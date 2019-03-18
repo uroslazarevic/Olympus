@@ -699,20 +699,6 @@
     font-weight: 600;
     margin-left: auto; }
 
-.friends-voted {
-  display: inline-flex;
-  flex-direction: row;
-  padding-left: 10px; }
-  .friends-voted .voter {
-    position: relative;
-    margin-left: -10px;
-    overflow: hidden; }
-    .friends-voted .voter .voter-avatar img {
-      cursor: pointer;
-      border: 1px solid #fff; }
-      .friends-voted .voter .voter-avatar img:hover {
-        border: 1px solid #404257; }
-
 .pool-progress {
   height: 15px;
   width: 100%;
@@ -790,6 +776,46 @@
     cursor: pointer; }
     .post-origin .text-stress:hover {
       color: #f88526; }
+
+.post-footer {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #edf2f6; }
+  .post-footer .post-footer-left {
+    align-items: center;
+    display: flex; }
+  .post-footer .post-footer-right {
+    display: flex;
+    margin-left: auto; }
+    .post-footer .post-footer-right .post-btn:last-child {
+      margin-right: 0px; }
+
+.post-btn {
+  margin-right: 10px;
+  color: #ccc; }
+  .post-btn .post-btn-icon {
+    cursor: pointer;
+    margin-right: 5px; }
+    .post-btn .post-btn-icon i {
+      font-size: 20px; }
+    .post-btn .post-btn-icon:hover {
+      color: orangered; }
+  .post-btn .post-btn-count {
+    font-size: 15px; }
+  .post-btn.my-endorse .post-btn-icon {
+    color: orangered; }
+
+.endorsed-by {
+  font-size: 15px;
+  line-height: 18px;
+  color: #ccc;
+  font-weight: 400;
+  padding-left: 10px;
+  width: 180px; }
+  .endorsed-by .person-endorsed {
+    color: #000;
+    font-weight: 500; }
 
 .ui-btn {
   height: 40px;
@@ -971,3 +997,17 @@
       .info-block-item .item-info .description:hover {
         opacity: 0.9;
         color: #000; }
+
+.friends-voted {
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 10px; }
+  .friends-voted .voter {
+    position: relative;
+    margin-left: -10px;
+    overflow: hidden; }
+    .friends-voted .voter .voter-avatar img {
+      cursor: pointer;
+      border: 1px solid #fff; }
+      .friends-voted .voter .voter-avatar img:hover {
+        border: 1px solid #404257; }
