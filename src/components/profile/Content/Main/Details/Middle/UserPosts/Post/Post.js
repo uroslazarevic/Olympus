@@ -1,13 +1,12 @@
 import React from "react";
 
-import { PostHeader, PostFooter } from "components";
+import { PostHeader, PostFooter, PostContentView } from "components";
 
 const Post = props => {
-  // console.log("POST:", props);
-
   return (
     <li className="user-post">
       <PostHeader props={props} />
+      <PostContentView post={props.post} />
       <PostFooter post={props.post} />
     </li>
   );

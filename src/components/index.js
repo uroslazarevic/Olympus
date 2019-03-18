@@ -51,7 +51,10 @@ import PoolItemAnswer from "./Profile/Content/Main/Details/Right/UserPool/Item/A
 import PoolItemProgressBar from "./Profile/Content/Main/Details/Right/UserPool/Item/ProgressBar/ProgressBar";
 import UserPosts from "./Profile/Content/Main/Details/Middle/UserPosts/UserPosts";
 import Post from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Post";
-import PostContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Content/Content";
+import PostContentView from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/ContentView";
+import TextContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/Text/Text";
+import ImageContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/Image/Image";
+import VideoContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/Video/Video";
 import PostFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer";
 import PostBtn from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/PostBtn/PostBtn";
 import EndorsedBy from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy";
@@ -115,7 +118,7 @@ export {
   PoolItemProgressBar,
   UserPosts,
   Post,
-  PostContent,
+  PostContentView,
   PostFooter,
   PostBtn,
   EndorsedBy,
@@ -123,5 +126,8 @@ export {
   PostComment,
   PostCommentReply,
   PostCreator,
-  PostOrigin
+  PostOrigin,
+  TextContent,
+  ImageContent,
+  VideoContent
 };

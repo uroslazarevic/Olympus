@@ -1,0 +1,41 @@
+.video-content {
+  .post-description {
+    font-size: 15px;
+    color: #747893;
+    width: 90%;
+    padding-bottom: 20px;
+  }
+  .video-item {
+    $videoItemSize: 250px;
+    height: $videoItemSize;
+    display: flex;
+
+    .video-record {
+      width: 90%;
+
+      .post-youtube {
+        width: 100%;
+        height: $videoItemSize;
+      }
+    }
+
+    .video-details {
+      padding: 20px;
+      border: 1px solid #edf2f6;
+      border-left: none;
+
+      .video-title {
+        font-size: 26px;
+        font-weight: 500;
+        color: #717590;
+      }
+
+      .video-description {
+        color: #747893;
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

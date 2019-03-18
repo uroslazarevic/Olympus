@@ -2,9 +2,8 @@ import React from "react";
 
 class EndorsedBy extends React.Component {
   renderEndorseText() {
-    console.log(this.props.endorse);
     const { count, list } = this.props.endorse;
-    // return <div>SMTH</div>;
+
     switch (count) {
       case 0:
         return null;
@@ -37,9 +36,7 @@ class EndorsedBy extends React.Component {
   }
 
   render() {
-    // console.log(this.props);
     return this.renderEndorseText();
-    // return <div>smth</div>;
   }
 }
 

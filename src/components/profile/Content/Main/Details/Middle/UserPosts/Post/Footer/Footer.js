@@ -17,8 +17,8 @@ class Footer extends React.Component {
   }
 
   render() {
-    console.log(post);
     const { post } = this.props;
+
     return (
       <div className="post-footer">
         <div className="post-footer-left">

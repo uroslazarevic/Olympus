@@ -9,6 +9,7 @@ import InfoBlockContent from "./InfoBlock/Content/Content";
 import InfoBlockItem from "./InfoBlockItem/InfoBlockItem";
 import Tooltip from "react-tooltip-lite";
 import FriendsVoted from "./FriendsVoted/FriendsVoted";
+import YouTube from "react-youtube";
 
 export {
   Btn,
@@ -21,5 +22,6 @@ export {
   InfoBlockContent,
   InfoBlockItem,
   Tooltip,
-  FriendsVoted
+  FriendsVoted,
+  YouTube
 };

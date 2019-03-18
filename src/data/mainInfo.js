@@ -582,10 +582,16 @@ export default {
       id: 3,
       shareType: "video",
       sharedFrom: "link",
-      videoUrl: "https://www.youtube.com/watch?v=tAGnKpE4NCI",
-      created: "12 hours ago",
       content:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus voluptates nihil aperiam, cupiditate error ducimus.",
+      video: {
+        yt_video_code: "tAGnKpE4NCI",
+        title: "Metallica - Nothing Else Matters [Official Music Video]",
+        description:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
+        origin: "youtube.com"
+      },
+      created: "12 hours ago",
       likes: {
         count: 3,
         list: [
