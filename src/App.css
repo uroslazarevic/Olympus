@@ -757,46 +757,6 @@ body {
     .post-header .show-options:hover {
       color: #000; }
 
-.post-creator {
-  align-items: center;
-  display: flex; }
-  .post-creator .creator-img {
-    height: 45px;
-    width: 45px;
-    cursor: pointer;
-    border-radius: 100%; }
-  .post-creator .info {
-    margin-left: 10px;
-    display: flex;
-    align-items: baseline; }
-    .post-creator .info .creator .fullname {
-      color: #404257;
-      text-transform: capitalize;
-      font-weight: 600;
-      font-size: 17px;
-      padding-bottom: 5px;
-      line-height: 17px;
-      cursor: pointer; }
-    .post-creator .info .creator .post-created {
-      color: #ccc;
-      font-size: 14px;
-      line-height: 14px;
-      cursor: pointer; }
-      .post-creator .info .creator .post-created:hover {
-        opacity: 0.9;
-        color: #000; }
-
-.post-origin {
-  color: #717590;
-  font-size: 17px;
-  padding-left: 5px; }
-  .post-origin .text-stress {
-    color: orangered;
-    font-weight: 500;
-    cursor: pointer; }
-    .post-origin .text-stress:hover {
-      color: #f88526; }
-
 .post-footer {
   display: flex;
   align-items: center;
@@ -810,21 +770,6 @@ body {
     margin-left: auto; }
     .post-footer .post-footer-right .post-btn:last-child {
       margin-right: 0px; }
-
-.post-btn {
-  margin-right: 10px;
-  color: #ccc; }
-  .post-btn .post-btn-icon {
-    cursor: pointer;
-    margin-right: 5px; }
-    .post-btn .post-btn-icon i {
-      font-size: 20px; }
-    .post-btn .post-btn-icon:hover {
-      color: orangered; }
-  .post-btn .post-btn-count {
-    font-size: 15px; }
-  .post-btn.my-endorse .post-btn-icon {
-    color: orangered; }
 
 .endorsed-by {
   font-size: 15px;
@@ -867,12 +812,86 @@ body {
     .video-content .video-item .video-details .video-title {
       font-size: 26px;
       font-weight: 500;
-      color: #717590; }
+      color: #717590;
+      cursor: pointer; }
+      .video-content .video-item .video-details .video-title:hover {
+        color: #000; }
     .video-content .video-item .video-details .video-description {
       color: #747893;
       font-size: 15px;
       padding-top: 20px;
       padding-bottom: 20px; }
+    .video-content .video-item .video-details .video-origin {
+      color: #ccc;
+      font-size: 12px;
+      text-transform: uppercase; }
+
+.sub-comments-list {
+  border: 1px solid #e7ebf4;
+  background-color: #fff; }
+  .sub-comments-list .sub-comments-item {
+    border-radius: 2px;
+    padding: 0 20px 0px 40px; }
+    .sub-comments-list .sub-comments-item:last-child .sub-comment {
+      border-bottom: none; }
+    .sub-comments-list .sub-comments-item .sub-comment {
+      border-bottom: 1px solid #e7ebf4;
+      border-left: 1px solid #e7ebf4;
+      padding: 20px 0px 20px 30px;
+      position: relative; }
+      .sub-comments-list .sub-comments-item .sub-comment::before {
+        position: absolute;
+        content: " ";
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        background-color: #fff;
+        top: 34px;
+        left: -6px;
+        border: 3px solid #dfdfdf; }
+
+.main-comment {
+  padding: 20px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff; }
+
+.comment-header {
+  display: flex; }
+  .comment-header .show-options {
+    margin-left: auto;
+    color: #ccc; }
+    .comment-header .show-options:hover {
+      color: #000; }
+  .comment-header .comment-creator .creator-img {
+    height: 35px;
+    width: 35px; }
+  .comment-header .comment-creator .info .creator .fullname {
+    font-size: 15px;
+    padding-bottom: 1px; }
+  .comment-header .comment-creator .info .creator .post-created {
+    font-size: 12px; }
+
+.comment-footer {
+  display: flex;
+  align-items: center; }
+  .comment-footer .comment-reply {
+    font-size: 14px;
+    line-height: 18px;
+    color: #ccc;
+    font-weight: 400;
+    padding-left: 25px;
+    cursor: pointer; }
+    .comment-footer .comment-reply:hover {
+      color: orangered;
+      font-weight: 400; }
+
+.comment-content {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 15px;
+  color: #747893;
+  width: 90%; }
 
 .ui-btn {
   height: 40px;
@@ -1068,3 +1087,58 @@ body {
       border: 1px solid #fff; }
       .friends-voted .voter .voter-avatar img:hover {
         border: 1px solid #404257; }
+
+.creator-block {
+  align-items: center;
+  display: flex; }
+  .creator-block .creator-img {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 100%; }
+  .creator-block .info {
+    margin-left: 10px;
+    display: flex;
+    align-items: baseline; }
+    .creator-block .info .creator .fullname {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 17px;
+      padding-bottom: 5px;
+      line-height: 17px;
+      cursor: pointer; }
+    .creator-block .info .creator .post-created {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer; }
+      .creator-block .info .creator .post-created:hover {
+        opacity: 0.9;
+        color: #000; }
+
+.post-origin {
+  color: #717590;
+  font-size: 17px;
+  padding-left: 5px; }
+  .post-origin .text-stress {
+    color: orangered;
+    font-weight: 500;
+    cursor: pointer; }
+    .post-origin .text-stress:hover {
+      color: #f88526; }
+
+.post-btn {
+  margin-right: 10px;
+  color: #ccc; }
+  .post-btn .post-btn-icon {
+    cursor: pointer;
+    margin-right: 5px; }
+    .post-btn .post-btn-icon i {
+      font-size: 20px; }
+    .post-btn .post-btn-icon:hover {
+      color: orangered; }
+  .post-btn .post-btn-count {
+    font-size: 15px; }
+  .post-btn.my-endorse .post-btn-icon {
+    color: orangered; }

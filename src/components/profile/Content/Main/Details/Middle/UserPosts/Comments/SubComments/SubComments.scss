@@ -1,0 +1,38 @@
+.sub-comments-list {
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+
+  .sub-comments-item {
+    border-radius: 2px;
+    padding: 0 20px 0px 40px;
+
+    &:last-child {
+      .sub-comment {
+        border-bottom: none;
+      }
+    }
+
+    .sub-comment {
+      $beforeEleSize: 10px;
+      $beforeEleLeftPos: -6px;
+      $beforeEleTopPos: 34px;
+
+      border-bottom: 1px solid #e7ebf4;
+      border-left: 1px solid #e7ebf4;
+      padding: 20px 0px 20px 30px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: " ";
+        width: $beforeEleSize;
+        height: $beforeEleSize;
+        border-radius: 100%;
+        background-color: #fff;
+        top: $beforeEleTopPos;
+        left: $beforeEleLeftPos;
+        border: 3px solid #dfdfdf;
+      }
+    }
+  }
+}

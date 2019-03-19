@@ -28,6 +28,11 @@
         font-size: 26px;
         font-weight: 500;
         color: #717590;
+        cursor: pointer;
+
+        &:hover {
+          color: #000;
+        }
       }
 
       .video-description {
@@ -35,6 +40,12 @@
         font-size: 15px;
         padding-top: 20px;
         padding-bottom: 20px;
+      }
+
+      .video-origin {
+        color: #ccc;
+        font-size: 12px;
+        text-transform: uppercase;
       }
     }
   }

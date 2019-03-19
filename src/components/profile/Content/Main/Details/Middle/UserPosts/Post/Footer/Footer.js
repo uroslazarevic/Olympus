@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PostBtn, EndorsedBy } from "components";
-import { FriendsVoted } from "components/UI";
+import { EndorsedBy } from "components";
+import { PostBtn, FriendsVoted } from "components/UI";
 
 class Footer extends React.Component {
   constructor(props) {

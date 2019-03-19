@@ -1,12 +1,17 @@
 import React from "react";
 
-import { Post } from "components";
+import { Post, PostComments } from "components";
 
 const UserPosts = props => {
   return (
     <ul className="post-list">
       {props.posts.map(post => {
-        return <Post key={post.id} post={post} user={props.user} />;
+        return (
+          <li key={post.id} className="post-list-item">
+            <Post post={post} user={props.user} />
+            <PostComments post={post} />
+          </li>
+        );
       })}
     </ul>
   );

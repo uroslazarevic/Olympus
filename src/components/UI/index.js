@@ -10,6 +10,9 @@ import InfoBlockItem from "./InfoBlockItem/InfoBlockItem";
 import Tooltip from "react-tooltip-lite";
 import FriendsVoted from "./FriendsVoted/FriendsVoted";
 import YouTube from "react-youtube";
+import Creator from "./Creator/Creator";
+import Origin from "./Creator/Origin/Origin";
+import PostBtn from "./PostBtn/PostBtn";
 
 export {
   Btn,
@@ -23,5 +26,8 @@ export {
   InfoBlockItem,
   Tooltip,
   FriendsVoted,
-  YouTube
+  YouTube,
+  Creator,
+  Origin,
+  PostBtn
 };

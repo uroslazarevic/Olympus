@@ -192,3 +192,58 @@
       border: 1px solid #fff; }
       .friends-voted .voter .voter-avatar img:hover {
         border: 1px solid #404257; }
+
+.creator-block {
+  align-items: center;
+  display: flex; }
+  .creator-block .creator-img {
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    border-radius: 100%; }
+  .creator-block .info {
+    margin-left: 10px;
+    display: flex;
+    align-items: baseline; }
+    .creator-block .info .creator .fullname {
+      color: #404257;
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 17px;
+      padding-bottom: 5px;
+      line-height: 17px;
+      cursor: pointer; }
+    .creator-block .info .creator .post-created {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 14px;
+      cursor: pointer; }
+      .creator-block .info .creator .post-created:hover {
+        opacity: 0.9;
+        color: #000; }
+
+.post-origin {
+  color: #717590;
+  font-size: 17px;
+  padding-left: 5px; }
+  .post-origin .text-stress {
+    color: orangered;
+    font-weight: 500;
+    cursor: pointer; }
+    .post-origin .text-stress:hover {
+      color: #f88526; }
+
+.post-btn {
+  margin-right: 10px;
+  color: #ccc; }
+  .post-btn .post-btn-icon {
+    cursor: pointer;
+    margin-right: 5px; }
+    .post-btn .post-btn-icon i {
+      font-size: 20px; }
+    .post-btn .post-btn-icon:hover {
+      color: orangered; }
+  .post-btn .post-btn-count {
+    font-size: 15px; }
+  .post-btn.my-endorse .post-btn-icon {
+    color: orangered; }

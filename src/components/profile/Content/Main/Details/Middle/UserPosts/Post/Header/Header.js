@@ -1,7 +1,9 @@
 import React from "react";
 
-import { PostCreator } from "components";
-import { ElipsisBtn as OptionsBtn } from "components/UI";
+import {
+  Creator as PostCreator,
+  ElipsisBtn as OptionsBtn
+} from "components/UI";
 
 const Header = ({ props }) => {
   const {
@@ -20,6 +22,7 @@ const Header = ({ props }) => {
           shareType,
           sharedFrom
         }}
+        creatorClass="post-creator"
       />
       <OptionsBtn />
     </div>

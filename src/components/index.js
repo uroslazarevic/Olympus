@@ -56,13 +56,14 @@ import TextContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Co
 import ImageContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/Image/Image";
 import VideoContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/ContentView/Video/Video";
 import PostFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer";
-import PostBtn from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/PostBtn/PostBtn";
 import EndorsedBy from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy";
 import PostHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Header";
-import PostCreator from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/Creator";
-import PostOrigin from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Creator/PostOrigin/PostOrigin";
-import PostComment from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Comment/Comment";
-import PostCommentReply from "./Profile/Content/Main/Details/Middle/UserPosts/Post/CommentReply/CommentReply";
+import PostComment from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Comment";
+import CommentHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Header/Header";
+import CommentFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Footer/Footer";
+import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Content/Content";
+import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
+import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
 
 export {
   // Login Page Exports
@@ -120,14 +121,15 @@ export {
   Post,
   PostContentView,
   PostFooter,
-  PostBtn,
   EndorsedBy,
   PostHeader,
   PostComment,
-  PostCommentReply,
-  PostCreator,
-  PostOrigin,
+  SubComments,
   TextContent,
   ImageContent,
-  VideoContent
+  VideoContent,
+  CommentHeader,
+  CommentFooter,
+  CommentContent,
+  PostComments
 };

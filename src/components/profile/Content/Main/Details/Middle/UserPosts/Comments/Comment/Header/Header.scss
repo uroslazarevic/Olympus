@@ -1,0 +1,32 @@
+.comment-header {
+  display: flex;
+
+  .show-options {
+    margin-left: auto;
+    color: #ccc;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .comment-creator {
+    $imgSize: 35px;
+    .creator-img {
+      height: $imgSize;
+      width: $imgSize;
+    }
+
+    .info {
+      .creator {
+        .fullname {
+          font-size: 15px;
+          padding-bottom: 1px;
+        }
+        .post-created {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

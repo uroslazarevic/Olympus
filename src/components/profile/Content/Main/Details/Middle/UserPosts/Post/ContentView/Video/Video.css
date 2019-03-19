@@ -19,9 +19,16 @@
     .video-content .video-item .video-details .video-title {
       font-size: 26px;
       font-weight: 500;
-      color: #717590; }
+      color: #717590;
+      cursor: pointer; }
+      .video-content .video-item .video-details .video-title:hover {
+        color: #000; }
     .video-content .video-item .video-details .video-description {
       color: #747893;
       font-size: 15px;
       padding-top: 20px;
       padding-bottom: 20px; }
+    .video-content .video-item .video-details .video-origin {
+      color: #ccc;
+      font-size: 12px;
+      text-transform: uppercase; }

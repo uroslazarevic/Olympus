@@ -1,0 +1,18 @@
+.comment-footer {
+  display: flex;
+  align-items: center;
+
+  .comment-reply {
+    font-size: 14px;
+    line-height: 18px;
+    color: #ccc;
+    font-weight: 400;
+    padding-left: 25px;
+    cursor: pointer;
+
+    &:hover {
+      color: orangered;
+      font-weight: 400;
+    }
+  }
+}

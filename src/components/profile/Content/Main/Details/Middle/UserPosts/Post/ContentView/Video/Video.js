@@ -2,7 +2,6 @@ import React from "react";
 import { YouTube } from "components/UI";
 
 const Video = ({ post }) => {
-  console.log("video:", post);
   return (
     <div className="video-content">
       <div className="post-description">{post.content}</div>

@@ -1,17 +1,19 @@
 import React from "react";
 
-import { PostOrigin } from "components";
+import { Origin } from "components/UI";
 
-const Creator = ({ item }) => {
+const Creator = ({ item, creatorClass }) => {
   return (
-    <div className="post-creator">
+    <div className={`creator-block ${creatorClass}`}>
       <img className="creator-img" src={item.src} alt="post-creator" />
       <div className="info">
         <div className="creator">
           <div className="fullname">{item.fullname}</div>
           <div className="post-created">{item.created}</div>
         </div>
-        <PostOrigin shareType={item.shareType} sharedFrom={item.sharedFrom} />
+        {item.sharedFrom && (
+          <Origin shareType={item.shareType} sharedFrom={item.sharedFrom} />
+        )}
       </div>
     </div>
   );
