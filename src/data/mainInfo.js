@@ -711,8 +711,10 @@ export default {
       shareType: "image",
       sharedFrom: "Person 1",
       created: "7 hours ago",
+      image: { src: "https://loremflickr.com/700/330/nature?random=150" },
+
       content:
-        "Hey, everyone! Check out this fine piece of art produced by Person1! :)",
+        "Hey, everyone! Check out this fine piece of art produced by Person 1 ! :)",
       likes: {
         count: 3,
         list: [
@@ -755,6 +757,27 @@ export default {
                   id: 2,
                   src: "https://loremflickr.com/320/240/people?random=5",
                   name: "Person 5"
+                }
+              ]
+            },
+            comments: {
+              count: 0,
+              list: []
+            }
+          },
+          {
+            id: 2,
+            src: "https://loremflickr.com/320/240/people?random=5",
+            name: "Person 5",
+            comment: "I LOVE IT!",
+            created: "25 minutes ago",
+            likes: {
+              count: 1,
+              list: [
+                {
+                  id: 1,
+                  src: "https://loremflickr.com/320/240/people?random=1",
+                  name: "Person 1"
                 }
               ]
             },
