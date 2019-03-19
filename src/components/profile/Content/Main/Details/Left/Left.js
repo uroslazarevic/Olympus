@@ -5,11 +5,19 @@ import {
   ProfileIntro,
   UserBadges,
   SpotifyPlaylist,
-  TwitterFeed
+  TwitterFeed,
+  LatestVideos
 } from "components";
 
 const Left = props => {
-  const { details, badges, spotifyList, twitterFeed } = props.details;
+  const {
+    details,
+    badges,
+    spotifyList,
+    twitterFeed,
+    latestVideos
+  } = props.details;
+
   return (
     <div className="left">
       <ProfileIntro details={details} />
@@ -19,6 +27,7 @@ const Left = props => {
         twitterFeed={twitterFeed}
         authorSrc={props.basicInfo.picture.thumbnail}
       />
+      <LatestVideos latestVideos={latestVideos} />
     </div>
   );
 };

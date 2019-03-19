@@ -38,6 +38,7 @@ import SpotifyPlaylist from "./Profile/Content/Main/Details/Left/SpotifyPlaylist
 import SpotifyPlaylistSongItem from "./Profile/Content/Main/Details/Left/SpotifyPlaylist/SongItem/SongItem";
 import TwitterFeed from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitterFeed";
 import TwitterFeedTwitItem from "./Profile/Content/Main/Details/Left/TwitterFeed/TwitItem/TwitItem";
+import LatestVideos from "./Profile/Content/Main/Details/Left/LatestVideos/LatestVideos";
 import Photos from "./Profile/Content/Main/Details/Right/Photos/Photos";
 import PhotosItem from "./Profile/Content/Main/Details/Right/Photos/Item/Item";
 import Blog from "./Profile/Content/Main/Details/Right/Blog/Blog";
@@ -58,13 +59,13 @@ import VideoContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/C
 import PostFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer";
 import EndorsedBy from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy";
 import PostHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Header";
+import PostAsideBtns from "./Profile/Content/Main/Details/Middle/UserPosts/Post/AsideBtns/AsideBtns";
 import PostComment from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Comment";
 import CommentHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Header/Header";
 import CommentFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Footer/Footer";
 import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Content/Content";
 import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
-import PostAsideBtns from "./Profile/Content/Main/Details/Middle/UserPosts/Post/AsideBtns/AsideBtns";
 
 export {
   // Login Page Exports
@@ -133,5 +134,6 @@ export {
   CommentFooter,
   CommentContent,
   PostComments,
-  PostAsideBtns
+  PostAsideBtns,
+  LatestVideos
 };

@@ -547,6 +547,15 @@ body {
     .twit-item .twit-created:hover {
       color: #000; }
 
+.user-last-videos .latest-videos-list {
+  display: grid;
+  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: 1fr;
+  grid-row-gap: 20px; }
+  .user-last-videos .latest-videos-list .video-record .latest-video-youtube {
+    width: 100%;
+    height: 100%; }
+
 .profile-photos .profile-photos-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

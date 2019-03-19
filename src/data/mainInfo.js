@@ -793,5 +793,31 @@ export default {
         list: []
       }
     }
+  ],
+  latestVideos: [
+    {
+      id: 1,
+      yt_video_code: "tAGnKpE4NCI",
+      title: "Metallica - Nothing Else Matters [Official Music Video]",
+      description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
+      origin: "youtube.com"
+    },
+    {
+      id: 2,
+      yt_video_code: "LHCob76kigA",
+      title: "Lukas Graham - 7 Years [OFFICIAL MUSIC VIDEO]",
+      description:
+        "7 Years by Lukas Graham. 'A mix of Christiania, Copenhagen and Los Angeles is combined to give you a beautiful imagery to help the song along. I really hope you like it.' - Lukas Graham",
+      origin: "youtube.com"
+    },
+    {
+      id: 3,
+      yt_video_code: "RBumgq5yVrA",
+      title: "Passenger | Let Her Go (Official Video)",
+      description:
+        "The official video for 'Let Her Go' – Directed and Produced by Dave Jansen. www.funmonkey.com.au",
+      origin: "youtube.com"
+    }
   ]
 };
