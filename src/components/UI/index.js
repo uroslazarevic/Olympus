@@ -6,6 +6,7 @@ import ElipsisBtn from "./ElipsisBtn/ElipsisBtn";
 import InfoBlock from "./InfoBlock/InfoBlock";
 import InfoBlockHeader from "./InfoBlock/Header/Header";
 import InfoBlockContent from "./InfoBlock/Content/Content";
+import InfoBlockOptions from "./InfoBlock/Options/Options";
 import InfoBlockItem from "./InfoBlockItem/InfoBlockItem";
 import Tooltip from "react-tooltip-lite";
 import FriendsVoted from "./FriendsVoted/FriendsVoted";
@@ -24,6 +25,7 @@ export {
   InfoBlock,
   InfoBlockHeader,
   InfoBlockContent,
+  InfoBlockOptions,
   InfoBlockItem,
   Tooltip,
   FriendsVoted,

@@ -8,7 +8,7 @@ const LatestVideos = ({ latestVideos }) => {
         <ul className="latest-videos-list">
           {latestVideos.map(video => {
             return (
-              <li className="video-record">
+              <li key={video.id} className="video-record">
                 <YouTube
                   videoId={video.yt_video_code}
                   className="latest-video-youtube"

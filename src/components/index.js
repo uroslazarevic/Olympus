@@ -60,11 +60,13 @@ import VideoContent from "./Profile/Content/Main/Details/Middle/UserPosts/Post/C
 import PostFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/Footer";
 import EndorsedBy from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Footer/EndorsedBy/EndorsedBy";
 import PostHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Header/Header";
+import PostOptions from "./Profile/Content/Main/Details/Middle/UserPosts/Post/Options/Options";
 import PostAsideBtns from "./Profile/Content/Main/Details/Middle/UserPosts/Post/AsideBtns/AsideBtns";
 import PostComment from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Comment";
 import CommentHeader from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Header/Header";
 import CommentFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Footer/Footer";
 import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Content/Content";
+import CommentOptions from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Options/Options";
 import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
 
@@ -127,6 +129,7 @@ export {
   PostFooter,
   EndorsedBy,
   PostHeader,
+  PostOptions,
   PostComment,
   SubComments,
   TextContent,
@@ -135,6 +138,7 @@ export {
   CommentHeader,
   CommentFooter,
   CommentContent,
+  CommentOptions,
   PostComments,
   PostAsideBtns,
   LatestVideos

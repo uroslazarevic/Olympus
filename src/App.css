@@ -412,7 +412,7 @@ body {
       color: orangered; }
 
 .content-main {
-  padding: 30px;
+  padding: 30px 30px 70px 30px;
   background-color: #edf2f6; }
 
 .cover {
@@ -789,6 +789,25 @@ body {
     .post-header .show-options:hover {
       color: #000; }
 
+.user-post-options {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  z-index: 99; }
+  .user-post-options .option {
+    width: 200px;
+    color: #404257;
+    padding: 12.5px 22.5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer; }
+    .user-post-options .option:hover {
+      background: #f9fafd;
+      color: orangered; }
+
 .post-footer {
   display: flex;
   align-items: center;
@@ -929,7 +948,8 @@ body {
   padding: 20px 50px 20px 20px;
   border-radius: 2px;
   border: 1px solid #e7ebf4;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
 
 .comment-header {
   display: flex; }
@@ -967,6 +987,25 @@ body {
   font-size: 15px;
   color: #747893;
   width: 90%; }
+
+.post-comment-options {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  z-index: 99; }
+  .post-comment-options .option {
+    width: 200px;
+    color: #404257;
+    padding: 12.5px 22.5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer; }
+    .post-comment-options .option:hover {
+      background: #f9fafd;
+      color: orangered; }
 
 .ui-btn {
   height: 40px;
@@ -1086,9 +1125,12 @@ body {
   font-size: 22px;
   line-height: 22px;
   cursor: pointer; }
+  .elipsis-btn.active-elipsis-btn {
+    color: orangered !important; }
 
 .info-block {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
 
 .info-block-header {
   border-radius: 2px;
@@ -1113,6 +1155,25 @@ body {
   border: 1px solid #e7ebf4;
   background-color: #fff;
   padding: 25px 20px; }
+
+.info-block-options {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  z-index: 99; }
+  .info-block-options .option {
+    width: 200px;
+    color: #404257;
+    padding: 12.5px 22.5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer; }
+    .info-block-options .option:hover {
+      background: #f9fafd;
+      color: orangered; }
 
 .info-block-item {
   align-items: center;

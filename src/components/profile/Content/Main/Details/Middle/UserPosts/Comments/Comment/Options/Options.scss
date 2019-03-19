@@ -1,0 +1,23 @@
+.post-comment-options {
+  position: absolute;
+  top: 45px;
+  right: 50px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  z-index: 99;
+
+  .option {
+    width: 200px;
+    color: #404257;
+    padding: 12.5px 22.5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f9fafd;
+      color: orangered;
+    }
+  }
+}

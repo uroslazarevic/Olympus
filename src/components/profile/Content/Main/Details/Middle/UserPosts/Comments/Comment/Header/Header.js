@@ -5,7 +5,7 @@ import {
   ElipsisBtn as OptionsBtn
 } from "components/UI";
 
-const Header = ({ commentator }) => {
+const Header = ({ commentator, handleOptionsBtnClick, optionsBtnActive }) => {
   const { name, src, created } = commentator;
 
   return (
@@ -18,7 +18,10 @@ const Header = ({ commentator }) => {
         }}
         creatorClass="comment-creator"
       />
-      <OptionsBtn />
+      <OptionsBtn
+        handleOptionsBtnClick={handleOptionsBtnClick}
+        optionsBtnActive={optionsBtnActive}
+      />
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Image = ({ post }) => {
         <img
           className="shared-img"
           src={post.image.src}
-          alt="post-image-content"
+          alt="post-img-content"
         />
       </div>
     </div>

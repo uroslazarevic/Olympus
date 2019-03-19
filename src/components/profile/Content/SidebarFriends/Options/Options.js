@@ -10,7 +10,7 @@ const Options = () => {
       </div>
       <div className="chat-option">
         <span>
-          <i class="far fa-comment-alt" />
+          <i className="far fa-comment-alt" />
         </span>
       </div>
     </li>

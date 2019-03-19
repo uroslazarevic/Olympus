@@ -1,7 +1,7 @@
 import { SIGN_IN, SIGN_OUT } from "actions/types";
 
 const initialState = {
-  signedIn: true
+  signedIn: false
 };
 
 export default (state = initialState, action) => {

@@ -116,9 +116,12 @@
   font-size: 22px;
   line-height: 22px;
   cursor: pointer; }
+  .elipsis-btn.active-elipsis-btn {
+    color: orangered !important; }
 
 .info-block {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  position: relative; }
 
 .info-block-header {
   border-radius: 2px;
@@ -143,6 +146,25 @@
   border: 1px solid #e7ebf4;
   background-color: #fff;
   padding: 25px 20px; }
+
+.info-block-options {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  border-radius: 2px;
+  border: 1px solid #e7ebf4;
+  background-color: #fff;
+  z-index: 99; }
+  .info-block-options .option {
+    width: 200px;
+    color: #404257;
+    padding: 12.5px 22.5px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer; }
+    .info-block-options .option:hover {
+      background: #f9fafd;
+      color: orangered; }
 
 .info-block-item {
   align-items: center;

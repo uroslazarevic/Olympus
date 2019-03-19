@@ -5,12 +5,12 @@ import {
   ElipsisBtn as OptionsBtn
 } from "components/UI";
 
-const Header = ({ props }) => {
+const Header = ({ mainProps, handleOptionsBtnClick, optionsBtnActive }) => {
   const {
     name: { first, last },
     picture: { thumbnail }
-  } = props.user;
-  const { created, shareType, sharedFrom } = props.post;
+  } = mainProps.user;
+  const { created, shareType, sharedFrom } = mainProps.post;
 
   return (
     <div className="post-header">
@@ -24,7 +24,10 @@ const Header = ({ props }) => {
         }}
         creatorClass="post-creator"
       />
-      <OptionsBtn />
+      <OptionsBtn
+        handleOptionsBtnClick={handleOptionsBtnClick}
+        optionsBtnActive={optionsBtnActive}
+      />
     </div>
   );
 };
