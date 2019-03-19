@@ -3,23 +3,29 @@ import { connect } from "react-redux";
 import { fetchUser } from "actions";
 
 import { ProfileHeader, ProfileContent } from "components";
+import { PageLoader } from "components/UI";
 
 class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { pageLoader: true };
+  }
   componentWillMount() {
-    this.props.fetchUser();
+    this.props.fetchUser().then(() => this.setState({ pageLoader: false }));
   }
 
   render() {
     const { user } = this.props;
-    if (user.basicInfo) {
-      return (
-        <div className="profile">
-          <ProfileHeader user={user} />
-          <ProfileContent user={user} />
-        </div>
-      );
+    if (this.state.pageLoader) {
+      return <PageLoader />;
     }
-    return <div>Loading...</div>;
+    return (
+      <div className="profile">
+        <ProfileHeader user={user} />
+        <ProfileContent user={user} />
+      </div>
+    );
   }
 }
 

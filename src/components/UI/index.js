@@ -13,6 +13,7 @@ import YouTube from "react-youtube";
 import Creator from "./Creator/Creator";
 import Origin from "./Creator/Origin/Origin";
 import PostBtn from "./PostBtn/PostBtn";
+import { PageLoader } from "./Loaders";
 
 export {
   Btn,
@@ -29,5 +30,6 @@ export {
   YouTube,
   Creator,
   Origin,
-  PostBtn
+  PostBtn,
+  PageLoader
 };

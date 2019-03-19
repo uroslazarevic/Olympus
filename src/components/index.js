@@ -15,6 +15,7 @@ import ProfileHeader from "./Profile/Header/Header";
 import ProfileCover from "./Profile/Content/Main/Cover/Cover";
 import AsideNavigation from "./Profile/Content/AsideNavigation/AsideNavigation";
 import SidebarFriends from "./Profile/Content/SidebarFriends/SidebarFriends";
+import SidebarFriendsOptions from "./Profile/Content/SidebarFriends/Options/Options";
 import ProfileContent from "./Profile/Content/Content";
 import TimelineHeadline from "./Profile/Content/Main/Cover/TimelineHeadline/TimelineHeadline";
 import SearchBar from "./Profile/Header/SearchBar/SearchBar";
@@ -85,6 +86,7 @@ export {
   ProfileCover,
   AsideNavigation,
   SidebarFriends,
+  SidebarFriendsOptions,
   TimelineHeadline,
   SearchBar,
   SocialNotifications,

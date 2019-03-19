@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Avatar as FreindAvatar } from "components/UI";
+import { SidebarFriendsOptions } from "components";
 
 class SidebarFriends extends React.Component {
   render() {
@@ -23,6 +24,7 @@ class SidebarFriends extends React.Component {
               </li>
             );
           })}
+          <SidebarFriendsOptions />
         </ul>
       );
     }

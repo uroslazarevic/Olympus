@@ -1,0 +1,20 @@
+.sidebar-friends-options {
+  position: absolute;
+  bottom: 0px;
+  width: 100%; }
+  .sidebar-friends-options .menu-option,
+  .sidebar-friends-options .chat-option {
+    padding: 18px 0;
+    text-align: center;
+    cursor: pointer;
+    color: #fff; }
+  .sidebar-friends-options .menu-option {
+    color: #ccc;
+    background: #fff; }
+    .sidebar-friends-options .menu-option:hover {
+      color: orangered; }
+  .sidebar-friends-options .chat-option {
+    background: #7d5ac2;
+    color: #fff; }
+    .sidebar-friends-options .chat-option:hover {
+      color: orangered; }
