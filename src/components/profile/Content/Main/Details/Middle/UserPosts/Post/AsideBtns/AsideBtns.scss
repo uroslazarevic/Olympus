@@ -1,0 +1,41 @@
+.post-aside-btns {
+  position: absolute;
+  top: 20px;
+  right: -22.5px;
+  z-index: 99;
+
+  .aside-btn {
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    background: #747893;
+    color: #fff;
+    position: relative;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: orangered;
+    }
+
+    &.trophy-btn {
+      background-color: #ffca24;
+
+      &:hover {
+        background-color: #ffca24;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    span {
+      font-size: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

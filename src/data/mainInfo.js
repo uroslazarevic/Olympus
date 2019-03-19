@@ -357,6 +357,7 @@ export default {
       shareType: "text",
       sharedFrom: "",
       created: "19 hours ago",
+      highlight: true,
       content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt, libero error aliquam quos ipsam accusamus expedita quam tempore ab beatae? Repellendus nisi natus eos ab minima quod tenetur?",
       likes: {
@@ -712,7 +713,6 @@ export default {
       sharedFrom: "Person 1",
       created: "7 hours ago",
       image: { src: "https://loremflickr.com/700/330/nature?random=150" },
-
       content:
         "Hey, everyone! Check out this fine piece of art produced by Person 1 ! :)",
       likes: {

@@ -4,7 +4,7 @@
 
   .sub-comments-item {
     border-radius: 2px;
-    padding: 0 20px 0px 40px;
+    padding: 0 0 0px 40px;
 
     &:last-child {
       .sub-comment {
@@ -19,7 +19,7 @@
 
       border-bottom: 1px solid #e7ebf4;
       border-left: 1px solid #e7ebf4;
-      padding: 20px 0px 20px 30px;
+      padding: 20px 50px 20px 30px;
       position: relative;
 
       &::before {

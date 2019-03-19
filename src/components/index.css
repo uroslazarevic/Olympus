@@ -724,10 +724,11 @@
       opacity: 0; }
 
 .user-post {
-  padding: 20px;
+  padding: 20px 50px 20px 20px;
   border-radius: 2px;
   border: 1px solid #e7ebf4;
-  background-color: #fff; }
+  background-color: #fff;
+  position: relative; }
 
 .post-header {
   display: flex; }
@@ -820,18 +821,47 @@
       font-size: 12px;
       text-transform: uppercase; }
 
+.post-aside-btns {
+  position: absolute;
+  top: 20px;
+  right: -22.5px;
+  z-index: 99; }
+  .post-aside-btns .aside-btn {
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    background: #747893;
+    color: #fff;
+    position: relative;
+    border-radius: 100%;
+    cursor: pointer; }
+    .post-aside-btns .aside-btn:hover {
+      background-color: orangered; }
+    .post-aside-btns .aside-btn.trophy-btn {
+      background-color: #ffca24; }
+      .post-aside-btns .aside-btn.trophy-btn:hover {
+        background-color: #ffca24; }
+    .post-aside-btns .aside-btn:last-child {
+      margin-bottom: 0px; }
+    .post-aside-btns .aside-btn span {
+      font-size: 22px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
 .sub-comments-list {
   border: 1px solid #e7ebf4;
   background-color: #fff; }
   .sub-comments-list .sub-comments-item {
     border-radius: 2px;
-    padding: 0 20px 0px 40px; }
+    padding: 0 0 0px 40px; }
     .sub-comments-list .sub-comments-item:last-child .sub-comment {
       border-bottom: none; }
     .sub-comments-list .sub-comments-item .sub-comment {
       border-bottom: 1px solid #e7ebf4;
       border-left: 1px solid #e7ebf4;
-      padding: 20px 0px 20px 30px;
+      padding: 20px 50px 20px 30px;
       position: relative; }
       .sub-comments-list .sub-comments-item .sub-comment::before {
         position: absolute;
@@ -845,7 +875,7 @@
         border: 3px solid #dfdfdf; }
 
 .main-comment {
-  padding: 20px;
+  padding: 20px 50px 20px 20px;
   border-radius: 2px;
   border: 1px solid #e7ebf4;
   background-color: #fff; }

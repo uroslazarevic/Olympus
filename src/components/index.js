@@ -64,6 +64,7 @@ import CommentFooter from "./Profile/Content/Main/Details/Middle/UserPosts/Comme
 import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Content/Content";
 import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
+import PostAsideBtns from "./Profile/Content/Main/Details/Middle/UserPosts/Post/AsideBtns/AsideBtns";
 
 export {
   // Login Page Exports
@@ -131,5 +132,6 @@ export {
   CommentHeader,
   CommentFooter,
   CommentContent,
-  PostComments
+  PostComments,
+  PostAsideBtns
 };
