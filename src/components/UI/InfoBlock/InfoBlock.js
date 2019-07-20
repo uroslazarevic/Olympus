@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
-import {
-  InfoBlockHeader,
-  InfoBlockContent,
-  InfoBlockOptions
-} from "components/UI";
+import { InfoBlockHeader, InfoBlockContent, InfoBlockOptions } from "components/UI";
 
 class InfoBlock extends Component {
   constructor(props) {

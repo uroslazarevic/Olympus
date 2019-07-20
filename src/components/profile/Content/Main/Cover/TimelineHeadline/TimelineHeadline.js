@@ -3,7 +3,7 @@ import React from "react";
 import { TimelineHeadlineUser, TimelineHeadlineSocialBtns } from "components";
 import { ElipsisBtn as TimelineHeadlinOptions } from "components/UI";
 
-const TimelineHeadline = ({ user }) => {
+const TimelineHeadline = () => {
   return (
     <nav className="timeline-headline">
       <ul className="list">
@@ -20,7 +20,7 @@ const TimelineHeadline = ({ user }) => {
         </li>
         <li className="item">
           <a href="javascript:void(0)">
-            <TimelineHeadlineUser user={user} />
+            <TimelineHeadlineUser />
           </a>
         </li>
         <li className="item">

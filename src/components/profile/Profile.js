@@ -1,7 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
+
+// Actions
 import { fetchUser } from "actions";
 
+// Context
+import { UserContext } from "components/Contexts";
+
+// Components
 import { ProfileHeader, ProfileContent } from "components";
 import { PageLoader } from "components/UI";
 
@@ -22,8 +28,10 @@ class Profile extends React.Component {
     }
     return (
       <div className="profile">
-        <ProfileHeader user={user} />
-        <ProfileContent user={user} />
+        <UserContext.Provider value={user}>
+          <ProfileHeader user={user} />
+          <ProfileContent />
+        </UserContext.Provider>
       </div>
     );
   }

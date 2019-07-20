@@ -1,11 +1,9 @@
 import React from "react";
 
-const SocialNotification = ({ notification, status }) => {
+const SocialNotification = ({ notification }) => {
   return (
     <div className="social-notification">
-      <span className={`social-notification-icon ${notification.className}`}>
-        {notification.icon}
-      </span>
+      <span className={`social-notification-icon ${notification.className}`}>{notification.icon}</span>
     </div>
   );
 };

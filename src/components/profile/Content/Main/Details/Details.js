@@ -1,15 +1,11 @@
 import React from "react";
 
-import {
-  ProfileContentMainDetailsLeft,
-  DetailsMiddle,
-  DetailsRight
-} from "components";
+import { DetailsLeft, DetailsMiddle, DetailsRight } from "components";
 
 const Details = () => {
   return (
     <div className="profile-details">
-      <ProfileContentMainDetailsLeft />
+      <DetailsLeft />
       <DetailsMiddle />
       <DetailsRight />
     </div>

@@ -3,12 +3,7 @@ import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
 const ProfileRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      rest.signedIn === true ? <Component {...props} /> : <Redirect to="/" />
-    }
-  />
+  <Route {...rest} render={props => (rest.signedIn ? <Component {...props} /> : <Redirect to="/" />)} />
 );
 
 function mapStateToProps({ auth }) {

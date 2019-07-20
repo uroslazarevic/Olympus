@@ -1,11 +1,17 @@
 import React from "react";
 
+// Context
+import { UserContext } from "components/Contexts";
+
+// Components
 import { Avatar as FreindAvatar } from "components/UI";
 import { SidebarFriendsOptions } from "components";
 
 class SidebarFriends extends React.Component {
   render() {
-    const { friends } = this.props;
+    const user = this.context;
+    const friends = user.mainInfo.friends.list;
+
     if (friends) {
       return (
         <ul className="sidebar-friends">
@@ -35,5 +41,7 @@ class SidebarFriends extends React.Component {
     );
   }
 }
+
+SidebarFriends.contextType = UserContext;
 
 export default SidebarFriends;

@@ -30,7 +30,7 @@ import TimelineHeadlineSocialBtns from "./Profile/Content/Main/Cover/TimelineHea
 import ProfileIntro from "./Profile/Content/Main/Details/Left/ProfileIntro/ProfileIntro";
 import ProfileIntroItem from "./Profile/Content/Main/Details/Left/ProfileIntro/Item/Item";
 import ProfileDetails from "./Profile/Content/Main/Details/Details";
-import ProfileContentMainDetailsLeft from "./Profile/Content/Main/Details/Left/Left";
+import DetailsLeft from "./Profile/Content/Main/Details/Left/Left";
 import DetailsRight from "./Profile/Content/Main/Details/Right/Right";
 import DetailsMiddle from "./Profile/Content/Main/Details/Middle/Middle";
 import ProfileIntroSocialNetworks from "./Profile/Content/Main/Details/Left/ProfileIntro/SocialNetworks/SocialNetworks";
@@ -69,8 +69,12 @@ import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comm
 import CommentOptions from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Options/Options";
 import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
+// Not Found Page
+import NotFound from "./NotFound/NotFound";
 
 export {
+  // Not Found Page
+  NotFound,
   // Login Page Exports
   Login,
   Profile,
@@ -103,7 +107,7 @@ export {
   ProfileIntro,
   ProfileIntroItem,
   ProfileDetails,
-  ProfileContentMainDetailsLeft,
+  DetailsLeft,
   DetailsRight,
   DetailsMiddle,
   ProfileIntroSocialNetworks,

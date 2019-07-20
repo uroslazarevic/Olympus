@@ -3,15 +3,11 @@ import coverImg from "imgs/user-cover-img.jpg";
 
 import { TimelineHeadline } from "components";
 
-const Cover = ({ user }) => {
+const Cover = () => {
   return (
     <div className="cover">
-      <div
-        className="cover-img"
-        style={{ backgroundImage: `url("${coverImg}")` }}
-      />
-
-      <TimelineHeadline user={user} />
+      <div className="cover-img" style={{ backgroundImage: `url("${coverImg}")` }} />
+      <TimelineHeadline />
     </div>
   );
 };
