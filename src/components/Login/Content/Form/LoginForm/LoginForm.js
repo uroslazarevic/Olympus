@@ -1,41 +1,32 @@
 import React from "react";
-import { Field, reduxForm } from "redux-form";
+import { Field, reduxForm, SubmissionError } from "redux-form";
 import { FormField } from "components";
 import { Btn as FormBtn } from "components/UI";
 import { validateForm } from "utilis";
 
 class LoginForm extends React.Component {
-  onSubmit = formValues => {
-    this.props.onSubmit(formValues);
+  onSubmit = async (formValues) => {
+    const response = await this.props.onSubmit(formValues);
+    if (!response) return;
+    if (response.errors) {
+      const { error, path } = response.errors;
+      throw new SubmissionError({ [path]: error, _error: error });
+    }
   };
 
   render() {
     return (
-      <form
-        onSubmit={this.props.handleSubmit(this.onSubmit)}
-        className="login-form"
-      >
-        <div className="form-label">Login to your Account</div>
+      <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="login-form">
+        <div className="form-label">
+          {this.props.msg ? <span style={{ color: "green" }}>{this.props.msg}</span> : "Login to your Account"}
+        </div>
         <div className="login-form-content">
-          <Field
-            name="email"
-            type="text"
-            label="Your email"
-            component={FormField}
-          />
-          <Field
-            name="password"
-            type="password"
-            label="Your password"
-            component={FormField}
-          />
+          <Field name="email" type="text" label="Your email" component={FormField} />
+          <Field name="password" type="password" label="Your password" component={FormField} />
+          {this.props.error && <strong>{this.props.error}</strong>}
           <div className="additional-options">
             <label>
-              <Field
-                name="rememberLoginedUser"
-                component="input"
-                type="checkbox"
-              />
+              <Field name="rememberLoginedUser" component="input" type="checkbox" />
               <span>Remember me</span>
             </label>
             <div className="forgot-password">Forgot My Password</div>
@@ -77,6 +68,6 @@ export default reduxForm({
   initialValues: {
     password: "",
     email: "",
-    rememberLoginedUser: false
-  }
+    rememberLoginedUser: false,
+  },
 })(LoginForm);

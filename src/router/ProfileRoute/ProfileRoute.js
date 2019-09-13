@@ -1,16 +1,9 @@
 import React from "react";
-import { connect } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 
-const ProfileRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (rest.signedIn ? <Component {...props} /> : <Redirect to="/" />)} />
-);
+const ProfileRoute = ({ component: Component, ...rest }) => {
+  const token = localStorage.getItem("token");
+  return <Route {...rest} render={(props) => (token ? <Component {...props} /> : <Redirect to="/" />)} />;
+};
 
-function mapStateToProps({ auth }) {
-  return { signedIn: auth.signedIn };
-}
-
-export default connect(
-  mapStateToProps,
-  null
-)(ProfileRoute);
+export default ProfileRoute;

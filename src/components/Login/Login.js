@@ -19,14 +19,9 @@ class Login extends React.Component {
   }
 
   render() {
-    if (this.state.pageLoader) {
-      return <PageLoader />;
-    }
     return (
-      <div
-        className="login-page"
-        style={{ backgroundImage: `url("${backgroundImg}")` }}
-      >
+      <div className="login-page" style={{ backgroundImage: `url("${backgroundImg}")` }}>
+        {this.state.pageLoader && <PageLoader />}
         <div className="bg-layer">
           <div className="container">
             <LoginHeader />

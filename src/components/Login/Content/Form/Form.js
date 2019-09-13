@@ -1,65 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation } from "@apollo/react-hooks";
 import { connect } from "react-redux";
+import { SubmissionError } from "redux-form";
 
-import { signIn } from "actions";
+import { REG_USER, LOGIN_USER } from "mutations/auth";
+import { signIn, signUp } from "actions";
 import { LoginForm, RegisterForm } from "components";
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
+const Form = (props) => {
+  const [selectedForm, setSelectedForm] = useState("loginForm");
+  const [msg, setMsg] = useState("");
+  const [registerUser, { data: regData }, error] = useMutation(REG_USER);
+  const [loginUser, { data: loginData }] = useMutation(LOGIN_USER);
 
-    this.state = {
-      selectedForm: "loginForm"
-    };
-  }
-
-  onSubmit = formValues => {
+  const onSubmit = async (formValues) => {
     console.log("formValues", formValues);
-    this.props.signIn();
+    try {
+      if (selectedForm === "loginForm") {
+        const response = await loginUser({ variables: { ...formValues } });
+        setMsg("Login successfull!");
+        setTimeout(() => {
+          props.signIn(response);
+        }, 3000);
+      }
+      if (selectedForm === "registerForm") {
+        const response = await registerUser({
+          variables: { ...formValues, isAdmin: false },
+          operationName: "register",
+        });
+        setMsg("Registration successfull!");
+        console.log("response", response);
+        setTimeout(() => {
+          props.signUp(formValues);
+          setSelectedForm("loginForm");
+        }, 3000);
+      }
+      return;
+    } catch (err) {
+      const [errors] = err.graphQLErrors;
+      console.log("validation errors", errors);
+      return { errors };
+    }
   };
 
-  showRegisterForm = () => {
-    this.setState({ selectedForm: "registerForm" });
-  };
-
-  render() {
-    const { selectedForm } = this.state;
-
-    return (
-      <div className="form">
-        <div className="select-form-btns">
-          <span
-            onClick={() => this.setState({ selectedForm: "loginForm" })}
-            className={`login-form-btn ${
-              selectedForm === "loginForm" ? "active-item" : ""
-            }`}
-          >
-            <i className="fas fa-adjust" />
-          </span>
-          <span
-            onClick={() => this.setState({ selectedForm: "registerForm" })}
-            className={`register-form-btn ${
-              selectedForm === "registerForm" ? "active-item" : ""
-            }`}
-          >
-            <i className="fas fa-adjust" />
-          </span>
-        </div>
-        <div className="content">
-          {this.state.selectedForm === "loginForm" && (
-            <LoginForm
-              showRegisterForm={this.showRegisterForm}
-              onSubmit={this.onSubmit}
-            />
-          )}
-          {this.state.selectedForm === "registerForm" && <RegisterForm />}
-        </div>
+  return (
+    <div className="form">
+      <div className="select-form-btns">
+        <span
+          onClick={() => setSelectedForm("loginForm")}
+          className={`login-form-btn ${selectedForm === "loginForm" ? "active-item" : ""}`}
+        >
+          <i className="fas fa-adjust" />
+        </span>
+        <span
+          onClick={() => setSelectedForm("registerForm")}
+          className={`register-form-btn ${selectedForm === "registerForm" ? "active-item" : ""}`}
+        >
+          <i className="fas fa-adjust" />
+        </span>
       </div>
-    );
-  }
-}
+      <div className="content">
+        {selectedForm === "loginForm" && (
+          <LoginForm msg={msg} showRegisterForm={() => setSelectedForm("registerForm")} onSubmit={onSubmit} />
+        )}
+        {selectedForm === "registerForm" && <RegisterForm msg={msg} onSubmit={onSubmit} />}
+      </div>
+    </div>
+  );
+};
 
 export default connect(
   null,
-  { signIn }
+  { signIn, signUp }
 )(Form);

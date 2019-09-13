@@ -71,6 +71,7 @@ import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comment
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
 // Not Found Page
 import NotFound from "./NotFound/NotFound";
+import { Chat } from "./Profile/Chat/Chat";
 
 export {
   // Not Found Page
@@ -145,5 +146,6 @@ export {
   CommentOptions,
   PostComments,
   PostAsideBtns,
-  LatestVideos
+  LatestVideos,
+  Chat,
 };
