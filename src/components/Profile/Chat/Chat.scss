@@ -1,4 +1,5 @@
 .chat-box {
+  margin-left: 15px;
   background: #ddd;
   border-top-left-radius: 4px;
   width: 200px;
@@ -6,7 +7,6 @@
   border: 1px solid cornflowerblue;
   background-color: #fff;
   overflow: hidden;
-  margin-bottom: 20px;
 
   .header {
     padding: 5px 10px;
@@ -68,11 +68,20 @@
 
       .msg-content {
         .text {
+          font-size: 11px;
+          line-height: 12px;
         }
 
         .date {
-          font-size: 11px;
+          font-size: 10px;
+          font-family: sans-serif;
           font-weight: bold;
+          margin-top: 1px;
+
+          &:hover {
+            opacity: 0.8;
+            cursor: pointer;
+          }
         }
       }
     }
@@ -80,34 +89,128 @@
     $min-width: 75px;
     .you {
       margin-left: auto;
-      width: 65%;
+      width: 80%;
 
       .msg-content {
-        min-width: $min-width;
-        padding: 5px 15px 5px 10px;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
         text-align: right;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 20px;
-        background-color: deepskyblue;
+
+        .text {
+          margin-left: auto;
+          min-width: 40px;
+          position: relative;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 0;
+          padding: 5px 10px 5px 10px;
+          border-bottom-left-radius: 15px;
+          border-top-left-radius: 15px;
+          background-color: deepskyblue;
+
+          &:hover {
+            background: #49d1ff;
+            cursor: pointer;
+
+            &::before {
+              background: #49d1ff;
+              cursor: pointer;
+            }
+          }
+
+          &::before {
+            content: " ";
+            right: -1px;
+            top: -3px;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            z-index: 1001;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: -10px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: -9px;
+            transform: rotate(90deg);
+            background: deepskyblue;
+          }
+        }
+
+        .date {
+          margin-right: 5px;
+        }
       }
     }
 
-    .friend {
-      width: 65%;
+    .friend,
+    .admin {
+      width: 80%;
 
       .msg-content {
-        min-width: $min-width;
+        display: flex;
+        flex-direction: column;
         margin-right: auto;
         text-align: left;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 17px;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 0px;
-        background-color: antiquewhite;
-        padding: 5px 10px 5px 15px;
+
+        .date {
+          margin-left: 5px;
+        }
+
+        .text {
+          margin-right: auto;
+          min-width: 40px;
+          padding: 5px 10px 5px 10px;
+          border-bottom-right-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 0px;
+          background-color: #e3e3e3;
+          position: relative;
+
+          &:hover {
+            background: #ececec;
+            cursor: pointer;
+
+            &::before {
+              background: #ececec;
+              cursor: pointer;
+            }
+          }
+
+          &::before {
+            content: " ";
+            left: -1px;
+            top: -3px;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            z-index: 1001;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: -10px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: -9px;
+            border-color: dimgray;
+            background: #e3e3e3;
+          }
+        }
+      }
+    }
+
+    .admin {
+      .text {
+        background: yellowgreen !important;
+
+        &:hover {
+          background: #b2de58 !important;
+          cursor: pointer !important;
+
+          &::before {
+            background: #b2de58 !important;
+            cursor: pointer !important;
+          }
+        }
+        &::before {
+          background: yellowgreen !important;
+        }
       }
     }
   }

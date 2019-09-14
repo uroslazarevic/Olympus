@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import * as socketClient from "socket";
 // Actions
 import { fetchUser } from "actions";
-import { getChatHistory } from "actions/socket";
+import { getChatHistory, onSentMessage, onRoomJoin, onRoomLeave } from "actions/socket";
 // Context
 import { UserContext } from "components/Contexts";
 // Components
@@ -17,13 +17,22 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { pageLoader: true };
+    this.state = { pageLoader: true, socketData: {} };
   }
-  componentWillMount() {
-    // this.props.fetchUser().then(() => this.setState({ pageLoader: false }));
-
+  componentDidMount() {
     socketClient.initSocket();
     const socket = socketClient.getSocket();
+    this.setState({ pageLoader: true });
+    this.props.fetchUser().then(() => this.setState({ pageLoader: false }));
+
+    socket.on("chat_history", async (data) => {
+      this.props.getChatHistory(data);
+    });
+
+    socket.on("chat_msg", (newMsg) => {
+      console.log("newMsg");
+      this.props.onSentMessage(newMsg);
+    });
 
     // socket.on("chat_history", (data) => {
     //   this.props.getChatHistory(data);
@@ -31,23 +40,45 @@ class Profile extends React.Component {
     //   // console.log("GET CHAT_HISTORY", data);
     // });
 
-    socket.on("chat_room_error", (msg) => {
-      console.log("chat_room_error", msg);
-    });
+    // socket.on("chat_room_error", (msg) => {
+    //   console.log("chat_room_error", msg);
+    // });
   }
 
+  componentDidUpdate(newPr, old) {
+    console.log("new props", newPr, "old", old);
+  }
+
+  renderChats = () => {
+    const {
+      onRoomLeave,
+      socketData: { chatRooms, chatHistories },
+    } = this.props;
+    if (!chatRooms) return;
+    return (
+      <ul className="active-chats">
+        {chatRooms.map((room) => (
+          <Chat room={room} chatHistory={chatHistories} onRoomLeave={onRoomLeave} />
+        ))}
+      </ul>
+    );
+  };
+
   render() {
-    const { user, socketData } = this.props;
-    // if (this.state.pageLoader) {
-    //   return <PageLoader />;
-    // }
+    const { user, socketData, ...rest } = this.props;
+    const actions = { onRoomJoin: rest.onRoomJoin, onSentMessage: rest.onSentMessage };
+
+    if (this.state.pageLoader) {
+      return <PageLoader />;
+    }
+
     return (
       <div className="profile">
-        <Chat socketData={socketData} />
-        {/* <UserContext.Provider value={user, socketData}>
+        {this.renderChats()}
+        <UserContext.Provider value={{ user, chatRoomsData: [], actions }}>
           <ProfileHeader user={user} />
           <ProfileContent />
-       </UserContext.Provider> */}
+        </UserContext.Provider>
       </div>
     );
   }
@@ -62,5 +93,5 @@ function mapStateToProps({ user, socketData }) {
 
 export default connect(
   mapStateToProps,
-  { fetchUser, getChatHistory }
+  { fetchUser, getChatHistory, onSentMessage, onRoomJoin, onRoomLeave }
 )(Profile);

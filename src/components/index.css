@@ -220,6 +220,15 @@
 .is-success label {
   color: #28a745; }
 
+.profile .active-chats {
+  z-index: 1000;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 100px; }
+
 .profile-header {
   display: flex;
   height: 70px;
@@ -1273,14 +1282,14 @@
     transform: translate(-50%); }
 
 .chat-box {
+  margin-left: 15px;
   background: #ddd;
   border-top-left-radius: 4px;
   width: 200px;
   border-top-right-radius: 4px;
   border: 1px solid cornflowerblue;
   background-color: #fff;
-  overflow: hidden;
-  margin-bottom: 20px; }
+  overflow: hidden; }
   .chat-box .header {
     padding: 5px 10px;
     background-color: cornflowerblue;
@@ -1323,34 +1332,113 @@
       padding: 5px 10px;
       font-size: 12px;
       display: flex; }
-      .chat-box .content .message .msg-content .date {
+      .chat-box .content .message .msg-content .text {
         font-size: 11px;
-        font-weight: bold; }
+        line-height: 12px; }
+      .chat-box .content .message .msg-content .date {
+        font-size: 10px;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-top: 1px; }
+        .chat-box .content .message .msg-content .date:hover {
+          opacity: 0.8;
+          cursor: pointer; }
     .chat-box .content .you {
       margin-left: auto;
-      width: 65%; }
+      width: 80%; }
       .chat-box .content .you .msg-content {
-        min-width: 75px;
-        padding: 5px 15px 5px 10px;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
-        text-align: right;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 20px;
-        background-color: deepskyblue; }
-    .chat-box .content .friend {
-      width: 65%; }
-      .chat-box .content .friend .msg-content {
-        min-width: 75px;
+        text-align: right; }
+        .chat-box .content .you .msg-content .text {
+          margin-left: auto;
+          min-width: 40px;
+          position: relative;
+          border-bottom-right-radius: 10px;
+          border-top-right-radius: 0;
+          padding: 5px 10px 5px 10px;
+          border-bottom-left-radius: 15px;
+          border-top-left-radius: 15px;
+          background-color: deepskyblue; }
+          .chat-box .content .you .msg-content .text:hover {
+            background: #49d1ff;
+            cursor: pointer; }
+            .chat-box .content .you .msg-content .text:hover::before {
+              background: #49d1ff;
+              cursor: pointer; }
+          .chat-box .content .you .msg-content .text::before {
+            content: " ";
+            right: -1px;
+            top: -3px;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            z-index: 1001;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: -10px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: -9px;
+            transform: rotate(90deg);
+            background: deepskyblue; }
+        .chat-box .content .you .msg-content .date {
+          margin-right: 5px; }
+    .chat-box .content .friend,
+    .chat-box .content .admin {
+      width: 80%; }
+      .chat-box .content .friend .msg-content,
+      .chat-box .content .admin .msg-content {
+        display: flex;
+        flex-direction: column;
         margin-right: auto;
-        text-align: left;
-        border-bottom-right-radius: 0px;
-        border-top-right-radius: 17px;
-        border-bottom-left-radius: 20px;
-        border-top-left-radius: 0px;
-        background-color: antiquewhite;
-        padding: 5px 10px 5px 15px; }
+        text-align: left; }
+        .chat-box .content .friend .msg-content .date,
+        .chat-box .content .admin .msg-content .date {
+          margin-left: 5px; }
+        .chat-box .content .friend .msg-content .text,
+        .chat-box .content .admin .msg-content .text {
+          margin-right: auto;
+          min-width: 40px;
+          padding: 5px 10px 5px 10px;
+          border-bottom-right-radius: 15px;
+          border-top-right-radius: 15px;
+          border-bottom-left-radius: 10px;
+          border-top-left-radius: 0px;
+          background-color: #e3e3e3;
+          position: relative; }
+          .chat-box .content .friend .msg-content .text:hover,
+          .chat-box .content .admin .msg-content .text:hover {
+            background: #ececec;
+            cursor: pointer; }
+            .chat-box .content .friend .msg-content .text:hover::before,
+            .chat-box .content .admin .msg-content .text:hover::before {
+              background: #ececec;
+              cursor: pointer; }
+          .chat-box .content .friend .msg-content .text::before,
+          .chat-box .content .admin .msg-content .text::before {
+            content: " ";
+            left: -1px;
+            top: -3px;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            z-index: 1001;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: -10px;
+            border-top-right-radius: 6px;
+            border-top-left-radius: -9px;
+            border-color: dimgray;
+            background: #e3e3e3; }
+    .chat-box .content .admin .text {
+      background: yellowgreen !important; }
+      .chat-box .content .admin .text:hover {
+        background: #b2de58 !important;
+        cursor: pointer !important; }
+        .chat-box .content .admin .text:hover::before {
+          background: #b2de58 !important;
+          cursor: pointer !important; }
+      .chat-box .content .admin .text::before {
+        background: yellowgreen !important; }
   .chat-box .send-msg {
     position: relative; }
     .chat-box .send-msg textarea {

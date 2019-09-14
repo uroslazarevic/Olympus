@@ -8,7 +8,7 @@ import { UserContext } from "components/Contexts";
 const User = () => {
   return (
     <UserContext.Consumer>
-      {user => (
+      {({ user }) => (
         <div className="headline-timeline-user">
           <UserAvatar imgSrc={user.basicInfo.picture.medium} className="avatar-lg" />
           <div className="details">

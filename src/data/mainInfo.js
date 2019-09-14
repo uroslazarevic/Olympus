@@ -6,23 +6,23 @@ export default {
     {
       id: 1,
       topic: "about me",
-      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
+      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet",
     },
     {
       id: 2,
       topic: "Favorite TV Shows",
-      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
+      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet",
     },
     {
       id: 3,
       topic: "Favorite Music Bands / Artists",
-      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
-    }
+      content: "lorem ipsum dolor sit amet, lorem ipsum dolor sit amet",
+    },
   ],
   socialNetworks: [
     { id: 1, name: "facebook", src: "https://www.facebook.com/" },
     { id: 2, name: "twitter", src: "https://twitter.com/?lang=en" },
-    { id: 1, name: "dribbble", src: "https://dribbble.com/" }
+    { id: 1, name: "dribbble", src: "https://dribbble.com/" },
   ],
   photos: [
     { id: 1, src: "https://loremflickr.com/320/240/nature?random=1" },
@@ -33,122 +33,122 @@ export default {
     { id: 6, src: "https://loremflickr.com/320/240/nature?random=6" },
     { id: 7, src: "https://loremflickr.com/320/240/nature?random=7" },
     { id: 8, src: "https://loremflickr.com/320/240/nature?random=8" },
-    { id: 9, src: "https://loremflickr.com/320/240/nature?random=9" }
+    { id: 9, src: "https://loremflickr.com/320/240/nature?random=9" },
   ],
   friends: {
     count: 28,
     list: [
       {
-        id: 1,
+        id: 1000,
         src: "https://loremflickr.com/320/240/people?random=1",
         badgeColor: "bg-success",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 2,
+        id: 1001,
         src: "https://loremflickr.com/320/240/people?random=2",
         badgeColor: "bg-danger",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 3,
+        id: 1002,
         src: "https://loremflickr.com/320/240/people?random=3",
         badgeColor: "bg-primary",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 4,
+        id: 1003,
         src: "https://loremflickr.com/320/240/people?random=4",
         badgeColor: "warning",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 5,
+        id: 1004,
         src: "https://loremflickr.com/320/240/people?random=5",
         badgeColor: "bg-info",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 6,
+        id: 1005,
         src: "https://loremflickr.com/320/240/people?random=6",
         badgeColor: "bg-info",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 7,
+        id: 1006,
         src: "https://loremflickr.com/320/240/people?random=7",
         badgeColor: "warning",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 8,
+        id: 1007,
         src: "https://loremflickr.com/320/240/people?random=8",
         badgeColor: "bg-success",
-        name: "lorem"
+        name: "lorem",
       },
       {
-        id: 9,
+        id: 1008,
         src: "https://loremflickr.com/320/240/people?random=9",
         badgeColor: "bg-success",
-        name: "lorem"
-      }
-    ]
+        name: "lorem",
+      },
+    ],
   },
   badges: [
     {
       id: 1,
       src: "https://loremflickr.com/320/240/random?random=1",
       count: 1,
-      status: "bg-warning"
+      status: "bg-warning",
     },
     {
       id: 2,
       src: "https://loremflickr.com/320/240/random?random=2",
       count: "",
-      status: ""
+      status: "",
     },
     {
       id: 3,
       src: "https://loremflickr.com/320/240/random?random=3",
       count: "",
-      status: ""
+      status: "",
     },
     {
       id: 4,
       src: "https://loremflickr.com/320/240/random?random=4",
       count: "",
-      status: ""
+      status: "",
     },
     {
       id: 5,
       src: "https://loremflickr.com/320/240/random?random=5",
       count: 1,
-      status: "bg-primary"
+      status: "bg-primary",
     },
     {
       id: 6,
       src: "https://loremflickr.com/320/240/random?random=6",
       count: "",
-      status: ""
+      status: "",
     },
     {
       id: 7,
       src: "https://loremflickr.com/320/240/random?random=7",
       count: "",
-      status: ""
+      status: "",
     },
     {
       id: 8,
       src: "https://loremflickr.com/320/240/random?random=8",
       count: 2,
-      status: "bg-primary"
+      status: "bg-primary",
     },
     {
       id: 9,
       src: "https://loremflickr.com/320/240/random?random=9",
       count: 2,
-      status: "bg-success"
-    }
+      status: "bg-success",
+    },
   ],
   spotifyList: [
     {
@@ -156,36 +156,36 @@ export default {
       src: "https://loremflickr.com/320/240/random?random=1",
       title: "Lorem ipsum Dolor",
       description: "Some description about song",
-      duration: "3:20"
+      duration: "3:20",
     },
     {
       id: 2,
       src: "https://loremflickr.com/320/240/random?random=2",
       title: "Lorem ipsum Dolor lorem",
       description: "Some description about song",
-      duration: "..."
+      duration: "...",
     },
     {
       id: 3,
       src: "https://loremflickr.com/320/240/random?random=3",
       title: "Lorem ipsum Dolor",
       description: "Some description about song",
-      duration: "2:00"
+      duration: "2:00",
     },
     {
       id: 4,
       src: "https://loremflickr.com/320/240/random?random=4",
       title: "Lorem ipsum Dolor",
       description: "Some description about song",
-      duration: "1:50"
+      duration: "1:50",
     },
     {
       id: 5,
       src: "https://loremflickr.com/320/240/random?random=5",
       title: "Lorem ipsum Dolor",
       description: "Some description about song",
-      duration: "4:00"
-    }
+      duration: "4:00",
+    },
   ],
   twitterFeed: [
     {
@@ -193,96 +193,89 @@ export default {
       pseudonym: "Space Cowboy",
       author: "author",
       tags: ["tag1", "tag2"],
-      text:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
-      created: "2 hours ago"
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago",
     },
     {
       id: 2,
       pseudonym: "Space Cowboy",
       author: "author",
       tags: ["tag1", "tag2"],
-      text:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
-      created: "2 hours ago"
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago",
     },
     {
       id: 3,
       pseudonym: "Space Cowboy",
       author: "author",
       tags: ["tag1", "tag2"],
-      text:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
-      created: "2 hours ago"
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago",
     },
     {
       id: 4,
       pseudonym: "Space Cowboy",
       author: "author",
       tags: ["tag1", "tag2"],
-      text:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
-      created: "2 hours ago"
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago",
     },
     {
       id: 5,
       pseudonym: "Space Cowboy",
       author: "author",
       tags: ["tag1", "tag2"],
-      text:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
-      created: "2 hours ago"
-    }
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, eveniet.",
+      created: "2 hours ago",
+    },
   ],
   blog: [
     {
       id: 1,
       topic: "My Perfect Vacations in South America and Europe",
-      text:
-        "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum dolor.",
+      text: "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum dolor.",
       date: "March 18th 2018",
-      time: "19:00h"
+      time: "19:00h",
     },
     {
       id: 2,
       topic: "The Big Experience of Traveling Alone",
-      text:
-        "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum ime lorem ipsum.",
+      text: "Lorem ipsum dolor sit amet lorem ipsum dolor ,lorem ipsum dolor sit amet lorem ipsum ime lorem ipsum.",
       date: "March 18th 2018",
-      time: "19:00h"
-    }
+      time: "19:00h",
+    },
   ],
   favPages: [
     {
       id: 1,
       src: "https://loremflickr.com/320/240/random?random=1",
       title: "The Marina Bar",
-      description: "Restaurant / Bar"
+      description: "Restaurant / Bar",
     },
     {
       id: 2,
       src: "https://loremflickr.com/320/240/random?random=2",
       title: "Tapronus Rock",
-      description: "Rock Band"
+      description: "Rock Band",
     },
     {
       id: 3,
       src: "https://loremflickr.com/320/240/random?random=3",
       title: "Pixel Digital Design",
-      description: "Company"
+      description: "Company",
     },
     {
       id: 4,
       src: "https://loremflickr.com/320/240/random?random=4",
       title: "Ray Bar & Gril",
-      description: "Restaurant / Bar"
+      description: "Restaurant / Bar",
     },
     {
       id: 5,
       src: "https://loremflickr.com/320/240/random?random=5",
       title: "Crimson Agency",
-      description: "Company"
-    }
+      description: "Company",
+    },
   ],
   pool: [
     {
@@ -298,24 +291,24 @@ export default {
             {
               id: 1,
               src: "https://loremflickr.com/320/240/people?random=1",
-              name: "Person 1"
+              name: "Person 1",
             },
             {
               id: 2,
               src: "https://loremflickr.com/320/240/people?random=2",
-              name: "Person 2"
+              name: "Person 2",
             },
             {
               id: 3,
               src: "https://loremflickr.com/320/240/people?random=3",
-              name: "Person 3"
+              name: "Person 3",
             },
             {
               id: 4,
               src: "https://loremflickr.com/320/240/people?random=4",
-              name: "Person 4"
-            }
-          ]
+              name: "Person 4",
+            },
+          ],
         },
         {
           id: 2,
@@ -325,19 +318,19 @@ export default {
             {
               id: 5,
               src: "https://loremflickr.com/320/240/people?random=5",
-              name: "Person 5"
+              name: "Person 5",
             },
             {
               id: 6,
               src: "https://loremflickr.com/320/240/people?random=6",
-              name: "Person 6"
+              name: "Person 6",
             },
             {
               id: 7,
               src: "https://loremflickr.com/320/240/people?random=7",
-              name: "Person 7"
-            }
-          ]
+              name: "Person 7",
+            },
+          ],
         },
         {
           id: 3,
@@ -345,11 +338,11 @@ export default {
           votes: 2,
           voters: [
             { id: 8, src: "https://loremflickr.com/320/240/people?random=8" },
-            { id: 9, src: "https://loremflickr.com/320/240/people?random=9" }
-          ]
-        }
-      ]
-    }
+            { id: 9, src: "https://loremflickr.com/320/240/people?random=9" },
+          ],
+        },
+      ],
+    },
   ],
   posts: [
     {
@@ -366,39 +359,39 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            name: "Person 1",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
+            name: "Person 2",
           },
           {
             id: 3,
             src: "https://loremflickr.com/320/240/people?random=3",
-            name: "Person 3"
+            name: "Person 3",
           },
           {
             id: 4,
             src: "https://loremflickr.com/320/240/people?random=4",
-            name: "Person 4"
+            name: "Person 4",
           },
           {
             id: 5,
             src: "https://loremflickr.com/320/240/people?random=5",
-            name: "Person 5"
+            name: "Person 5",
           },
           {
             id: 6,
             src: "https://loremflickr.com/320/240/people?random=6",
-            name: "Person 6"
+            name: "Person 6",
           },
           {
             id: 7,
             src: "https://loremflickr.com/320/240/people?random=7",
-            name: "Person 7"
-          }
-        ]
+            name: "Person 7",
+          },
+        ],
       },
       comments: {
         count: 2,
@@ -416,24 +409,24 @@ export default {
                 {
                   id: 1,
                   src: "https://loremflickr.com/320/240/people?random=4",
-                  name: "Person 4"
+                  name: "Person 4",
                 },
                 {
                   id: 2,
                   src: "https://loremflickr.com/320/240/people?random=5",
-                  name: "Person 5"
+                  name: "Person 5",
                 },
                 {
                   id: 3,
                   src: "https://loremflickr.com/320/240/people?random=6",
-                  name: "Person 6"
+                  name: "Person 6",
                 },
                 {
                   id: 4,
                   src: "https://loremflickr.com/320/240/people?random=7",
-                  name: "Person 7"
-                }
-              ]
+                  name: "Person 7",
+                },
+              ],
             },
             comments: {
               count: 2,
@@ -451,24 +444,24 @@ export default {
                       {
                         id: 1,
                         src: "https://loremflickr.com/320/240/people?random=1",
-                        name: "Person 1"
+                        name: "Person 1",
                       },
                       {
                         id: 2,
                         src: "https://loremflickr.com/320/240/people?random=3",
-                        name: "Person 3"
+                        name: "Person 3",
                       },
                       {
                         id: 3,
                         src: "https://loremflickr.com/320/240/people?random=8",
-                        name: "Person 8"
-                      }
-                    ]
+                        name: "Person 8",
+                      },
+                    ],
                   },
                   comments: {
                     count: 0,
-                    list: []
-                  }
+                    list: [],
+                  },
                 },
                 {
                   id: 2,
@@ -483,22 +476,22 @@ export default {
                       {
                         id: 1,
                         src: "https://loremflickr.com/320/240/people?random=1",
-                        name: "You"
+                        name: "You",
                       },
                       {
                         id: 2,
                         src: "https://loremflickr.com/320/240/people?random=2",
-                        name: "Person 2"
-                      }
-                    ]
+                        name: "Person 2",
+                      },
+                    ],
                   },
                   comments: {
                     count: 0,
-                    list: []
-                  }
-                }
-              ]
-            }
+                    list: [],
+                  },
+                },
+              ],
+            },
           },
           {
             id: 2,
@@ -513,16 +506,16 @@ export default {
                 {
                   id: 1,
                   src: "https://loremflickr.com/320/240/people?random=1",
-                  name: "You"
-                }
-              ]
+                  name: "You",
+                },
+              ],
             },
             comments: {
               count: 0,
-              list: []
-            }
-          }
-        ]
+              list: [],
+            },
+          },
+        ],
       },
       shares: {
         count: 2,
@@ -530,15 +523,15 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            name: "Person 1",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
-          }
-        ]
-      }
+            name: "Person 2",
+          },
+        ],
+      },
     },
     {
       id: 2,
@@ -553,14 +546,14 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            name: "Person 1",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
-          }
-        ]
+            name: "Person 2",
+          },
+        ],
       },
       comments: {
         count: 2,
@@ -569,8 +562,7 @@ export default {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
             name: "Person 1",
-            comment:
-              "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            comment: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
             created: "2 hours ago",
             likes: {
               count: 2,
@@ -578,19 +570,19 @@ export default {
                 {
                   id: 1,
                   src: "https://loremflickr.com/320/240/people?random=4",
-                  name: "Person 4"
+                  name: "Person 4",
                 },
                 {
                   id: 2,
                   src: "https://loremflickr.com/320/240/people?random=5",
-                  name: "Person 5"
-                }
-              ]
+                  name: "Person 5",
+                },
+              ],
             },
             comments: {
               count: 0,
-              list: []
-            }
+              list: [],
+            },
           },
           {
             id: 2,
@@ -600,7 +592,7 @@ export default {
             created: "5 hours ago",
             likes: {
               count: 0,
-              list: []
+              list: [],
             },
             comments: {
               count: 1,
@@ -618,24 +610,24 @@ export default {
                       {
                         id: 1,
                         src: "https://loremflickr.com/320/240/people?random=1",
-                        name: "Person 1"
+                        name: "Person 1",
                       },
                       {
                         id: 2,
                         src: "https://loremflickr.com/320/240/people?random=3",
-                        name: "Person 3"
-                      }
-                    ]
+                        name: "Person 3",
+                      },
+                    ],
                   },
                   comments: {
                     count: 0,
-                    list: []
-                  }
-                }
-              ]
-            }
-          }
-        ]
+                    list: [],
+                  },
+                },
+              ],
+            },
+          },
+        ],
       },
       shares: {
         count: 1,
@@ -643,15 +635,15 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "Person 1"
+            name: "Person 1",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
-          }
-        ]
-      }
+            name: "Person 2",
+          },
+        ],
+      },
     },
     {
       id: 3,
@@ -664,7 +656,7 @@ export default {
         title: "Metallica - Nothing Else Matters [Official Music Video]",
         description:
           "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
-        origin: "youtube.com"
+        origin: "youtube.com",
       },
       created: "12 hours ago",
       likes: {
@@ -673,23 +665,23 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
-            name: "You"
+            name: "You",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
+            name: "Person 2",
           },
           {
             id: 3,
             src: "https://loremflickr.com/320/240/people?random=3",
-            name: "Person 3"
-          }
-        ]
+            name: "Person 3",
+          },
+        ],
       },
       comments: {
         count: 0,
-        list: []
+        list: [],
       },
       shares: {
         count: 2,
@@ -697,15 +689,15 @@ export default {
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=5",
-            name: "Person 5"
+            name: "Person 5",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=8",
-            name: "Person 8"
-          }
-        ]
-      }
+            name: "Person 8",
+          },
+        ],
+      },
     },
     {
       id: 4,
@@ -713,27 +705,26 @@ export default {
       sharedFrom: "Person 1",
       created: "7 hours ago",
       image: { src: "https://loremflickr.com/700/330/nature?random=150" },
-      content:
-        "Hey, everyone! Check out this fine piece of art produced by Person 1 ! :)",
+      content: "Hey, everyone! Check out this fine piece of art produced by Person 1 ! :)",
       likes: {
         count: 3,
         list: [
           {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=2",
-            name: "Person 2"
+            name: "Person 2",
           },
           {
             id: 2,
             src: "https://loremflickr.com/320/240/people?random=5",
-            name: "Person 5"
+            name: "Person 5",
           },
           {
             id: 3,
             src: "https://loremflickr.com/320/240/people?random=7",
-            name: "Person 7"
-          }
-        ]
+            name: "Person 7",
+          },
+        ],
       },
       comments: {
         count: 1,
@@ -742,8 +733,7 @@ export default {
             id: 1,
             src: "https://loremflickr.com/320/240/people?random=1",
             name: "Person 1",
-            comment:
-              "That is a amazing photo, I wonder what genius is behind this mastery!",
+            comment: "That is a amazing photo, I wonder what genius is behind this mastery!",
             created: "25 minutes ago",
             likes: {
               count: 2,
@@ -751,19 +741,19 @@ export default {
                 {
                   id: 1,
                   src: "https://loremflickr.com/320/240/people?random=4",
-                  name: "Person 4"
+                  name: "Person 4",
                 },
                 {
                   id: 2,
                   src: "https://loremflickr.com/320/240/people?random=5",
-                  name: "Person 5"
-                }
-              ]
+                  name: "Person 5",
+                },
+              ],
             },
             comments: {
               count: 0,
-              list: []
-            }
+              list: [],
+            },
           },
           {
             id: 2,
@@ -777,22 +767,22 @@ export default {
                 {
                   id: 1,
                   src: "https://loremflickr.com/320/240/people?random=1",
-                  name: "Person 1"
-                }
-              ]
+                  name: "Person 1",
+                },
+              ],
             },
             comments: {
               count: 0,
-              list: []
-            }
-          }
-        ]
+              list: [],
+            },
+          },
+        ],
       },
       shares: {
         count: 0,
-        list: []
-      }
-    }
+        list: [],
+      },
+    },
   ],
   latestVideos: [
     {
@@ -801,7 +791,7 @@ export default {
       title: "Metallica - Nothing Else Matters [Official Music Video]",
       description:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore minus incidunt culpa totam nobis dolorum, non suscipit delectus unde hic sunt...",
-      origin: "youtube.com"
+      origin: "youtube.com",
     },
     {
       id: 2,
@@ -809,15 +799,14 @@ export default {
       title: "Lukas Graham - 7 Years [OFFICIAL MUSIC VIDEO]",
       description:
         "7 Years by Lukas Graham. 'A mix of Christiania, Copenhagen and Los Angeles is combined to give you a beautiful imagery to help the song along. I really hope you like it.' - Lukas Graham",
-      origin: "youtube.com"
+      origin: "youtube.com",
     },
     {
       id: 3,
       yt_video_code: "RBumgq5yVrA",
       title: "Passenger | Let Her Go (Official Video)",
-      description:
-        "The official video for 'Let Her Go' – Directed and Produced by Dave Jansen. www.funmonkey.com.au",
-      origin: "youtube.com"
-    }
-  ]
+      description: "The official video for 'Let Her Go' – Directed and Produced by Dave Jansen. www.funmonkey.com.au",
+      origin: "youtube.com",
+    },
+  ],
 };

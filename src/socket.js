@@ -1,6 +1,6 @@
 import socketIOClient from "socket.io-client";
 
-import { getChatHistory } from "actions/socket";
+import { getChatHistory, onSentMessage } from "actions/socket";
 
 let socket = null;
 
@@ -16,9 +16,13 @@ const initSocket = () => {
     console.log("chat_room_error", msg);
   });
 
-  socket.on("chat_history", (data) => {
-    getChatHistory(data);
-  });
+  // socket.on("chat_history", (data) => {
+  //   getChatHistory(data);
+  // });
+
+  // socket.on("chat_msg", (newMsg) => {
+  //   onSentMessage(newMsg);
+  // });
 };
 
 const getSocket = () => socket;

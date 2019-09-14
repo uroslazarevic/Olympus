@@ -12,8 +12,7 @@ class LatestVideos extends React.Component {
       <div className="user-last-videos">
         <InfoBlock name="Last Videos">
           <ul className="latest-videos-list">
-            {this.props.latestVideos.map(video => {
-              console.log("video", video);
+            {this.props.latestVideos.map((video) => {
               return (
                 <li key={video.id} className="video-record">
                   <YouTube videoId={video.yt_video_code} className="latest-video-youtube" onReady={this._onReady} />

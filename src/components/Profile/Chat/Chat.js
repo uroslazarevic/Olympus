@@ -2,46 +2,41 @@ import React, { useState, useEffect } from "react";
 import mainInfo from "data/mainInfo";
 import * as socketClient from "socket";
 import { Avatar as FriendAvatar } from "components/UI";
-import uuidv4 from "uuid/v4";
 
-const initialMessages = [
-  { text: "Hello", date: "danas", from: "you", id: "12312313" },
-  { text: "Hello2", date: "danas2", from: "friend", id: "12312314" },
-  { text: "Hello", date: "danas", from: "you", id: "12312315" },
-  { text: "Hello2", date: "danas2", from: "friend", id: "12312316" },
-];
-export const Chat = ({ socketData }) => {
-  const [messages, setMessages] = useState(initialMessages);
+const friendData = mainInfo.friends.list[0];
+export const Chat = ({ room, chatHistory, onRoomLeave }) => {
+  const socket = socketClient.getSocket();
+  const [messages, setMessages] = useState([]);
   const [chatMsg, setChatMsg] = useState("");
-  const [loadChat, setLoadChat] = useState(false);
 
   const userData = JSON.parse(localStorage.getItem("userData"));
-  const friendId = 2;
-  const room = `${userData.id}-${friendId}`;
-  const socket = socketClient.getSocket();
-  const friendData = mainInfo.friends.list[0];
-  useEffect(() => {
-    console.log("chatHistory", socketData.chatHistories);
-    const chatHistory = socketData.chatHistories[room];
-    // setMessages(socketData.chatHistories[room]);
+  const token = localStorage.getItem("refreshToken");
 
-    // socket.on("chat_msg", (newMsg) => {
-    //   console.log("messages", newMsg);
-    // });
-  }, [socketData.chatHistories]);
+  useEffect(() => {
+    const data = {
+      userData: { username: userData.username, token },
+      roomName: room,
+    };
+    socket.emit("chat_room", data);
+  }, []);
+
+  useEffect(() => {
+    setMessages(chatHistory[room]);
+  }, [chatHistory]);
 
   const sendMsg = () => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
     if (!chatMsg.trim()) return;
-    const token = localStorage.getItem("refreshToken");
-    const msg = {
-      text: chatMsg.trim(),
-      userData: { username: userData.username, token },
-      friendId,
-      id: uuidv4(),
+    const msgData = {
+      msg: {
+        text: chatMsg.trim(),
+        from: userData.username,
+      },
+      token,
+      roomName: room,
     };
-    socket.emit("chat_room", msg);
+    socket.emit("chat_msg", msgData);
     setChatMsg("");
-    setLoadChat(true);
   };
 
   const onKeyCombo = (e) => {
@@ -52,8 +47,12 @@ export const Chat = ({ socketData }) => {
     if (e.shiftKey && e.keyCode === 13) sendMsg();
   };
 
+  const RoomLeave = () => {
+    onRoomLeave(room, socket);
+  };
+
   return (
-    <form className="chat-box">
+    <li className="chat-box">
       <div className="header">
         <FriendAvatar
           imgSrc={friendData.src}
@@ -68,13 +67,21 @@ export const Chat = ({ socketData }) => {
           {friendData.badgeColor === "bg-success" && <div className={`status active`}>Active now</div>}
           {friendData.badgeColor !== "bg-success" && <div className={`status inactive`}>Inactive</div>}
         </div>
-        <span className="remove">&times;</span>
+        <span onClick={RoomLeave} className="remove">
+          &times;
+        </span>
       </div>
       <div className="content">
         {messages &&
           messages.map((msg) => {
+            // ${msg.from === 'admin'
             return (
-              <div key={msg.id} className={`message ${msg.from}`}>
+              <div
+                key={msg.id}
+                className={`message ${
+                  msg.from === userData.username ? "you" : msg.from === "admin" ? "admin" : "friend"
+                } `}
+              >
                 <div className="msg-content">
                   <div className="text">{msg.text}</div>
                   <div className="date">{msg.date}</div>
@@ -99,6 +106,6 @@ export const Chat = ({ socketData }) => {
           placeholder="Write message..."
         />
       </div>
-    </form>
+    </li>
   );
 };

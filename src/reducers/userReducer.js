@@ -4,7 +4,7 @@ import mainInfo from "data/mainInfo";
 
 const initialState = {
   basicInfo: null,
-  mainInfo
+  mainInfo,
 };
 
 export default (state = initialState, action) => {
