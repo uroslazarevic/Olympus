@@ -15,14 +15,6 @@ const initSocket = () => {
   socket.on("chat_room_error", (msg) => {
     console.log("chat_room_error", msg);
   });
-
-  // socket.on("chat_history", (data) => {
-  //   getChatHistory(data);
-  // });
-
-  // socket.on("chat_msg", (newMsg) => {
-  //   onSentMessage(newMsg);
-  // });
 };
 
 const getSocket = () => socket;

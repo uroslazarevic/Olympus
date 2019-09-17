@@ -31,7 +31,6 @@ export default (state = initialState, action) => {
     case LEAVE_ROOM:
       const chatRooms = state.chatRooms.filter((room) => room !== action.payload);
       const chatHistories = _.omit(state.chatHistories, [action.payload]);
-      console.log("chatRooms", chatHistories);
       return { chatHistories, chatRooms };
 
     default:

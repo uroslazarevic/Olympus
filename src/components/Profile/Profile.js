@@ -9,9 +9,9 @@ import { getChatHistory, onSentMessage, onRoomJoin, onRoomLeave } from "actions/
 // Context
 import { UserContext } from "components/Contexts";
 // Components
-import { ProfileHeader, ProfileContent } from "components";
+import { ProfileHeader, ProfileContent, Chat } from "components";
 import { PageLoader } from "components/UI";
-import { Chat } from "..";
+// import { Chat } from "..";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -30,23 +30,9 @@ class Profile extends React.Component {
     });
 
     socket.on("chat_msg", (newMsg) => {
-      console.log("newMsg");
+      console.log("newMsg", newMsg);
       this.props.onSentMessage(newMsg);
     });
-
-    // socket.on("chat_history", (data) => {
-    //   this.props.getChatHistory(data);
-    //   console.log("PROF DATA: ", data);
-    //   // console.log("GET CHAT_HISTORY", data);
-    // });
-
-    // socket.on("chat_room_error", (msg) => {
-    //   console.log("chat_room_error", msg);
-    // });
-  }
-
-  componentDidUpdate(newPr, old) {
-    console.log("new props", newPr, "old", old);
   }
 
   renderChats = () => {
