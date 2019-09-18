@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import * as socketClient from "socket";
 // Actions
 import { fetchUser } from "actions";
-import { getChatHistory, onSentMessage, onRoomJoin, onRoomLeave } from "actions/socket";
+import { getChatHistory, onSentMessage, onRoomJoin, onRoomLeave, editMessage, deleteMessage } from "actions/socket";
 // Context
 import { UserContext } from "components/Contexts";
 // Components
@@ -17,8 +17,9 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { pageLoader: true, socketData: {} };
+    this.state = { pageLoader: true, socketData: {}, showOptions: false };
   }
+
   componentDidMount() {
     socketClient.initSocket();
     const socket = socketClient.getSocket();
@@ -38,13 +39,21 @@ class Profile extends React.Component {
   renderChats = () => {
     const {
       onRoomLeave,
+      editMessage,
+      deleteMessage,
       socketData: { chatRooms, chatHistories },
     } = this.props;
     if (!chatRooms) return;
     return (
       <ul className="active-chats">
         {chatRooms.map((room) => (
-          <Chat room={room} chatHistory={chatHistories} onRoomLeave={onRoomLeave} />
+          <Chat
+            room={room}
+            chatHistory={chatHistories}
+            onRoomLeave={onRoomLeave}
+            editMessage={editMessage}
+            deleteMessage={deleteMessage}
+          />
         ))}
       </ul>
     );
@@ -52,7 +61,10 @@ class Profile extends React.Component {
 
   render() {
     const { user, socketData, ...rest } = this.props;
-    const actions = { onRoomJoin: rest.onRoomJoin, onSentMessage: rest.onSentMessage };
+    const actions = {
+      onRoomJoin: rest.onRoomJoin,
+      onSentMessage: rest.onSentMessage,
+    };
 
     if (this.state.pageLoader) {
       return <PageLoader />;
@@ -79,5 +91,5 @@ function mapStateToProps({ user, socketData }) {
 
 export default connect(
   mapStateToProps,
-  { fetchUser, getChatHistory, onSentMessage, onRoomJoin, onRoomLeave }
+  { fetchUser, getChatHistory, onSentMessage, onRoomJoin, onRoomLeave, editMessage, deleteMessage }
 )(Profile);

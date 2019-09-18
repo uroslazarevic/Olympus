@@ -72,6 +72,8 @@ import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Commen
 // Not Found Page
 import NotFound from "./NotFound/NotFound";
 import { Chat } from "./Profile/Chat/Chat";
+import { ChatOptions } from "./Profile/Chat/Options/Options";
+import { ChatMessage } from "./Profile/Chat/Message/Message";
 
 export {
   // Not Found Page
@@ -148,4 +150,6 @@ export {
   PostAsideBtns,
   LatestVideos,
   Chat,
+  ChatOptions,
+  ChatMessage,
 };

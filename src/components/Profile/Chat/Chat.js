@@ -1,13 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import moment from "moment";
 import mainInfo from "data/mainInfo";
 import * as socketClient from "socket";
 import { Avatar as FriendAvatar } from "components/UI";
+import { ChatMessage } from "components";
 
 const friendData = mainInfo.friends.list[0];
-export const Chat = ({ room, chatHistory, onRoomLeave }) => {
+
+export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessage }) => {
   const socket = socketClient.getSocket();
   const [messages, setMessages] = useState([]);
   const [chatMsg, setChatMsg] = useState("");
+  const [editedMsgId, setEditedMsgId] = useState(null);
 
   const userData = JSON.parse(localStorage.getItem("userData"));
   const token = localStorage.getItem("refreshToken");
@@ -35,8 +39,23 @@ export const Chat = ({ room, chatHistory, onRoomLeave }) => {
       token,
       roomName: room,
     };
+    if (editedMsgId) {
+      // Create edited message
+      const updDate = moment(Date.now()).format("h:mm a");
+      const editedMsg = { ...msgData, msg: { ...msgData.msg, id: editedMsgId, date: updDate } };
+      // Update chat history
+      editMessage(editedMsg, socket);
+      setEditedMsgId(null);
+      return setChatMsg("");
+    }
     socket.emit("chat_msg", msgData);
     setChatMsg("");
+  };
+
+  const onEditMessage = (msg) => {
+    console.log("msg", msg);
+    setEditedMsgId(msg.id);
+    setChatMsg(msg.text);
   };
 
   const onKeyCombo = (e) => {
@@ -73,22 +92,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave }) => {
       </div>
       <div className="content">
         {messages &&
-          messages.map((msg) => {
-            // ${msg.from === 'admin'
-            return (
-              <div
-                key={msg.id}
-                className={`message ${
-                  msg.from === userData.username ? "you" : msg.from === "admin" ? "admin" : "friend"
-                } `}
-              >
-                <div className="msg-content">
-                  <div className="text">{msg.text}</div>
-                  <div className="date">{msg.date}</div>
-                </div>
-              </div>
-            );
-          })}
+          messages.map((msg) => <ChatMessage msg={msg} username={userData.username} onEditMessage={onEditMessage} />)}
       </div>
       <div className="send-msg">
         <span onClick={sendMsg}>

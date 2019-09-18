@@ -1327,118 +1327,6 @@
     overflow-y: scroll;
     height: 200px;
     padding: 10px 5px; }
-    .chat-box .content .message {
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 12px;
-      display: flex; }
-      .chat-box .content .message .msg-content .text {
-        font-size: 11px;
-        line-height: 12px; }
-      .chat-box .content .message .msg-content .date {
-        font-size: 10px;
-        font-family: sans-serif;
-        font-weight: bold;
-        margin-top: 1px; }
-        .chat-box .content .message .msg-content .date:hover {
-          opacity: 0.8;
-          cursor: pointer; }
-    .chat-box .content .you {
-      margin-left: auto;
-      width: 80%; }
-      .chat-box .content .you .msg-content {
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        text-align: right; }
-        .chat-box .content .you .msg-content .text {
-          margin-left: auto;
-          min-width: 40px;
-          position: relative;
-          border-bottom-right-radius: 10px;
-          border-top-right-radius: 0;
-          padding: 5px 10px 5px 10px;
-          border-bottom-left-radius: 15px;
-          border-top-left-radius: 15px;
-          background-color: deepskyblue; }
-          .chat-box .content .you .msg-content .text:hover {
-            background: #49d1ff;
-            cursor: pointer; }
-            .chat-box .content .you .msg-content .text:hover::before {
-              background: #49d1ff;
-              cursor: pointer; }
-          .chat-box .content .you .msg-content .text::before {
-            content: " ";
-            right: -1px;
-            top: -3px;
-            position: absolute;
-            width: 7px;
-            height: 7px;
-            z-index: 1001;
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: -10px;
-            border-top-right-radius: 6px;
-            border-top-left-radius: -9px;
-            transform: rotate(90deg);
-            background: deepskyblue; }
-        .chat-box .content .you .msg-content .date {
-          margin-right: 5px; }
-    .chat-box .content .friend,
-    .chat-box .content .admin {
-      width: 80%; }
-      .chat-box .content .friend .msg-content,
-      .chat-box .content .admin .msg-content {
-        display: flex;
-        flex-direction: column;
-        margin-right: auto;
-        text-align: left; }
-        .chat-box .content .friend .msg-content .date,
-        .chat-box .content .admin .msg-content .date {
-          margin-left: 5px; }
-        .chat-box .content .friend .msg-content .text,
-        .chat-box .content .admin .msg-content .text {
-          margin-right: auto;
-          min-width: 40px;
-          padding: 5px 10px 5px 10px;
-          border-bottom-right-radius: 15px;
-          border-top-right-radius: 15px;
-          border-bottom-left-radius: 10px;
-          border-top-left-radius: 0px;
-          background-color: #e3e3e3;
-          position: relative; }
-          .chat-box .content .friend .msg-content .text:hover,
-          .chat-box .content .admin .msg-content .text:hover {
-            background: #ececec;
-            cursor: pointer; }
-            .chat-box .content .friend .msg-content .text:hover::before,
-            .chat-box .content .admin .msg-content .text:hover::before {
-              background: #ececec;
-              cursor: pointer; }
-          .chat-box .content .friend .msg-content .text::before,
-          .chat-box .content .admin .msg-content .text::before {
-            content: " ";
-            left: -1px;
-            top: -3px;
-            position: absolute;
-            width: 7px;
-            height: 7px;
-            z-index: 1001;
-            border-bottom-left-radius: 7px;
-            border-bottom-right-radius: -10px;
-            border-top-right-radius: 6px;
-            border-top-left-radius: -9px;
-            border-color: dimgray;
-            background: #e3e3e3; }
-    .chat-box .content .admin .text {
-      background: yellowgreen !important; }
-      .chat-box .content .admin .text:hover {
-        background: #b2de58 !important;
-        cursor: pointer !important; }
-        .chat-box .content .admin .text:hover::before {
-          background: #b2de58 !important;
-          cursor: pointer !important; }
-      .chat-box .content .admin .text::before {
-        background: yellowgreen !important; }
   .chat-box .send-msg {
     position: relative; }
     .chat-box .send-msg textarea {
@@ -1466,3 +1354,183 @@
       color: #b3b3b3; }
       .chat-box .send-msg span:hover {
         color: cornflowerblue; }
+
+.message {
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex; }
+  .message .msg-content {
+    position: relative; }
+    .message .msg-content .text {
+      position: relative;
+      font-size: 11px;
+      line-height: 12px; }
+      .message .msg-content .text .elipsis-btn {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        color: #9a9595;
+        font-size: 14px;
+        z-index: 1;
+        top: 50%;
+        transform: translate(0, -50%); }
+    .message .msg-content .date {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-top: 1px; }
+      .message .msg-content .date:hover {
+        opacity: 0.8;
+        cursor: pointer; }
+    .message .msg-content:hover .elipsis-btn {
+      display: block; }
+
+.you {
+  margin-left: auto;
+  width: 80%; }
+  .you .msg-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    text-align: right;
+    padding-left: 20px; }
+    .you .msg-content .text {
+      margin-left: auto;
+      min-width: 40px;
+      position: relative;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 0;
+      padding: 5px 10px 5px 10px;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+      background-color: deepskyblue; }
+      .you .msg-content .text .elipsis-btn {
+        left: -20px; }
+      .you .msg-content .text::before {
+        content: " ";
+        right: -1px;
+        top: -3px;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        z-index: 100;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: -10px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: -9px;
+        transform: rotate(90deg);
+        background: deepskyblue; }
+    .you .msg-content .date {
+      margin-right: 5px; }
+    .you .msg-content:hover {
+      cursor: pointer; }
+      .you .msg-content:hover .text {
+        background: #49d1ff; }
+        .you .msg-content:hover .text::before {
+          background: #49d1ff; }
+    .you .msg-content .chat-comment-options {
+      left: -34px; }
+
+.friend,
+.admin {
+  width: 80%; }
+  .friend .msg-content,
+  .admin .msg-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    text-align: left;
+    padding-right: 20px; }
+    .friend .msg-content .date,
+    .admin .msg-content .date {
+      margin-left: 5px; }
+    .friend .msg-content .text,
+    .admin .msg-content .text {
+      margin-right: auto;
+      min-width: 40px;
+      padding: 5px 10px 5px 10px;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 0px;
+      background-color: #e3e3e3;
+      position: relative; }
+      .friend .msg-content .text .elipsis-btn,
+      .admin .msg-content .text .elipsis-btn {
+        right: -20px; }
+      .friend .msg-content .text::before,
+      .admin .msg-content .text::before {
+        content: " ";
+        left: -1px;
+        top: -3px;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        z-index: 1001;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: -10px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: -9px;
+        border-color: dimgray;
+        background: #e3e3e3; }
+    .friend .msg-content:hover,
+    .admin .msg-content:hover {
+      cursor: pointer; }
+      .friend .msg-content:hover .text,
+      .admin .msg-content:hover .text {
+        background: #ececec; }
+      .friend .msg-content:hover::before,
+      .admin .msg-content:hover::before {
+        background: #ececec; }
+    .friend .msg-content .chat-comment-options,
+    .admin .msg-content .chat-comment-options {
+      right: -34px; }
+
+.admin .msg-content .text {
+  background: yellowgreen !important; }
+  .admin .msg-content .text::before {
+    background: yellowgreen !important; }
+
+.admin .msg-content:hover .text {
+  background: #b2de58 !important;
+  cursor: pointer !important; }
+  .admin .msg-content:hover .text::before {
+    background: #b2de58 !important;
+    cursor: pointer !important; }
+
+.chat-comment-options {
+  position: absolute;
+  border-radius: 2px;
+  border: 1px solid #333;
+  z-index: 101;
+  top: 30px;
+  background: #333;
+  border-radius: 4px; }
+  .chat-comment-options .option {
+    width: 80px;
+    color: #fff;
+    padding: 2.5px 11.5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+    text-align: left; }
+    .chat-comment-options .option:hover {
+      color: orangered; }
+  .chat-comment-options::before {
+    content: " ";
+    transform: rotate(-90deg);
+    left: 50%;
+    transform: translate(-50%, 0) rotate(-90deg);
+    z-index: 102;
+    top: -13px;
+    top: -11px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    z-index: 1001;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left-width: 8px;
+    border-left-style: solid; }
