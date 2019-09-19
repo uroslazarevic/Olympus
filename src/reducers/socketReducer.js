@@ -9,7 +9,8 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case GET_CHAT_HISTORY: {
-      const { id, chatHistory } = action.payload[0];
+      const { id, chatHistory } = action.payload;
+      console.log("action.payload", action.payload);
       return { ...state, chatHistories: { ...state.chatHistories, [id]: chatHistory } };
     }
 
@@ -40,8 +41,7 @@ export default (state = initialState, action) => {
     case EDIT_MESSAGE:
     case DELETE_MESSAGE: {
       const { room, history } = action.payload;
-      // return { ...state, chatHistories: { ...state.chatHistories, [room]: history } };
-      return { ...state };
+      return { ...state, chatHistories: { ...state.chatHistories, [room]: history } };
     }
     default:
       return state;

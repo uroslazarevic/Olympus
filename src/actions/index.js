@@ -1,10 +1,10 @@
-import { SIGN_IN, SIGN_OUT, FETCH_USER } from "./types";
+import { SIGN_IN, SIGN_OUT, FETCH_USER, SIGN_UP } from "./types";
 
 import { history } from "utilis";
 import { user } from "apis";
 
-export const signUp = (data) => async (dispatch) => {
-  console.log("signUp data", data);
+export const signUp = () => {
+  return { type: SIGN_UP };
 };
 
 export const signIn = (response) => (dispatch) => {

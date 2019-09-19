@@ -11,7 +11,6 @@ import { UserContext } from "components/Contexts";
 // Components
 import { ProfileHeader, ProfileContent, Chat } from "components";
 import { PageLoader } from "components/UI";
-// import { Chat } from "..";
 
 class Profile extends React.Component {
   constructor(props) {
@@ -21,18 +20,28 @@ class Profile extends React.Component {
   }
 
   componentDidMount() {
+    const refreshToken = localStorage.getItem("token");
     socketClient.initSocket();
     const socket = socketClient.getSocket();
     this.setState({ pageLoader: true });
     this.props.fetchUser().then(() => this.setState({ pageLoader: false }));
 
+    socket.emit("signin", refreshToken);
+
     socket.on("chat_history", async (data) => {
       this.props.getChatHistory(data);
     });
 
-    socket.on("chat_msg", (newMsg) => {
+    socket.on("send_msg", (newMsg) => {
       console.log("newMsg", newMsg);
       this.props.onSentMessage(newMsg);
+    });
+
+    socket.on("signin", (data) => console.log("DATA", data));
+
+    socket.on("check_signin", () => {
+      console.log("check_signin");
+      socket.emit("signin", refreshToken);
     });
   }
 

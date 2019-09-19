@@ -46,6 +46,30 @@
     padding: 10px 5px; }
   .chat-box .send-msg {
     position: relative; }
+    .chat-box .send-msg .edit-msg-info {
+      background: #edf2f6;
+      position: absolute;
+      width: 100%;
+      top: -34px;
+      display: flex;
+      height: 35px;
+      line-height: 35px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-family: "Times New Roman", Times, serif;
+      color: #ef8989; }
+      .chat-box .send-msg .edit-msg-info span {
+        margin-left: auto;
+        font-weight: bold;
+        color: #ef8989;
+        font-size: 16px;
+        padding-right: 10px;
+        cursor: pointer;
+        font-family: initial; }
+        .chat-box .send-msg .edit-msg-info span:hover {
+          color: #ed6060;
+          transform: scale(1.2);
+          transition: ease 0.2s transform; }
     .chat-box .send-msg textarea {
       overflow-y: scroll;
       resize: none;
@@ -60,7 +84,7 @@
       .chat-box .send-msg textarea:focus {
         outline: none;
         border-top-color: cornflowerblue; }
-    .chat-box .send-msg span {
+    .chat-box .send-msg .send-btn {
       z-index: 1;
       cursor: pointer;
       position: absolute;
@@ -69,5 +93,5 @@
       transform: translate(0, -50%);
       font-size: 12px;
       color: #b3b3b3; }
-      .chat-box .send-msg span:hover {
+      .chat-box .send-msg .send-btn:hover {
         color: cornflowerblue; }

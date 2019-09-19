@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { connect } from "react-redux";
-import { SubmissionError } from "redux-form";
-
+// Mutations
 import { REG_USER, LOGIN_USER } from "mutations/auth";
+// Actions
 import { signIn, signUp } from "actions";
+// Components
 import { LoginForm, RegisterForm } from "components";
 
 const Form = (props) => {
   const [selectedForm, setSelectedForm] = useState("loginForm");
   const [msg, setMsg] = useState("");
-  const [registerUser, { data: regData }, error] = useMutation(REG_USER);
-  const [loginUser, { data: loginData }] = useMutation(LOGIN_USER);
+  const [registerUser] = useMutation(REG_USER);
+  const [loginUser] = useMutation(LOGIN_USER);
 
   const onSubmit = async (formValues) => {
     console.log("formValues", formValues);
@@ -21,7 +22,7 @@ const Form = (props) => {
         setMsg("Login successfull!");
         setTimeout(() => {
           props.signIn(response);
-        }, 3000);
+        }, 2000);
       }
       if (selectedForm === "registerForm") {
         const response = await registerUser({
@@ -31,9 +32,10 @@ const Form = (props) => {
         setMsg("Registration successfull!");
         console.log("response", response);
         setTimeout(() => {
-          props.signUp(formValues);
+          props.signUp();
           setSelectedForm("loginForm");
-        }, 3000);
+          setMsg("");
+        }, 2000);
       }
       return;
     } catch (err) {

@@ -1,4 +1,5 @@
 // auth
+const SIGN_UP = "SIGN_UP";
 const SIGN_IN = "SIGN_IN";
 const SIGN_OUT = "SIGN_OUT";
 const FETCH_USER = "FETCH_USER";
@@ -12,6 +13,7 @@ const EDIT_MESSAGE = "EDIT_MESSAGE";
 const DELETE_MESSAGE = "DELETE_MESSAGE";
 
 export {
+  SIGN_UP,
   SIGN_IN,
   FETCH_USER,
   SIGN_OUT,

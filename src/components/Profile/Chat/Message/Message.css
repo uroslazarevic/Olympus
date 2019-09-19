@@ -22,7 +22,7 @@
       font-size: 10px;
       font-family: sans-serif;
       font-weight: bold;
-      margin-top: 1px; }
+      margin-top: 2px; }
       .message .msg-content .date:hover {
         opacity: 0.8;
         cursor: pointer; }
@@ -36,8 +36,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    text-align: right;
-    padding-left: 20px; }
+    text-align: right; }
     .you .msg-content .text {
       margin-left: auto;
       min-width: 40px;
@@ -47,7 +46,8 @@
       padding: 5px 10px 5px 10px;
       border-bottom-left-radius: 15px;
       border-top-left-radius: 15px;
-      background-color: deepskyblue; }
+      background-color: deepskyblue;
+      margin-left: 20px; }
       .you .msg-content .text .elipsis-btn {
         left: -20px; }
       .you .msg-content .text::before {
@@ -65,7 +65,7 @@
         transform: rotate(90deg);
         background: deepskyblue; }
     .you .msg-content .date {
-      margin-right: 5px; }
+      margin-right: 2px; }
     .you .msg-content:hover {
       cursor: pointer; }
       .you .msg-content:hover .text {
@@ -83,11 +83,10 @@
     display: flex;
     flex-direction: column;
     margin-right: auto;
-    text-align: left;
-    padding-right: 20px; }
+    text-align: left; }
     .friend .msg-content .date,
     .admin .msg-content .date {
-      margin-left: 5px; }
+      margin-left: 2px; }
     .friend .msg-content .text,
     .admin .msg-content .text {
       margin-right: auto;
@@ -98,7 +97,8 @@
       border-bottom-left-radius: 10px;
       border-top-left-radius: 0px;
       background-color: #e3e3e3;
-      position: relative; }
+      position: relative;
+      margin-right: 20px; }
       .friend .msg-content .text .elipsis-btn,
       .admin .msg-content .text .elipsis-btn {
         right: -20px; }

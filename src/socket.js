@@ -1,7 +1,5 @@
 import socketIOClient from "socket.io-client";
 
-import { getChatHistory, onSentMessage } from "actions/socket";
-
 let socket = null;
 
 const initSocket = () => {
@@ -12,8 +10,8 @@ const initSocket = () => {
   });
   socket.on("connected", (msg) => console.log(msg));
 
-  socket.on("chat_room_error", (msg) => {
-    console.log("chat_room_error", msg);
+  socket.on("join_room_error", (msg) => {
+    console.log("join_room_error", msg);
   });
 };
 

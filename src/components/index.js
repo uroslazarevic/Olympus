@@ -71,9 +71,12 @@ import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comment
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
 // Not Found Page
 import NotFound from "./NotFound/NotFound";
+// Chat
 import { Chat } from "./Profile/Chat/Chat";
 import { ChatOptions } from "./Profile/Chat/Options/Options";
 import { ChatMessage } from "./Profile/Chat/Message/Message";
+import { Modal } from "./Profile/Modals/Modal/Modal";
+import { DeleteMsgModal } from "./Profile/Modals/DeleteMsgModal/DeleteMsgModal";
 
 export {
   // Not Found Page
@@ -152,4 +155,6 @@ export {
   Chat,
   ChatOptions,
   ChatMessage,
+  Modal,
+  DeleteMsgModal,
 };

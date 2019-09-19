@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
-import moment from "moment";
+import React, { useState, useEffect } from "react";
+import { CSSTransition } from "react-transition-group";
+import uuidV4 from "uuid/v4";
 import mainInfo from "data/mainInfo";
 import * as socketClient from "socket";
 import { Avatar as FriendAvatar } from "components/UI";
@@ -21,7 +22,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
       userData: { username: userData.username, token },
       roomName: room,
     };
-    socket.emit("chat_room", data);
+    socket.emit("join_room", data);
   }, []);
 
   useEffect(() => {
@@ -33,29 +34,40 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     if (!chatMsg.trim()) return;
     const msgData = {
       msg: {
-        text: chatMsg.trim(),
+        date: Date.now(),
         from: userData.username,
+        text: chatMsg.trim(),
+        id: uuidV4(),
+        room,
       },
       token,
-      roomName: room,
     };
     if (editedMsgId) {
       // Create edited message
-      const updDate = moment(Date.now()).format("h:mm a");
-      const editedMsg = { ...msgData, msg: { ...msgData.msg, id: editedMsgId, date: updDate } };
+      const editedMsg = { ...msgData, msg: { ...msgData.msg, id: editedMsgId } };
       // Update chat history
       editMessage(editedMsg, socket);
       setEditedMsgId(null);
       return setChatMsg("");
     }
-    socket.emit("chat_msg", msgData);
+    socket.emit("send_msg", msgData);
+    setChatMsg("");
+  };
+
+  const onCancelEditMessage = () => {
+    setEditedMsgId(null);
     setChatMsg("");
   };
 
   const onEditMessage = (msg) => {
-    console.log("msg", msg);
     setEditedMsgId(msg.id);
     setChatMsg(msg.text);
+  };
+
+  const onDeleteMessage = (msg, deleteFor) => {
+    onCancelEditMessage();
+    const msgToDel = { ...msg, token, deleteFor };
+    deleteMessage(msgToDel, socket);
   };
 
   const onKeyCombo = (e) => {
@@ -92,10 +104,22 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
       </div>
       <div className="content">
         {messages &&
-          messages.map((msg) => <ChatMessage msg={msg} username={userData.username} onEditMessage={onEditMessage} />)}
+          messages.map((msg) => (
+            <ChatMessage
+              msg={msg}
+              username={userData.username}
+              onEditMessage={onEditMessage}
+              onDeleteMessage={onDeleteMessage}
+            />
+          ))}
       </div>
       <div className="send-msg">
-        <span onClick={sendMsg}>
+        <CSSTransition in={editedMsgId} timeout={300} classNames="fade-edit" unmountOnExit>
+          <div onClick={onCancelEditMessage} className="edit-msg-info">
+            Edit message <span>&times;</span>
+          </div>
+        </CSSTransition>
+        <span className="send-btn" onClick={sendMsg}>
           <i className="fas fa-bolt"></i>
         </span>
         <textarea
