@@ -1,0 +1,112 @@
+$mainColor: rgb(50, 175, 169);
+$boxShadowColor: 0 0 0 0.2rem rgba(50, 175, 169, 0.25);
+$subColor: rgba(50, 175, 169, 0.6);
+
+.profile-settings-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 650px;
+  width: 650px;
+  min-width: 450px;
+
+  .content {
+    .header {
+      .modal-title {
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+        font-family: serif;
+        color: $mainColor;
+      }
+      .profile-settings-image {
+        position: relative;
+
+        .upload-file {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+        }
+
+        label.label-upload-file {
+          span.camera {
+            position: absolute;
+            top: 60%;
+            font-size: 20px;
+            right: 204px;
+            text-align: center;
+            transform: translate(-50%, 0);
+            cursor: pointer;
+
+            i.fa-camera {
+              font-size: 19px;
+              line-height: 20px;
+              background: $mainColor;
+              padding: 6px;
+              color: #fff;
+              border-radius: 100%;
+            }
+          }
+          &:hover ~ .avatar-profile-settings {
+            box-shadow: $boxShadowColor;
+          }
+        }
+
+        .img-avatar.avatar-profile-settings {
+          height: 160px;
+          width: 160px;
+          margin: 0 auto;
+          position: initial;
+          border-radius: 100%;
+        }
+      }
+    }
+
+    .body {
+      form {
+        display: flex;
+        flex-direction: column;
+        .form-group {
+          label {
+            color: $mainColor;
+          }
+
+          input {
+            border-color: $subColor;
+            font-size: 14px;
+            &:focus {
+              box-shadow: $boxShadowColor;
+              border-color: $subColor;
+            }
+          }
+
+          small {
+            color: $subColor !important;
+          }
+        }
+
+        button.save {
+          background: $mainColor;
+          &:hover {
+            background: $mainColor;
+          }
+        }
+        button.save {
+          color: #fff;
+          margin-left: auto;
+
+          &:hover {
+            box-shadow: $boxShadowColor;
+          }
+
+          &:disabled {
+            box-shadow: initial;
+          }
+        }
+      }
+    }
+  }
+}

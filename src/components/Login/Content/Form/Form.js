@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useMutation } from "@apollo/react-hooks";
+import { useMutation, useQuery } from "@apollo/react-hooks";
 import { connect } from "react-redux";
 // Mutations
 import { REG_USER, LOGIN_USER } from "mutations/auth";
@@ -7,6 +7,8 @@ import { REG_USER, LOGIN_USER } from "mutations/auth";
 import { signIn, signUp } from "actions";
 // Components
 import { LoginForm, RegisterForm } from "components";
+// Utilis
+import { history } from "utilis";
 
 const Form = (props) => {
   const [selectedForm, setSelectedForm] = useState("loginForm");
@@ -19,6 +21,14 @@ const Form = (props) => {
     try {
       if (selectedForm === "loginForm") {
         const response = await loginUser({ variables: { ...formValues } });
+        const { name, pseudonym, avatar } = response.data.login.user;
+        if (!name || !pseudonym || !avatar) {
+          setMsg("Configure your profile");
+          setTimeout(() => {
+            history.push("/profile/settings", { id: response.data.login.userData.id });
+          }, 2000);
+          return;
+        }
         setMsg("Login successfull!");
         setTimeout(() => {
           props.signIn(response);
@@ -30,11 +40,8 @@ const Form = (props) => {
           operationName: "register",
         });
         setMsg("Registration successfull!");
-        console.log("response", response);
         setTimeout(() => {
-          props.signUp();
-          setSelectedForm("loginForm");
-          setMsg("");
+          props.signUp(response.data.register.id);
         }, 2000);
       }
       return;

@@ -9,6 +9,7 @@ import "./App.css";
 
 import AppRouter from "router/AppRouter";
 
+const { createUploadLink } = require("apollo-upload-client");
 const authMiddleware = new ApolloLink((operation, forward) => {
   const token = localStorage.getItem("token");
   const refreshToken = localStorage.getItem("refreshToken");
@@ -26,9 +27,20 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   return forward(operation);
 });
 
-const httpLink = new HttpLink({
+// const httpLink = new HttpLink({
+//   uri: "http://localhost:3001/graphql",
+
+// });
+
+const httpLink = new createUploadLink({
   uri: "http://localhost:3001/graphql",
 });
+
+// const client = new ApolloClient({
+//   cache: new InMemoryCache(),
+//   link: createUploadLink()
+// })
+// return
 
 const afterwareLink = new ApolloLink((operation, forward) => {
   return forward(operation).map((response) => {

@@ -9,6 +9,11 @@ export const LOGIN_USER = gql`
         username
         id
       }
+      user {
+        name
+        pseudonym
+        avatar
+      }
     }
   }
 `;
@@ -17,8 +22,20 @@ export const REG_USER = gql`
   mutation($username: String!, $email: String!, $password: String!, $isAdmin: Boolean!) {
     register(username: $username, email: $email, password: $password, isAdmin: $isAdmin) {
       id
-      username
-      email
     }
+  }
+`;
+
+export const FILE_UPLOAD = gql`
+  mutation fileUpload($file: Upload!, $id: Int!) {
+    fileUpload(file: $file, id: $id) {
+      filename
+    }
+  }
+`;
+
+export const PROFILE_SETTINGS = gql`
+  mutation profileSettings($name: String!, $pseudonym: String!, $id: Int!) {
+    profileSettings(name: $name, pseudonym: $pseudonym, id: $id)
   }
 `;

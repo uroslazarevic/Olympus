@@ -3,7 +3,8 @@ import { SIGN_IN, SIGN_OUT, FETCH_USER, SIGN_UP } from "./types";
 import { history } from "utilis";
 import { user } from "apis";
 
-export const signUp = () => {
+export const signUp = (id) => {
+  history.push("/profile/settings", { id });
   return { type: SIGN_UP };
 };
 
