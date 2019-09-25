@@ -7,14 +7,12 @@ import { REG_USER, LOGIN_USER } from "mutations/auth";
 import { signIn, signUp } from "actions";
 // Components
 import { LoginForm, RegisterForm } from "components";
-// Utilis
-import { history } from "utilis";
 
 const Form = (props) => {
-  const [selectedForm, setSelectedForm] = useState("loginForm");
   const [msg, setMsg] = useState("");
   const [registerUser] = useMutation(REG_USER);
   const [loginUser] = useMutation(LOGIN_USER);
+  const { selectedForm, setSelectedForm } = props;
 
   const onSubmit = async (formValues) => {
     console.log("formValues", formValues);

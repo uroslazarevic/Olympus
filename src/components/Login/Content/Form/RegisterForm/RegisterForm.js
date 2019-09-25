@@ -25,7 +25,7 @@ class RegisterForm extends React.Component {
           <Field name="email" type="text" label="Your email" component={FormField} />
           <Field name="password" type="password" label="Your password" component={FormField} />
           {error && <strong>{error}</strong>}
-          <button name="register" className="ui-btn register btn-disabled">
+          <button name="register" className="ui-btn register">
             Register
           </button>
 
