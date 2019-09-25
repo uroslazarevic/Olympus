@@ -14,7 +14,8 @@ const User = () => {
           <div className="details">
             <div className="fullname">{user.mainInfo.name}</div>
             <div className="location">
-              {user.basicInfo.location.city}, {user.basicInfo.location.state}
+              {/* {user.basicInfo.location.city}, {user.basicInfo.location.state} */}
+              {user.mainInfo.name === "Uros Lazarevic" ? "Lazarevac, Serbia" : "Belgrade, Serbia"}
             </div>
           </div>
         </div>
