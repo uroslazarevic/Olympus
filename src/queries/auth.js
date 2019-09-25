@@ -9,3 +9,13 @@ export const GET_ME = gql`
     }
   }
 `;
+export const ALL_USERS = gql`
+  query Users {
+    allUsers {
+      id
+      name
+      pseudonym
+      avatar
+    }
+  }
+`;

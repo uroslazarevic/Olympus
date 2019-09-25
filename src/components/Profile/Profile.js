@@ -1,6 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { Query } from "react-apollo";
 
+// Queries
+import { ALL_USERS } from "queries/auth";
 // Socket
 import * as socketClient from "socket";
 // Actions
@@ -16,11 +20,13 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { pageLoader: true, socketData: {}, showOptions: false };
+    this.state = { pageLoader: true, socketData: {}, showOptions: false, userId: null };
   }
 
   componentDidMount() {
     const refreshToken = localStorage.getItem("token");
+    const userId = JSON.parse(localStorage.getItem("userData")).id;
+    this.setState({ userId });
     socketClient.initSocket();
     const socket = socketClient.getSocket();
     this.setState({ pageLoader: true });
@@ -45,7 +51,7 @@ class Profile extends React.Component {
     });
   }
 
-  renderChats = () => {
+  renderChats = (friends) => {
     const {
       onRoomLeave,
       editMessage,
@@ -53,18 +59,26 @@ class Profile extends React.Component {
       socketData: { chatRooms, chatHistories },
     } = this.props;
     if (!chatRooms) return;
+
     return (
-      <ul className="active-chats">
-        {chatRooms.map((room) => (
-          <Chat
-            room={room}
-            chatHistory={chatHistories}
-            onRoomLeave={onRoomLeave}
-            editMessage={editMessage}
-            deleteMessage={deleteMessage}
-          />
-        ))}
-      </ul>
+      <TransitionGroup component="ul" className="active-chats">
+        {chatRooms.map((room) => {
+          const friendData = friends.find((fr) => fr.id === Number(room.split("-")[1]));
+          friendData.badgeColor = "bg-success";
+          return (
+            <CSSTransition key={room} timeout={350} classNames="item">
+              <Chat
+                room={room}
+                friendData={friendData}
+                chatHistory={chatHistories}
+                onRoomLeave={onRoomLeave}
+                editMessage={editMessage}
+                deleteMessage={deleteMessage}
+              />
+            </CSSTransition>
+          );
+        })}
+      </TransitionGroup>
     );
   };
 
@@ -80,13 +94,25 @@ class Profile extends React.Component {
     }
 
     return (
-      <div className="profile">
-        {this.renderChats()}
-        <UserContext.Provider value={{ user, chatRoomsData: [], actions }}>
-          <ProfileHeader user={user} />
-          <ProfileContent />
-        </UserContext.Provider>
-      </div>
+      <Query query={ALL_USERS} variables={{ id: this.state.userId }}>
+        {({ loading, error, data }) => {
+          if (loading) return <PageLoader />;
+          if (error) return `Error! ${error.message}`;
+          const friends = data.allUsers.filter((user) => user.id !== this.state.userId);
+          const me = data.allUsers.find((user) => user.id === this.state.userId);
+          const combinedUserData = { ...user, mainInfo: { ...user.mainInfo, ...me } };
+
+          return (
+            <div className="profile">
+              {this.renderChats(friends)}
+              <UserContext.Provider value={{ user: combinedUserData, friends, chatRoomsData: [], actions }}>
+                <ProfileHeader user={combinedUserData} />
+                <ProfileContent />
+              </UserContext.Provider>
+            </div>
+          );
+        }}
+      </Query>
     );
   }
 }

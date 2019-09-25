@@ -25,13 +25,13 @@ const Form = (props) => {
         if (!name || !pseudonym || !avatar) {
           setMsg("Configure your profile");
           setTimeout(() => {
-            history.push("/profile/settings", { id: response.data.login.userData.id });
+            props.signIn(response, "/profile/settings");
           }, 2000);
           return;
         }
         setMsg("Login successfull!");
         setTimeout(() => {
-          props.signIn(response);
+          props.signIn(response, "/profile");
         }, 2000);
       }
       if (selectedForm === "registerForm") {

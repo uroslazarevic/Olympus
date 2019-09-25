@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-import { customHooks } from "utilis";
 import { useMutation, useQuery } from "@apollo/react-hooks";
 // Mutations
 import { PROFILE_SETTINGS, FILE_UPLOAD } from "mutations/auth";
@@ -46,20 +45,18 @@ export const SettingsModal = ({ id }) => {
     try {
       const name = values.name ? values.name : data.me.name;
       const pseudonym = values.pseudonym ? values.pseudonym : data.me.pseudonym;
-      const response = await setProfileSettings({
+      await setProfileSettings({
         variables: { name, pseudonym, id },
         operationName: "setProfileSettings",
       });
-
-      response.data.profileSettings && history.push("/");
+      if (localStorage.getItem("refreshToken")) {
+        return history.push("/profile");
+      }
+      history.push("/");
     } catch (err) {
       console.log(err);
     }
   };
-
-  useEffect(() => {
-    console.log("DATA", values.name, values.pseudonym);
-  });
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
@@ -125,7 +122,7 @@ export const SettingsModal = ({ id }) => {
               </label>
             </div>
             <button disabled={!confirmed} type="submit" className="btn save">
-              Submit
+              Save
             </button>
           </form>
         </div>

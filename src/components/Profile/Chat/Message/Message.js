@@ -6,6 +6,7 @@ import { ChatOptions, Modal, DeleteMsgModal } from "components";
 export const ChatMessage = ({ msg, username, onEditMessage, onDeleteMessage }) => {
   const [showOptions, setShowOptions] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const myId = JSON.parse(localStorage.getItem("userData")).id;
 
   const onClickEdit = (msg) => {
     setShowOptions(false);
@@ -44,6 +45,10 @@ export const ChatMessage = ({ msg, username, onEditMessage, onDeleteMessage }) =
     return date;
   };
 
+  if (msg.from === "admin" && msg.for != myId) {
+    return null;
+  }
+
   return (
     <div
       key={msg.id}
@@ -57,19 +62,15 @@ export const ChatMessage = ({ msg, username, onEditMessage, onDeleteMessage }) =
       <div className="msg-content">
         <div className="text">
           {msg.text}
-          <ElipsisBtn
-            handleOptionsBtnClick={() => setShowOptions((showOptions) => !showOptions)}
-            optionsBtnActive={showOptions}
-          />
+          {msg.from === username && (
+            <ElipsisBtn
+              handleOptionsBtnClick={() => setShowOptions((showOptions) => !showOptions)}
+              optionsBtnActive={showOptions}
+            />
+          )}
         </div>
         <div className="date">{calculateDate(msg.date)}</div>
-        {showOptions && (
-          <ChatOptions
-            msgFromMe={msg.from === username}
-            onClickEdit={() => onClickEdit(msg)}
-            onClickDelete={displayModal}
-          />
-        )}
+        {showOptions && <ChatOptions onClickEdit={() => onClickEdit(msg)} onClickDelete={displayModal} />}
       </div>
     </div>
   );

@@ -1,7 +1,5 @@
 export default {
   notifications: 8,
-  name: "author",
-  pseudonym: "space cowboy",
   details: [
     {
       id: 1,

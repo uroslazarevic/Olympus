@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import uuidV4 from "uuid/v4";
-import mainInfo from "data/mainInfo";
+
+// Socket
 import * as socketClient from "socket";
+
+// Components
 import { Avatar as FriendAvatar } from "components/UI";
 import { ChatMessage } from "components";
 
-const friendData = mainInfo.friends.list[0];
-
-export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessage }) => {
+export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessage, friendData }) => {
   const socket = socketClient.getSocket();
   const [messages, setMessages] = useState([]);
   const [chatMsg, setChatMsg] = useState("");
@@ -44,9 +45,9 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     };
     if (editedMsgId) {
       // Create edited message
-      const editedMsg = { ...msgData, msg: { ...msgData.msg, id: editedMsgId } };
+      const editedMsgData = { ...msgData, msg: { ...msgData.msg, id: editedMsgId } };
       // Update chat history
-      editMessage(editedMsg, socket);
+      editMessage(editedMsgData, socket);
       setEditedMsgId(null);
       return setChatMsg("");
     }
@@ -86,7 +87,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     <li className="chat-box">
       <div className="header">
         <FriendAvatar
-          imgSrc={friendData.src}
+          imgSrc={`data:image/jpeg;base64,${friendData.avatar}`}
           badge={{
             badgePosition: "small small-tl",
             status: friendData.badgeColor,

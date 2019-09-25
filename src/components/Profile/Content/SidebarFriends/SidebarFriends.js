@@ -15,21 +15,20 @@ class SidebarFriends extends React.Component {
     actions.onRoomJoin(room);
   };
   render() {
-    const { user } = this.context;
-    const friends = user.mainInfo.friends.list;
+    const { friends } = this.context;
 
     if (friends) {
       return (
         <ul className="sidebar-friends">
-          {friends.map((friends) => {
-            const { id, src, badgeColor } = friends;
+          {friends.map((friend) => {
+            const { id, avatar } = friend;
             return (
               <li onClick={() => this.startChat(id)} key={id} className="friend-item">
                 <FreindAvatar
-                  imgSrc={src}
+                  imgSrc={`data:image/jpeg;base64,${avatar}`}
                   badge={{
                     badgePosition: "small small-tl",
-                    status: badgeColor,
+                    status: "bg-success",
                   }}
                   className="friend-avatar"
                 />

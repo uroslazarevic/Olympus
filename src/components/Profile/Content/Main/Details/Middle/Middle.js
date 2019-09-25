@@ -1,22 +1,21 @@
 import React from "react";
-import { connect } from "react-redux";
+// Context
+import { UserContext } from "components/Contexts";
 
 import { UserPosts } from "components";
 
-const Middle = props => {
-  const { posts, user } = props;
-
+const Middle = () => {
   return (
-    <div className="middle">
-      <UserPosts posts={posts} user={user} />
-    </div>
+    <UserContext.Consumer>
+      {({ user }) => {
+        return (
+          <div className="middle">
+            <UserPosts posts={user.mainInfo.posts} user={user.mainInfo} />
+          </div>
+        );
+      }}
+    </UserContext.Consumer>
   );
 };
 
-function mapStateToProps({ user }) {
-  return { posts: user.mainInfo.posts, user: user.basicInfo };
-}
-export default connect(
-  mapStateToProps,
-  null
-)(Middle);
+export default Middle;

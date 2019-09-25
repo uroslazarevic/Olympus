@@ -8,7 +8,7 @@ export const signUp = (id) => {
   return { type: SIGN_UP };
 };
 
-export const signIn = (response) => (dispatch) => {
+export const signIn = (response, redirectPage) => (dispatch) => {
   const { token, refreshToken, userData } = response.data.login;
   localStorage.setItem("token", token);
   localStorage.setItem("refreshToken", refreshToken);
@@ -18,6 +18,9 @@ export const signIn = (response) => (dispatch) => {
     type: SIGN_IN,
     payload: true,
   });
+  if (redirectPage === "/profile/settings") {
+    return history.push("/profile/settings", { id: response.data.login.userData.id });
+  }
   history.push("/profile");
 };
 

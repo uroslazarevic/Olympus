@@ -302,12 +302,12 @@
         font-size: 12px; }
     .user .user-details .user-options-list {
       position: absolute;
-      bottom: -70px;
+      top: 30px;
       right: 0px;
       background: #404257;
       width: 100px;
       border: 1px solid #51536b;
-      border-radius: 2px;
+      border-radius: 4px;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -315,14 +315,18 @@
       -ms-user-select: none;
       user-select: none; }
       .user .user-details .user-options-list .user-option {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 18px;
         color: #ccc;
         color: #717590;
-        padding: 2px 5px; }
+        padding: 7px 8px; }
+        .user .user-details .user-options-list .user-option a {
+          color: #717590; }
         .user .user-details .user-options-list .user-option:hover {
           background-color: #51536b;
           color: #fe5e3a; }
+          .user .user-details .user-options-list .user-option:hover a {
+            color: #fe5e3a; }
 
 .search-bar {
   position: relative;
@@ -373,7 +377,8 @@
   .sidebar-friends .friend-item {
     padding: 18px 0;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    border-bottom: 1px solid #ccc; }
     .sidebar-friends .friend-item:hover {
       background-color: #f6f5f5; }
     .sidebar-friends .friend-item .img-avatar {
@@ -1706,3 +1711,10 @@
         box-shadow: 0 0 0 0.2rem rgba(50, 175, 169, 0.25); }
       .profile-settings-modal .content .body form button.save:disabled {
         box-shadow: initial; }
+
+.personal-settings {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(50, 175, 169, 0.5);
+  background-repeat: no-repeat;
+  background-position: center; }

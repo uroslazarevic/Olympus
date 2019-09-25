@@ -10,17 +10,30 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case GET_CHAT_HISTORY: {
       const { id, chatHistory } = action.payload;
-      console.log("action.payload", action.payload);
       return { ...state, chatHistories: { ...state.chatHistories, [id]: chatHistory } };
     }
 
     case SEND_MSG: {
       const { room } = action.payload;
-      // Logic for dummy users
-      if (!state.chatHistories[room]) {
+      // Client joined in friends room and recieves msg in chat with oposite room name
+      const isMyRoom = `${room.split("-")[1]}-${room.split("-")[0]}`;
+      if (state.chatRooms.find((r) => r === isMyRoom)) {
+        const updChatRoom = [...state.chatHistories[isMyRoom]];
+        updChatRoom.push(action.payload);
+        return { ...state, chatHistories: { ...state.chatHistories, [isMyRoom]: updChatRoom } };
+      }
+
+      // When client has closed chat, but recieves a message
+      if (!state.chatHistories[room] && !state.chatRooms.find((r) => r === room)) {
+        return { ...state };
+      }
+
+      // Client initializing chat history with welcome message
+      if (!state.chatHistories[room] && state.chatRooms.find((r) => r === room)) {
         return { ...state, chatHistories: { ...state.chatHistories, [room]: [action.payload] } };
       }
-      // Logic for registered users
+
+      // Client updating chat history
       const updChatRoom = [...state.chatHistories[room]];
       updChatRoom.push(action.payload);
       return { ...state, chatHistories: { ...state.chatHistories, [room]: updChatRoom } };

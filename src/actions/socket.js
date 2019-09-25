@@ -27,18 +27,21 @@ export const onRoomLeave = (room, socket) => (dispatch, getState) => {
   dispatch({ type: LEAVE_ROOM, payload: room });
 };
 
-export const editMessage = (editedMsg, socket) => (dispatch, getState) => {
-  console.log("editedMsg", editedMsg);
-  const history = [...getState().socketData.chatHistories[editedMsg.msg.room]];
+export const editMessage = (editedMsgData, socket) => (dispatch, getState) => {
+  const history = [...getState().socketData.chatHistories[editedMsgData.msg.room]];
   const newHistory = history.map((msg) => {
-    if (msg.id === editedMsg.msg.id) {
-      msg.text = editedMsg.msg.text;
-      msg.date = editedMsg.msg.date;
+    if (msg.id === editedMsgData.msg.id) {
+      msg.text = editedMsgData.msg.text;
+      msg.date = editedMsgData.msg.date;
     }
     return msg;
   });
-  console.log("newHistory", newHistory);
-  const chat = { room: editedMsg.msg.room, history: newHistory, token: editedMsg.token };
+  const chat = {
+    room: editedMsgData.msg.room,
+    history: newHistory,
+    token: editedMsgData.token,
+    editedMsg: editedMsgData.msg,
+  };
   socket.emit("edit_message", chat);
   dispatch({ type: EDIT_MESSAGE, payload: chat });
 };
@@ -46,7 +49,7 @@ export const editMessage = (editedMsg, socket) => (dispatch, getState) => {
 export const deleteMessage = (msg, socket) => (dispatch, getState) => {
   const history = [...getState().socketData.chatHistories[msg.room]];
   const newHistory = history.filter((m) => m.id !== msg.id);
-  const chat = { room: msg.room, history: newHistory, token: msg.token };
+  const chat = { room: msg.room, history: newHistory, token: msg.token, deletedMsg: msg };
   socket.emit("delete_message", { chat, deleteFor: msg.deleteFor });
   dispatch({ type: DELETE_MESSAGE, payload: chat });
 };
