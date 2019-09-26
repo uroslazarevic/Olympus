@@ -1,0 +1,127 @@
+.chat-box {
+  margin-left: 15px;
+  background: #ddd;
+  border-top-left-radius: 4px;
+  width: 200px;
+  border-top-right-radius: 4px;
+  border: 1px solid cornflowerblue;
+  background-color: #fff;
+  overflow: hidden;
+
+  .header {
+    padding: 5px 10px;
+    background-color: cornflowerblue;
+    align-items: center;
+    display: flex;
+
+    .friend {
+      display: flex;
+      flex-direction: column;
+      margin-left: 16px;
+      font-size: 14px;
+
+      .fullname {
+        line-height: 16px;
+      }
+
+      .status {
+        font-size: 12px;
+        line-height: 12px;
+      }
+
+      .inactive {
+        color: red;
+      }
+      .active {
+        color: green;
+      }
+    }
+    .remove {
+      cursor: pointer;
+      margin-left: auto;
+      color: #ef8989;
+      position: relative;
+      top: -5px;
+      font-size: 16px;
+      height: 20px;
+      font-weight: bold;
+      line-height: 20px;
+
+      &:hover {
+        color: #ed6060;
+        transform: scale(1.3);
+        transition: ease 0.2s transform;
+      }
+    }
+  }
+
+  .content {
+    overflow-y: scroll;
+    height: 200px;
+    padding: 10px 5px;
+  }
+
+  .send-msg {
+    position: relative;
+
+    .edit-msg-info {
+      background: #edf2f6;
+      position: absolute;
+      width: 100%;
+      top: -34px;
+      display: flex;
+      height: 35px;
+      line-height: 35px;
+      padding-left: 10px;
+      font-size: 13px;
+      font-family: "Times New Roman", Times, serif;
+      color: #ef8989;
+
+      span {
+        margin-left: auto;
+        font-weight: bold;
+        color: #ef8989;
+        font-size: 16px;
+        padding-right: 10px;
+        cursor: pointer;
+        font-family: initial;
+        &:hover {
+          color: #ed6060;
+          transform: scale(1.2);
+          transition: ease 0.2s transform;
+        }
+      }
+    }
+    textarea {
+      overflow-y: scroll;
+      resize: none;
+      width: 100%;
+      padding: 4px 30px 4px 15px;
+      font-size: 13px;
+      font-family: initial;
+      border-bottom: initial;
+      border-left: initial;
+      border-right: initial;
+      border-top: 1px solid #ccc;
+      &:focus {
+        outline: none;
+        border-top-color: cornflowerblue;
+      }
+    }
+
+    .send-btn {
+      z-index: 1;
+      cursor: pointer;
+      position: absolute;
+      top: 20%;
+      right: 10px;
+      transform: translate(0, -50%);
+      font-size: 12px;
+      color: #b3b3b3;
+
+      &:hover {
+        color: cornflowerblue;
+      }
+    }
+  }
+}

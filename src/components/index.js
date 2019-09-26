@@ -71,6 +71,16 @@ import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comment
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
 // Not Found Page
 import NotFound from "./NotFound/NotFound";
+// Chat
+import { Chat } from "./Profile/Chat/Chat";
+import { ChatOptions } from "./Profile/Chat/Options/Options";
+import { ChatMessage } from "./Profile/Chat/Message/Message";
+// Modals
+import { Modal } from "./Profile/Modals/Modal/Modal";
+import { DeleteMsgModal } from "./Profile/Modals/DeleteMsgModal/DeleteMsgModal";
+import { SettingsModal } from "./Profile/Modals/SettingsModal/SettingsModal";
+// Settings
+import { Settings } from "./Settings/Settings";
 
 export {
   // Not Found Page
@@ -145,5 +155,12 @@ export {
   CommentOptions,
   PostComments,
   PostAsideBtns,
-  LatestVideos
+  LatestVideos,
+  Chat,
+  ChatOptions,
+  ChatMessage,
+  Modal,
+  DeleteMsgModal,
+  SettingsModal,
+  Settings,
 };

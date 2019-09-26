@@ -8,15 +8,14 @@ import { UserContext } from "components/Contexts";
 const User = () => {
   return (
     <UserContext.Consumer>
-      {user => (
+      {({ user }) => (
         <div className="headline-timeline-user">
-          <UserAvatar imgSrc={user.basicInfo.picture.medium} className="avatar-lg" />
+          <UserAvatar imgSrc={`data:image/jpeg;base64,${user.mainInfo.avatar}`} className="avatar-lg" />
           <div className="details">
-            <div className="fullname">
-              {user.basicInfo.name.first} {user.basicInfo.name.last}
-            </div>
+            <div className="fullname">{user.mainInfo.name}</div>
             <div className="location">
-              {user.basicInfo.location.city}, {user.basicInfo.location.state}
+              {/* {user.basicInfo.location.city}, {user.basicInfo.location.state} */}
+              {user.mainInfo.name === "Uros Lazarevic" ? "Lazarevac, Serbia" : "Belgrade, Serbia"}
             </div>
           </div>
         </div>

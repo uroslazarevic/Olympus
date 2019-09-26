@@ -1,0 +1,43 @@
+.chat-comment-options {
+  $color: #333;
+  position: absolute;
+  border-radius: 2px;
+  border: 1px solid $color;
+  z-index: 101;
+  top: 30px;
+  background: $color;
+  border-radius: 4px;
+  .option {
+    width: 80px;
+    color: #fff;
+    padding: 2.5px 11.5px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+      // background: #f9fafd;
+      color: orangered;
+    }
+  }
+
+  &::before {
+    content: " ";
+    transform: rotate(-90deg);
+    left: 50%;
+    transform: translate(-50%, 0) rotate(-90deg);
+    z-index: 102;
+    top: -13px;
+    top: -11px;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    z-index: 1001;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left-width: 8px;
+    border-left-style: solid;
+  }
+}

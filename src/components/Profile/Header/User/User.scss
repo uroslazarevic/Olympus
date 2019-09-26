@@ -41,12 +41,12 @@
 
     .user-options-list {
       position: absolute;
-      bottom: -70px;
+      top: 30px;
       right: 0px;
       background: #404257;
       width: 100px;
       border: 1px solid #51536b;
-      border-radius: 2px;
+      border-radius: 4px;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -khtml-user-select: none;
@@ -55,15 +55,23 @@
       user-select: none;
 
       .user-option {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 18px;
         color: #ccc;
         color: #717590;
-        padding: 2px 5px;
+        padding: 7px 8px;
+
+        a {
+          color: #717590;
+        }
 
         &:hover {
           background-color: #51536b;
           color: #fe5e3a;
+
+          a {
+            color: #fe5e3a;
+          }
         }
       }
     }

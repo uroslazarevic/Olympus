@@ -1,27 +1,24 @@
-const validateForm = formValues => {
+const validateForm = (formValues) => {
   const errors = {};
-
-  if (!formValues.fullname) {
-    errors.fullname = "Required";
+  if (!formValues.username) {
+    errors.username = "Required";
   } else if (
-    !/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g.test(formValues.fullname)
+    !/^[a-zA-Z1-9]+(([',. -][a-zA-Z1-9])?[a-zA-Z1-9]*)*$/g.test(formValues.username) ||
+    formValues.username.length < 3
   ) {
-    errors.fullname = "Please provide a valid fullname.";
+    errors.username = "Please provide a valid fullname.";
   }
 
   if (!formValues.email) {
     errors.email = "Required";
-  } else if (
-    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formValues.email)
-  ) {
+  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(formValues.email)) {
     errors.email = "Please provide a valid email.";
   }
 
   if (!formValues.password) {
     errors.password = "Required";
-  } else if (formValues.password.length < 8) {
-    errors.password =
-      "Please provide a valid password, must be atleast 8 char.";
+  } else if (formValues.password.length < 4) {
+    errors.password = "Please provide a valid password, must be atleast 4 char.";
   }
 
   return errors;

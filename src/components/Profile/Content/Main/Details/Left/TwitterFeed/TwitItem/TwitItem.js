@@ -1,4 +1,8 @@
 import React from "react";
+
+// Context
+import { UserContext } from "components/Contexts";
+
 import { InfoBlockItem } from "components/UI";
 
 class TwitItem extends React.Component {
@@ -13,6 +17,7 @@ class TwitItem extends React.Component {
   }
 
   render() {
+    const { user } = this.context;
     const { author, pseudonym, tags, created, text } = this.props.twit;
     return (
       <li className="twit-item">
@@ -21,7 +26,7 @@ class TwitItem extends React.Component {
           item={{
             src: this.props.src,
             title: pseudonym,
-            description: `@${author}`
+            description: `@${user.mainInfo.pseudonym}`,
           }}
         />
         <div className="twit-text">
@@ -33,5 +38,5 @@ class TwitItem extends React.Component {
     );
   }
 }
-
+TwitItem.contextType = UserContext;
 export default TwitItem;

@@ -1,0 +1,143 @@
+.message {
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  display: flex; }
+  .message .msg-content {
+    position: relative; }
+    .message .msg-content .text {
+      position: relative;
+      font-size: 11px;
+      line-height: 12px; }
+      .message .msg-content .text .elipsis-btn {
+        display: none;
+        position: absolute;
+        cursor: pointer;
+        color: #9a9595;
+        font-size: 14px;
+        z-index: 1;
+        top: 50%;
+        transform: translate(0, -50%); }
+    .message .msg-content .date {
+      font-size: 10px;
+      font-family: sans-serif;
+      font-weight: bold;
+      margin-top: 2px; }
+      .message .msg-content .date:hover {
+        opacity: 0.8;
+        cursor: pointer; }
+    .message .msg-content:hover .elipsis-btn {
+      display: block; }
+
+.you {
+  margin-left: auto;
+  width: 80%; }
+  .you .msg-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    text-align: right; }
+    .you .msg-content .text {
+      margin-left: auto;
+      min-width: 40px;
+      position: relative;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 0;
+      padding: 5px 10px 5px 10px;
+      border-bottom-left-radius: 15px;
+      border-top-left-radius: 15px;
+      background-color: deepskyblue;
+      margin-left: 20px; }
+      .you .msg-content .text .elipsis-btn {
+        left: -20px; }
+      .you .msg-content .text::before {
+        content: " ";
+        right: -1px;
+        top: -3px;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        z-index: 100;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: -10px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: -9px;
+        transform: rotate(90deg);
+        background: deepskyblue; }
+    .you .msg-content .date {
+      margin-right: 2px; }
+    .you .msg-content:hover {
+      cursor: pointer; }
+      .you .msg-content:hover .text {
+        background: #49d1ff; }
+        .you .msg-content:hover .text::before {
+          background: #49d1ff; }
+    .you .msg-content .chat-comment-options {
+      left: -34px; }
+
+.friend,
+.admin {
+  width: 80%; }
+  .friend .msg-content,
+  .admin .msg-content {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    text-align: left; }
+    .friend .msg-content .date,
+    .admin .msg-content .date {
+      margin-left: 2px; }
+    .friend .msg-content .text,
+    .admin .msg-content .text {
+      margin-right: auto;
+      min-width: 40px;
+      padding: 5px 10px 5px 10px;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 0px;
+      background-color: #e3e3e3;
+      position: relative;
+      margin-right: 20px; }
+      .friend .msg-content .text .elipsis-btn,
+      .admin .msg-content .text .elipsis-btn {
+        right: -20px; }
+      .friend .msg-content .text::before,
+      .admin .msg-content .text::before {
+        content: " ";
+        left: -1px;
+        top: -3px;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        z-index: 1001;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: -10px;
+        border-top-right-radius: 6px;
+        border-top-left-radius: -9px;
+        border-color: dimgray;
+        background: #e3e3e3; }
+    .friend .msg-content:hover,
+    .admin .msg-content:hover {
+      cursor: pointer; }
+      .friend .msg-content:hover .text,
+      .admin .msg-content:hover .text {
+        background: #ececec; }
+      .friend .msg-content:hover::before,
+      .admin .msg-content:hover::before {
+        background: #ececec; }
+    .friend .msg-content .chat-comment-options,
+    .admin .msg-content .chat-comment-options {
+      right: -34px; }
+
+.admin .msg-content .text {
+  background: yellowgreen !important; }
+  .admin .msg-content .text::before {
+    background: yellowgreen !important; }
+
+.admin .msg-content:hover .text {
+  background: #b2de58 !important;
+  cursor: pointer !important; }
+  .admin .msg-content:hover .text::before {
+    background: #b2de58 !important;
+    cursor: pointer !important; }

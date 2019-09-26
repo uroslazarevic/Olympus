@@ -3,7 +3,7 @@ import React from "react";
 import { PostComment, SubComments } from "components";
 
 const Comments = ({ post }) => {
-  if (post.comments.count != 0) {
+  if (post.comments.count !== 0) {
     return (
       <ul className="post-comments">
         {post.comments.list.map(commentator => {

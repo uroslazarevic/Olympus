@@ -1,0 +1,69 @@
+.profile-settings-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  max-width: 650px;
+  width: 650px;
+  min-width: 450px; }
+  .profile-settings-modal .content .header .modal-title {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: serif;
+    color: #32afa9; }
+  .profile-settings-modal .content .header .profile-settings-image {
+    position: relative; }
+    .profile-settings-modal .content .header .profile-settings-image .upload-file {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1; }
+    .profile-settings-modal .content .header .profile-settings-image label.label-upload-file span.camera {
+      position: absolute;
+      top: 60%;
+      font-size: 20px;
+      right: 204px;
+      text-align: center;
+      transform: translate(-50%, 0);
+      cursor: pointer; }
+      .profile-settings-modal .content .header .profile-settings-image label.label-upload-file span.camera i.fa-camera {
+        font-size: 19px;
+        line-height: 20px;
+        background: #32afa9;
+        padding: 6px;
+        color: #fff;
+        border-radius: 100%; }
+    .profile-settings-modal .content .header .profile-settings-image label.label-upload-file:hover ~ .avatar-profile-settings {
+      box-shadow: 0 0 0 0.2rem rgba(50, 175, 169, 0.25); }
+    .profile-settings-modal .content .header .profile-settings-image .img-avatar.avatar-profile-settings {
+      height: 160px;
+      width: 160px;
+      margin: 0 auto;
+      position: initial;
+      border-radius: 100%; }
+  .profile-settings-modal .content .body form {
+    display: flex;
+    flex-direction: column; }
+    .profile-settings-modal .content .body form .form-group label {
+      color: #32afa9; }
+    .profile-settings-modal .content .body form .form-group input {
+      border-color: rgba(50, 175, 169, 0.6);
+      font-size: 14px; }
+      .profile-settings-modal .content .body form .form-group input:focus {
+        box-shadow: 0 0 0 0.2rem rgba(50, 175, 169, 0.25);
+        border-color: rgba(50, 175, 169, 0.6); }
+    .profile-settings-modal .content .body form .form-group small {
+      color: rgba(50, 175, 169, 0.6) !important; }
+    .profile-settings-modal .content .body form button.save {
+      background: #32afa9; }
+      .profile-settings-modal .content .body form button.save:hover {
+        background: #32afa9; }
+    .profile-settings-modal .content .body form button.save {
+      color: #fff;
+      margin-left: auto; }
+      .profile-settings-modal .content .body form button.save:hover {
+        box-shadow: 0 0 0 0.2rem rgba(50, 175, 169, 0.25); }
+      .profile-settings-modal .content .body form button.save:disabled {
+        box-shadow: initial; }

@@ -1,10 +1,15 @@
 .login-page {
-  height: 1000px;
+  height: 100vh;
+  position: fixed;
   width: 100%;
   background-attachment: fixed;
 
   .bg-layer {
     background-color: rgba(255, 69, 0, 0.9);
     height: 100%;
+
+    .container {
+      padding-top: 100px;
+    }
   }
 }

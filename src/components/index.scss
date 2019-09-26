@@ -77,3 +77,14 @@
 @import "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments.scss";
 // UI
 @import "./UI/index.scss";
+
+// Chat
+@import "./Profile/Chat/Chat.scss";
+@import "./Profile/Chat/Message/Message.scss";
+@import "./Profile/Chat/Options/Options.scss";
+// Modal
+@import "./Profile/Modals/Modal/Modal.scss";
+@import "./Profile/Modals/DeleteMsgModal/DeleteMsgModal.scss";
+@import "./Profile/Modals/SettingsModal/SettingsModal.scss";
+// Settings
+@import "./Settings/Settings.scss";

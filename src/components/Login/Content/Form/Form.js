@@ -1,65 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
+import { useMutation, useQuery } from "@apollo/react-hooks";
 import { connect } from "react-redux";
-
-import { signIn } from "actions";
+// Mutations
+import { REG_USER, LOGIN_USER } from "mutations/auth";
+// Actions
+import { signIn, signUp } from "actions";
+// Components
 import { LoginForm, RegisterForm } from "components";
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
+const Form = (props) => {
+  const [msg, setMsg] = useState("");
+  const [registerUser] = useMutation(REG_USER);
+  const [loginUser] = useMutation(LOGIN_USER);
+  const { selectedForm, setSelectedForm } = props;
 
-    this.state = {
-      selectedForm: "loginForm"
-    };
-  }
-
-  onSubmit = formValues => {
+  const onSubmit = async (formValues) => {
     console.log("formValues", formValues);
-    this.props.signIn();
+    try {
+      if (selectedForm === "loginForm") {
+        const response = await loginUser({ variables: { ...formValues } });
+        const { name, pseudonym, avatar } = response.data.login.user;
+        if (!name || !pseudonym || !avatar) {
+          setMsg("Configure your profile");
+          setTimeout(() => {
+            props.signIn(response, "/profile/settings");
+          }, 2000);
+          return;
+        }
+        setMsg("Login successfull!");
+        setTimeout(() => {
+          props.signIn(response, "/profile");
+        }, 2000);
+      }
+      if (selectedForm === "registerForm") {
+        const response = await registerUser({
+          variables: { ...formValues, isAdmin: false },
+          operationName: "register",
+        });
+        setMsg("Registration successfull!");
+        setTimeout(() => {
+          props.signUp(response.data.register.id);
+        }, 2000);
+      }
+      return;
+    } catch (err) {
+      const [errors] = err.graphQLErrors;
+      console.log("validation errors", errors);
+      return { errors };
+    }
   };
 
-  showRegisterForm = () => {
-    this.setState({ selectedForm: "registerForm" });
-  };
-
-  render() {
-    const { selectedForm } = this.state;
-
-    return (
-      <div className="form">
-        <div className="select-form-btns">
-          <span
-            onClick={() => this.setState({ selectedForm: "loginForm" })}
-            className={`login-form-btn ${
-              selectedForm === "loginForm" ? "active-item" : ""
-            }`}
-          >
-            <i className="fas fa-adjust" />
-          </span>
-          <span
-            onClick={() => this.setState({ selectedForm: "registerForm" })}
-            className={`register-form-btn ${
-              selectedForm === "registerForm" ? "active-item" : ""
-            }`}
-          >
-            <i className="fas fa-adjust" />
-          </span>
-        </div>
-        <div className="content">
-          {this.state.selectedForm === "loginForm" && (
-            <LoginForm
-              showRegisterForm={this.showRegisterForm}
-              onSubmit={this.onSubmit}
-            />
-          )}
-          {this.state.selectedForm === "registerForm" && <RegisterForm />}
-        </div>
+  return (
+    <div className="form">
+      <div className="select-form-btns">
+        <span
+          onClick={() => setSelectedForm("loginForm")}
+          className={`login-form-btn ${selectedForm === "loginForm" ? "active-item" : ""}`}
+        >
+          <i className="fas fa-adjust" />
+        </span>
+        <span
+          onClick={() => setSelectedForm("registerForm")}
+          className={`register-form-btn ${selectedForm === "registerForm" ? "active-item" : ""}`}
+        >
+          <i className="fas fa-adjust" />
+        </span>
       </div>
-    );
-  }
-}
+      <div className="content">
+        {selectedForm === "loginForm" && (
+          <LoginForm msg={msg} showRegisterForm={() => setSelectedForm("registerForm")} onSubmit={onSubmit} />
+        )}
+        {selectedForm === "registerForm" && <RegisterForm msg={msg} onSubmit={onSubmit} />}
+      </div>
+    </div>
+  );
+};
 
 export default connect(
   null,
-  { signIn }
+  { signIn, signUp }
 )(Form);
