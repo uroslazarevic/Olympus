@@ -46,10 +46,11 @@ export const editMessage = (editedMsgData, socket) => (dispatch, getState) => {
   dispatch({ type: EDIT_MESSAGE, payload: chat });
 };
 
-export const deleteMessage = (msg, socket) => (dispatch, getState) => {
+export const deleteMessage = (delMsgData, socket) => (dispatch, getState) => {
+  const { msg, token, deleteFor } = delMsgData;
   const history = [...getState().socketData.chatHistories[msg.room]];
   const newHistory = history.filter((m) => m.id !== msg.id);
-  const chat = { room: msg.room, history: newHistory, token: msg.token, deletedMsg: msg };
-  socket.emit("delete_message", { chat, deleteFor: msg.deleteFor });
+  const chat = { room: msg.room, history: newHistory, token, deletedMsg: msg };
+  socket.emit("delete_message", { chat, deleteFor });
   dispatch({ type: DELETE_MESSAGE, payload: chat });
 };

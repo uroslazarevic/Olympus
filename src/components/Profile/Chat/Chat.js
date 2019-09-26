@@ -45,7 +45,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     };
     if (editedMsgId) {
       // Create edited message
-      const editedMsgData = { ...msgData, msg: { ...msgData.msg, id: editedMsgId } };
+      const editedMsgData = { ...msgData, msg: { ...msgData.msg, id: editedMsgId, room } };
       // Update chat history
       editMessage(editedMsgData, socket);
       setEditedMsgId(null);
@@ -67,8 +67,8 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
 
   const onDeleteMessage = (msg, deleteFor) => {
     onCancelEditMessage();
-    const msgToDel = { ...msg, token, deleteFor };
-    deleteMessage(msgToDel, socket);
+    const delMsgData = { msg: { ...msg, room }, token, deleteFor };
+    deleteMessage(delMsgData, socket);
   };
 
   const onKeyCombo = (e) => {
