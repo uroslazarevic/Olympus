@@ -2,7 +2,6 @@ import React from "react";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient } from "apollo-client";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import { HttpLink } from "apollo-link-http";
 import { ApolloLink, concat } from "apollo-link";
 
 import "./App.css";
@@ -27,24 +26,12 @@ const authMiddleware = new ApolloLink((operation, forward) => {
   return forward(operation);
 });
 
-// const httpLink = new HttpLink({
-//   uri: "http://localhost:3001/graphql",
-
-// });
-
 const httpLink = new createUploadLink({
-  uri: "http://localhost:3001/graphql",
+  uri: `${process.env.REACT_APP_EXPRESS_SERVER}/graphql`,
 });
-
-// const client = new ApolloClient({
-//   cache: new InMemoryCache(),
-//   link: createUploadLink()
-// })
-// return
 
 const afterwareLink = new ApolloLink((operation, forward) => {
   return forward(operation).map((response) => {
-    // console.log("operation", operation.getContext());
     const context = operation.getContext();
     const {
       response: { headers },

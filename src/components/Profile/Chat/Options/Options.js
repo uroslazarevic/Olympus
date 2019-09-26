@@ -12,5 +12,3 @@ export const ChatOptions = ({ onClickEdit, onClickDelete }) => {
     </ul>
   );
 };
-
-// export Options;
