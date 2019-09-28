@@ -1,0 +1,53 @@
+@keyframes notification-on {
+  0% {
+    height: 0px;
+    line-height: 0px;
+  }
+
+  5% {
+    height: 75px;
+    line-height: 75px;
+  }
+
+  25% {
+    height: 75px;
+    line-height: 75px;
+  }
+
+  30% {
+    height: 0px;
+    line-height: 0px;
+  }
+
+  100% {
+    height: 0px;
+    line-height: 0px;
+  }
+}
+
+@keyframes notification-off {
+  from {
+    height: 75px;
+    line-height: 75px;
+  }
+  to {
+    height: 0px;
+    line-height: 0px;
+  }
+}
+
+.notification-on {
+  animation-duration: 10s;
+  animation-name: notification-on;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.notification-off {
+  animation-duration: 0.5s;
+  animation-name: notification-off;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+}

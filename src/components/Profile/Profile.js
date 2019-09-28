@@ -9,7 +9,15 @@ import { ALL_USERS } from "queries/auth";
 import * as socketClient from "socket";
 // Actions
 import { fetchUser } from "actions";
-import { getChatHistory, onSentMessage, onRoomJoin, onRoomLeave, editMessage, deleteMessage } from "actions/socket";
+import {
+  getChatHistory,
+  onSentMessage,
+  onRoomJoin,
+  onRoomLeave,
+  editMessage,
+  deleteMessage,
+  updOnlineUsers,
+} from "actions/socket";
 // Context
 import { UserContext } from "components/Contexts";
 // Components
@@ -43,7 +51,7 @@ class Profile extends React.Component {
       this.props.onSentMessage(newMsg);
     });
 
-    socket.on("signin", (data) => console.log("DATA", data));
+    socket.on("signin", (data) => this.props.updOnlineUsers(data));
 
     socket.on("check_signin", () => {
       console.log("check_signin");
@@ -95,9 +103,11 @@ class Profile extends React.Component {
 
     return (
       <Query query={ALL_USERS} variables={{ id: this.state.userId }}>
-        {({ loading, error, data }) => {
+        {({ loading, error, data, refetch }) => {
           if (loading) return <PageLoader />;
           if (error) return `Error! ${error.message}`;
+          // Refetch data due to redirect
+          refetch();
           const friends = data.allUsers.filter((user) => user.id !== this.state.userId);
           const me = data.allUsers.find((user) => user.id === this.state.userId);
           const combinedUserData = { ...user, mainInfo: { ...user.mainInfo, ...me } };
@@ -126,5 +136,5 @@ function mapStateToProps({ user, socketData }) {
 
 export default connect(
   mapStateToProps,
-  { fetchUser, getChatHistory, onSentMessage, onRoomJoin, onRoomLeave, editMessage, deleteMessage }
+  { fetchUser, getChatHistory, onSentMessage, onRoomJoin, onRoomLeave, editMessage, deleteMessage, updOnlineUsers }
 )(Profile);

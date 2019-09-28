@@ -9,7 +9,7 @@ class User extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { showUserOptList: false };
+    this.state = { showUserOptList: false, switchBtn: true };
   }
 
   handleUserOptionsList = () => {
@@ -18,7 +18,7 @@ class User extends React.Component {
 
   render() {
     const { user, signOut } = this.props;
-    const { showUserOptList } = this.state;
+    const { showUserOptList, switchBtn } = this.state;
     return (
       <div className="user">
         <UserAvatar
@@ -57,12 +57,26 @@ class User extends React.Component {
             {showUserOptList ? <i className="fas fa-angle-up" /> : <i className="fas fa-chevron-down" />}
           </span>
         </div>
+        {/* Rounded switch  */}
+        <label class="switch" for="switch" onClick={(e) => this.setState({ switchBtn: !switchBtn })}>
+          <input type="checkbox" checked={switchBtn} />
+          <span class="slider round"></span>
+        </label>
+        <div className={`users-online-notification ${!switchBtn ? "notification-off" : "notification-on"}`}>
+          Users online: {this.props.onlineUsers}
+        </div>
       </div>
     );
   }
 }
 
+function mapStateToProps({ socketData }) {
+  return {
+    onlineUsers: socketData.onlineUsers,
+  };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   { signOut }
 )(User);

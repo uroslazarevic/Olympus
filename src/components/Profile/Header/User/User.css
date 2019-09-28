@@ -2,7 +2,9 @@
   flex: 1;
   display: flex;
   align-items: center;
-  margin-left: 25px; }
+  margin-left: 25px;
+  position: relative;
+  /* The switch - the box around the slider */ }
   .user .user-details {
     display: flex;
     position: relative; }
@@ -28,6 +30,7 @@
       .user .user-details .user-options .fa-angle-up {
         font-size: 12px; }
     .user .user-details .user-options-list {
+      z-index: 10;
       position: absolute;
       top: 30px;
       right: 0px;
@@ -54,3 +57,71 @@
           color: #fe5e3a; }
           .user .user-details .user-options-list .user-option:hover a {
             color: #fe5e3a; }
+  .user .users-online-notification {
+    position: absolute;
+    background-image: linear-gradient(#717590, #404257);
+    color: #fe5e3a;
+    font-weight: bold;
+    left: -2px;
+    top: 50px;
+    padding: 0 15px;
+    height: 0px;
+    line-height: 0px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    width: 173px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    overflow: hidden; }
+  .user .switch {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 70px;
+    margin: 0px;
+    top: 20px;
+    /* Hide default HTML checkbox */
+    /* The slider */
+    /* Rounded sliders */ }
+    .user .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0; }
+    .user .switch .slider {
+      width: 60px;
+      height: 34px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      cursor: pointer;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s; }
+      .user .switch .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 6px;
+        bottom: 4.5px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s; }
+    .user .switch input:checked + .slider {
+      background-color: #2196f3; }
+    .user .switch input:focus + .slider {
+      box-shadow: 0 0 1px #2196f3; }
+    .user .switch input:checked + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px); }
+    .user .switch .slider.round {
+      border-radius: 34px; }
+    .user .switch .slider.round:before {
+      border-radius: 50%; }

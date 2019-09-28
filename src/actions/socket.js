@@ -1,4 +1,4 @@
-import { SEND_MSG, GET_CHAT_HISTORY, JOIN_ROOM, LEAVE_ROOM, EDIT_MESSAGE, DELETE_MESSAGE } from "./types";
+import { SEND_MSG, GET_CHAT_HISTORY, JOIN_ROOM, LEAVE_ROOM, EDIT_MESSAGE, DELETE_MESSAGE, ONLINE_USERS } from "./types";
 
 export const onSentMessage = (newMsg) => {
   return {
@@ -54,3 +54,5 @@ export const deleteMessage = (delMsgData, socket) => (dispatch, getState) => {
   socket.emit("delete_message", { chat, deleteFor });
   dispatch({ type: DELETE_MESSAGE, payload: chat });
 };
+
+export const updOnlineUsers = (data) => ({ type: ONLINE_USERS, payload: data });

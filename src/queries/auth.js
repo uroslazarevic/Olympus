@@ -6,6 +6,8 @@ export const GET_ME = gql`
       name
       pseudonym
       avatar
+      city
+      country
     }
   }
 `;
@@ -16,6 +18,8 @@ export const ALL_USERS = gql`
       name
       pseudonym
       avatar
+      city
+      country
     }
   }
 `;

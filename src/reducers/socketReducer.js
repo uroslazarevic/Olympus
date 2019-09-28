@@ -1,9 +1,18 @@
 import _ from "lodash";
-import { GET_CHAT_HISTORY, SEND_MSG, JOIN_ROOM, LEAVE_ROOM, EDIT_MESSAGE, DELETE_MESSAGE } from "actions/types";
+import {
+  GET_CHAT_HISTORY,
+  SEND_MSG,
+  JOIN_ROOM,
+  LEAVE_ROOM,
+  EDIT_MESSAGE,
+  DELETE_MESSAGE,
+  ONLINE_USERS,
+} from "actions/types";
 
 const initialState = {
   chatHistories: {},
   chatRooms: [],
+  activeUsers: null,
 };
 
 export default (state = initialState, action) => {
@@ -48,7 +57,7 @@ export default (state = initialState, action) => {
     case LEAVE_ROOM: {
       const chatRooms = state.chatRooms.filter((room) => room !== action.payload);
       const chatHistories = _.omit(state.chatHistories, [action.payload]);
-      return { chatHistories, chatRooms };
+      return { ...state, chatHistories, chatRooms };
     }
 
     case EDIT_MESSAGE:
@@ -56,6 +65,11 @@ export default (state = initialState, action) => {
       const { room, history } = action.payload;
       return { ...state, chatHistories: { ...state.chatHistories, [room]: history } };
     }
+
+    case ONLINE_USERS: {
+      return { ...state, onlineUsers: action.payload };
+    }
+
     default:
       return state;
   }

@@ -35,7 +35,7 @@ export const FILE_UPLOAD = gql`
 `;
 
 export const PROFILE_SETTINGS = gql`
-  mutation profileSettings($name: String!, $pseudonym: String!, $id: Int!) {
-    profileSettings(name: $name, pseudonym: $pseudonym, id: $id)
+  mutation profileSettings($settings: ProfileSettingsInput!) {
+    profileSettings(settings: $settings)
   }
 `;
