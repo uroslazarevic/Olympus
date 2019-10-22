@@ -1,12 +1,17 @@
 import React from "react";
 import { ApolloProvider } from "@apollo/react-hooks";
 import { ApolloClient } from "apollo-client";
-import { InMemoryCache } from "apollo-cache-inmemory";
+import { InMemoryCache, IntrospectionFragmentMatcher } from "apollo-cache-inmemory";
 import { ApolloLink, concat } from "apollo-link";
 
 import "./App.css";
 
 import AppRouter from "router/AppRouter";
+import introspectionQueryResultData from "fragmentTypes.json";
+
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData,
+});
 
 const { createUploadLink } = require("apollo-upload-client");
 const authMiddleware = new ApolloLink((operation, forward) => {
@@ -58,7 +63,7 @@ const afterwareLink = new ApolloLink((operation, forward) => {
 
 const client = new ApolloClient({
   link: afterwareLink.concat(concat(authMiddleware, httpLink)),
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache({ fragmentMatcher }),
 });
 
 export const App = () => {

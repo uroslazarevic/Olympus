@@ -1,12 +1,12 @@
 import React from "react";
 
-const Post = ({ post }) => {
+const Post = ({ blogPost }) => {
   return (
     <li className="blog-post">
-      <div className="topic">{post.topic}</div>
-      <div className="text">{post.text}</div>
+      <div className="topic">{blogPost.topic}</div>
+      <div className="text">{blogPost.text}</div>
       <div className="created">
-        {post.date}, at {post.time}
+        {blogPost.createdAt}, at {blogPost.time || "ISPRAVI"}
       </div>
     </li>
   );

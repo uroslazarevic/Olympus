@@ -3,6 +3,7 @@ import React from "react";
 const user = {},
   chatRoomsData = {},
   actions = {},
-  friends = [];
+  friends = [],
+  posts = [];
 
-export default React.createContext({ user, friends, chatRoomsData, actions });
+export default React.createContext({ user, friends, chatRoomsData, actions, posts });

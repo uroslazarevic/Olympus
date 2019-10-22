@@ -10,8 +10,9 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.commentator.likes.list.forEach(endorser => {
-      endorser.name === "You" && this.setState({ personalEndorsment: true });
+    const myId = JSON.parse(localStorage.getItem("userData")).id;
+    this.props.likes.list.forEach((userId) => {
+      userId === myId && this.setState({ personalEndorsment: true });
     });
   }
 
@@ -20,10 +21,8 @@ class Footer extends React.Component {
       <div className="comment-footer">
         <PostBtn
           icon={<i className="far fa-heart" />}
-          className={`like-btn ${
-            this.state.personalEndorsment ? "my-endorse" : ""
-          }`}
-          count={this.props.commentator.likes.count}
+          className={`like-btn ${this.state.personalEndorsment ? "my-endorse" : ""}`}
+          count={this.props.likes.count}
         />
         <div className="comment-reply">Reply</div>
       </div>

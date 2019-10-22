@@ -10,7 +10,7 @@ const Middle = () => {
       {({ user }) => {
         return (
           <div className="middle">
-            <UserPosts posts={user.mainInfo.posts} user={user.mainInfo} />
+            <UserPosts posts={user.profileData.authorPosts} user={user.me} />
           </div>
         );
       }}

@@ -2,13 +2,13 @@ import React from "react";
 import { InfoBlock } from "components/UI";
 import { BlogPost } from "components";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blogPosts }) => {
   return (
     <div className="profile-blog">
       <InfoBlock name="Blog Posts">
         <ul className="profile-blog-posts">
-          {blog.map(post => {
-            return <BlogPost key={post.id} post={post} />;
+          {blogPosts.map((blogPost) => {
+            return <BlogPost key={blogPost.id} blogPost={blogPost} />;
           })}
         </ul>
       </InfoBlock>

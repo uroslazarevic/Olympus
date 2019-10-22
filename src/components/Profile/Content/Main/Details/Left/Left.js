@@ -9,13 +9,22 @@ const Left = ({ user }) => {
   return (
     <UserContext.Consumer>
       {({ user }) => {
-        const { details, badges, spotifyList, twitterFeed, latestVideos, name, avatar } = user.mainInfo;
+        const {
+          profileData: {
+            profileIntro,
+            // badges,
+            // spotifyList,
+            twitterFeed,
+            latestVideos,
+          },
+          me,
+        } = user;
         return (
           <div className="left">
-            <ProfileIntro details={details} />
-            <UserBadges badges={badges} username={name} />
-            <SpotifyPlaylist spotifyList={spotifyList} />
-            <TwitterFeed twitterFeed={twitterFeed} authorSrc={`data:image/jpeg;base64,${avatar}`} />
+            <ProfileIntro profileIntro={profileIntro} />
+            {/* <UserBadges badges={badges} username={name} />
+            <SpotifyPlaylist spotifyList={spotifyList} /> */}
+            <TwitterFeed user={me} twitterFeed={twitterFeed} />
             <LatestVideos latestVideos={latestVideos} />
           </div>
         );

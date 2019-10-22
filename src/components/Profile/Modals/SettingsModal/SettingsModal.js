@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 // Apollo
 import { useMutation, useQuery } from "@apollo/react-hooks";
 // Mutations
 import { PROFILE_SETTINGS, FILE_UPLOAD } from "mutations/auth";
 // Queries
-import { GET_ME } from "queries/auth";
+import { GET_SETTINGS } from "queries/auth";
 // Utilis
 import { history } from "utilis";
 // Components
@@ -15,7 +15,7 @@ import avatar from "../../../../imgs/avatar.png";
 import { countryList } from "apis/index";
 
 export const SettingsModal = ({ id }) => {
-  const { loading, error, data, refetch } = useQuery(GET_ME, {
+  const { loading, error, data, refetch } = useQuery(GET_SETTINGS, {
     notifyOnNetworkStatusChange: false,
     variables: { id },
   });
@@ -35,25 +35,21 @@ export const SettingsModal = ({ id }) => {
       reader.onerror = (error) => reject(error);
     });
 
-  useEffect(() => {
-    console.log("LOADIG", { loading, error, data });
-  }, []);
-
   const onSubmit = async (e) => {
     e.preventDefault();
+    const name = values.name ? values.name : data.getProfileSettings.name;
+    const pseudonym = values.pseudonym ? values.pseudonym : data.getProfileSettings.pseudonym;
+    const city = values.city ? values.city : data.getProfileSettings.city;
+    const country = values.country ? values.country : data.getProfileSettings.country;
+    const ProfileSettingsInput = {
+      name,
+      pseudonym,
+      city,
+      country,
+      id,
+    };
+    console.log("ProfileSettingsInput: ", ProfileSettingsInput);
     try {
-      const name = values.name ? values.name : data.me.name;
-      const pseudonym = values.pseudonym ? values.pseudonym : data.me.pseudonym;
-      const city = values.city ? values.city : data.me.city;
-      const country = values.country ? values.country : data.me.country;
-      const ProfileSettingsInput = {
-        name,
-        pseudonym,
-        city,
-        country,
-        id,
-      };
-      console.log("ProfileSettingsInput: ", ProfileSettingsInput);
       await setProfileSettings({
         variables: { settings: ProfileSettingsInput },
         operationName: "setProfileSettings",
@@ -161,7 +157,7 @@ export const SettingsModal = ({ id }) => {
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error.message}`;
-  const dbAvatar = data.me.avatar ? `data:image/jpeg;base64,${data.me.avatar}` : "";
+  const dbAvatar = data.getProfileSettings.avatar ? `data:image/jpeg;base64,${data.getProfileSettings.avatar}` : "";
 
   return (
     <div className="profile-settings-modal">
@@ -191,7 +187,7 @@ export const SettingsModal = ({ id }) => {
                 className="form-control"
                 id="name"
                 name="name"
-                defaultValue={data.me.name}
+                defaultValue={data.getProfileSettings.name}
                 onChange={onChange}
                 placeholder="Enter name"
                 required
@@ -204,7 +200,7 @@ export const SettingsModal = ({ id }) => {
               <label htmlFor="pseudonym">Pseudonym</label>
               <input
                 autoComplete="off"
-                defaultValue={data.me.pseudonym}
+                defaultValue={data.getProfileSettings.pseudonym}
                 type="text"
                 className="form-control"
                 id="pseudonym"
@@ -219,7 +215,7 @@ export const SettingsModal = ({ id }) => {
               <div className="col">
                 <label htmlFor="city">City</label>
                 <input
-                  defaultValue={data.me.city}
+                  defaultValue={data.getProfileSettings.city}
                   name="city"
                   onChange={onChange}
                   autoComplete="off"
@@ -235,7 +231,7 @@ export const SettingsModal = ({ id }) => {
                 </label>
                 {!values.country ? (
                   <input
-                    defaultValue={data.me.country}
+                    defaultValue={data.getProfileSettings.country}
                     autoComplete="off"
                     name="country"
                     onChange={onCountryInputChange}
@@ -244,7 +240,7 @@ export const SettingsModal = ({ id }) => {
                   />
                 ) : (
                   <input
-                    defaultValue={data.me.country}
+                    defaultValue={data.getProfileSettings.country}
                     value={values.country}
                     autoComplete="off"
                     name="country"

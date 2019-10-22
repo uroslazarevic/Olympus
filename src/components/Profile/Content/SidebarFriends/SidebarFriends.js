@@ -21,7 +21,10 @@ class SidebarFriends extends React.Component {
       return (
         <ul className="sidebar-friends">
           {friends.map((friend) => {
-            const { id, avatar } = friend;
+            const {
+              id,
+              profileSettings: { avatar },
+            } = friend;
             return (
               <li onClick={() => this.startChat(id)} key={id} className="friend-item">
                 <FreindAvatar

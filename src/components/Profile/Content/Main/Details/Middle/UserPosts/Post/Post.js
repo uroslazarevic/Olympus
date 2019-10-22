@@ -1,12 +1,6 @@
 import React from "react";
 
-import {
-  PostHeader,
-  PostFooter,
-  PostContentView,
-  PostAsideBtns,
-  PostOptions
-} from "components";
+import { PostHeader, PostFooter, PostContentView, PostAsideBtns, PostOptions } from "components";
 
 class Post extends React.Component {
   constructor(props) {

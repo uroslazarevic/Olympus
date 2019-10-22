@@ -3,7 +3,7 @@ import React from "react";
 const Item = ({ photo }) => {
   return (
     <li className="photo-item">
-      <img src={photo.src} alt="the-pho-item" />
+      <img src={`data:image/jpeg;base64,${photo.base64}`} alt="the-pho-item" />
     </li>
   );
 };

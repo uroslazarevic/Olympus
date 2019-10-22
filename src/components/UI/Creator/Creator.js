@@ -11,9 +11,9 @@ const Creator = ({ item, creatorClass }) => {
           <div className="fullname">{item.fullname}</div>
           <div className="post-created">{item.created}</div>
         </div>
-        {item.sharedFrom && (
-          <Origin shareType={item.shareType} sharedFrom={item.sharedFrom} />
-        )}
+        {/* {item.author && (
+          <Origin shareType={item.type} sharedFrom={item.author} />
+        )} */}
       </div>
     </div>
   );

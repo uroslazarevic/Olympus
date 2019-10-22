@@ -4,21 +4,19 @@ import { InfoBlock, Avatar as FriendAvatar } from "components/UI";
 const Friends = ({ friends }) => {
   return (
     <div className="profile-friends">
-      <InfoBlock name={`Friends (${friends.count})`}>
+      <InfoBlock name={`Friends (${friends.list.length})`}>
         <ul className="profile-friends-list">
-          {friends.list.map(friend => {
+          {friends.list.map((friend) => {
             return (
               <FriendAvatar
-                imgSrc={friend.src}
+                imgSrc={`data:image/jpeg;base64,${friend.avatar}`}
                 className="friend-avatar avatar-medium"
                 key={friend.id}
               />
             );
           })}
           <li className="show-more-friends avatar-medium">
-            <span className="friends-remaining">
-              +{friends.count - friends.list.length}
-            </span>
+            <span className="friends-remaining">+{friends.count - friends.list.length}</span>
           </li>
         </ul>
       </InfoBlock>

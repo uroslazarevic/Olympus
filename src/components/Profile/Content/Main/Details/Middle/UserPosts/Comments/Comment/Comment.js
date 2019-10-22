@@ -1,11 +1,6 @@
 import React from "react";
 
-import {
-  CommentHeader,
-  CommentFooter,
-  CommentContent,
-  CommentOptions
-} from "components";
+import { CommentHeader, CommentFooter, CommentContent, CommentOptions } from "components";
 
 class Comment extends React.Component {
   constructor(props) {
@@ -19,7 +14,7 @@ class Comment extends React.Component {
   };
 
   render() {
-    const { commentator, className } = this.props;
+    const { commentator, likes, className } = this.props;
     return (
       <div className={`post-comment ${className}`}>
         <CommentHeader
@@ -28,7 +23,7 @@ class Comment extends React.Component {
           commentator={commentator}
         />
         <CommentContent commentator={commentator} />
-        <CommentFooter commentator={commentator} />
+        <CommentFooter likes={likes} />
         {this.state.showOptions && <CommentOptions />}
       </div>
     );

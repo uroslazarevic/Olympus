@@ -485,7 +485,40 @@ export default {
                   },
                   comments: {
                     count: 0,
-                    list: [],
+                    list: [
+                      {
+                        id: 1,
+                        src: "https://loremflickr.com/320/240/people?random=7",
+                        created: "1 hours ago",
+                        name: "Person 7",
+                        comment:
+                          "Now for manners use has company believe parlors. Least nor party who wrote while did. Excuse formed as is agreed admire so on result parish. Put use set uncommonly announcing and travelling. Allowance sweetness direction to as necessary. Principle oh explained excellent do my suspected conveying in. Excellent you did therefore perfectly supposing described. ",
+                        likes: {
+                          count: 3,
+                          list: [
+                            {
+                              id: 1,
+                              src: "https://loremflickr.com/320/240/people?random=1",
+                              name: "Person 1",
+                            },
+                            {
+                              id: 2,
+                              src: "https://loremflickr.com/320/240/people?random=3",
+                              name: "Person 3",
+                            },
+                            {
+                              id: 3,
+                              src: "https://loremflickr.com/320/240/people?random=8",
+                              name: "Person 8",
+                            },
+                          ],
+                        },
+                        comments: {
+                          count: 0,
+                          list: [],
+                        },
+                      },
+                    ],
                   },
                 },
               ],

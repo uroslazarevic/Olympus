@@ -9,7 +9,7 @@ export const LOGIN_USER = gql`
         username
         id
       }
-      user {
+      profileSettings {
         name
         pseudonym
         avatar
@@ -35,7 +35,7 @@ export const FILE_UPLOAD = gql`
 `;
 
 export const PROFILE_SETTINGS = gql`
-  mutation profileSettings($settings: ProfileSettingsInput!) {
-    profileSettings(settings: $settings)
+  mutation setProfileSettings($settings: ProfileSettingsInput!) {
+    setProfileSettings(settings: $settings)
   }
 `;

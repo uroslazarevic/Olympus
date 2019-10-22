@@ -1,27 +1,21 @@
 import React from "react";
 
-import {
-  Creator as CommentCreator,
-  ElipsisBtn as OptionsBtn
-} from "components/UI";
+import { Creator as CommentCreator, ElipsisBtn as OptionsBtn } from "components/UI";
 
 const Header = ({ commentator, handleOptionsBtnClick, optionsBtnActive }) => {
-  const { name, src, created } = commentator;
+  const { name, avatar, createdAt } = commentator;
 
   return (
     <div className="comment-header">
       <CommentCreator
         item={{
-          src,
+          src: `data:image/jpeg;base64,${avatar}`,
           fullname: name,
-          created
+          created: createdAt,
         }}
         creatorClass="comment-creator"
       />
-      <OptionsBtn
-        handleOptionsBtnClick={handleOptionsBtnClick}
-        optionsBtnActive={optionsBtnActive}
-      />
+      <OptionsBtn handleOptionsBtnClick={handleOptionsBtnClick} optionsBtnActive={optionsBtnActive} />
     </div>
   );
 };

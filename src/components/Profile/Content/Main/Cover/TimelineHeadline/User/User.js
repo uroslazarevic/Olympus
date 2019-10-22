@@ -10,11 +10,11 @@ const User = () => {
     <UserContext.Consumer>
       {({ user }) => (
         <div className="headline-timeline-user">
-          <UserAvatar imgSrc={`data:image/jpeg;base64,${user.mainInfo.avatar}`} className="avatar-lg" />
+          <UserAvatar imgSrc={`data:image/jpeg;base64,${user.me.profileSettings.avatar}`} className="avatar-lg" />
           <div className="details">
-            <div className="fullname">{user.mainInfo.name}</div>
+            <div className="fullname">{user.me.profileSettings.name}</div>
             <div className="location">
-              {user.mainInfo.city}, {user.mainInfo.country}
+              {user.me.profileSettings.city}, {user.me.profileSettings.country}
             </div>
           </div>
         </div>

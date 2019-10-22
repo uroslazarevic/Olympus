@@ -87,7 +87,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     <li className="chat-box">
       <div className="header">
         <FriendAvatar
-          imgSrc={`data:image/jpeg;base64,${friendData.avatar}`}
+          imgSrc={`data:image/jpeg;base64,${friendData.profileSettings.avatar}`}
           badge={{
             badgePosition: "small small-tl",
             status: friendData.badgeColor,
@@ -95,7 +95,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
           className="friend-avatar"
         />
         <div className="friend">
-          <div className="fullname">{friendData.name}</div>
+          <div className="fullname">{friendData.profileSettings.name}</div>
           {friendData.badgeColor === "bg-success" && <div className={`status active`}>Active now</div>}
           {friendData.badgeColor !== "bg-success" && <div className={`status inactive`}>Inactive</div>}
         </div>

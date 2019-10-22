@@ -1,24 +1,36 @@
 import React from "react";
-import { connect } from "react-redux";
 
-import { Photos, Blog, Friends, FavouritePages, UserPool } from "components";
+// Context
+import { UserContext } from "components/Contexts";
 
-const Right = props => {
-  const { photos, blog, friends, pool, favPages } = props.details;
+import { Photos, BlogPosts, Friends, FavouritePages, UserPool } from "components";
+
+const Right = () => {
   return (
-    <div className="right">
-      <Photos photos={photos} />
-      <Blog blog={blog} />
-      <Friends friends={friends} />
-      <FavouritePages favPages={favPages} />
-      <UserPool pool={pool} name={props.basicInfo.name.first} />
-    </div>
+    <UserContext.Consumer>
+      {({ user }) => {
+        const {
+          profileData: {
+            blogPosts,
+            // badges,
+            // spotifyList,
+            friends,
+            userPhotos,
+          },
+          me,
+        } = user;
+        return (
+          <div className="right">
+            <Photos photos={userPhotos} />
+            <BlogPosts blogPosts={blogPosts} />
+            <Friends friends={friends} />
+            {/* <FavouritePages favPages={favPages} />
+            <UserPool pool={pool} name={props.basicInfo.name.first} /> */}
+          </div>
+        );
+      }}
+    </UserContext.Consumer>
   );
 };
-function mapStateToProps({ user }) {
-  return { details: user.mainInfo, basicInfo: user.basicInfo };
-}
-export default connect(
-  mapStateToProps,
-  null
-)(Right);
+
+export default Right;

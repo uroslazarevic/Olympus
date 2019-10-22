@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useMutation, useQuery } from "@apollo/react-hooks";
+import { useMutation } from "@apollo/react-hooks";
 import { connect } from "react-redux";
 // Mutations
 import { REG_USER, LOGIN_USER } from "mutations/auth";
@@ -18,18 +18,18 @@ const Form = (props) => {
     console.log("formValues", formValues);
     try {
       if (selectedForm === "loginForm") {
+        let redirectPage;
         const response = await loginUser({ variables: { ...formValues } });
-        const { name, pseudonym, avatar } = response.data.login.user;
+        const { name, pseudonym, avatar } = response.data.login.profileSettings;
         if (!name || !pseudonym || !avatar) {
           setMsg("Configure your profile");
-          setTimeout(() => {
-            props.signIn(response, "/profile/settings");
-          }, 2000);
-          return;
+          redirectPage = "/profile/settings";
+        } else {
+          setMsg("Login successfull!");
+          redirectPage = "/profile";
         }
-        setMsg("Login successfull!");
         setTimeout(() => {
-          props.signIn(response, "/profile");
+          props.signIn(response, redirectPage);
         }, 2000);
       }
       if (selectedForm === "registerForm") {

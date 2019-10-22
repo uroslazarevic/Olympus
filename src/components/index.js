@@ -42,7 +42,7 @@ import TwitterFeedTwitItem from "./Profile/Content/Main/Details/Left/TwitterFeed
 import LatestVideos from "./Profile/Content/Main/Details/Left/LatestVideos/LatestVideos";
 import Photos from "./Profile/Content/Main/Details/Right/Photos/Photos";
 import PhotosItem from "./Profile/Content/Main/Details/Right/Photos/Item/Item";
-import Blog from "./Profile/Content/Main/Details/Right/Blog/Blog";
+import BlogPosts from "./Profile/Content/Main/Details/Right/Blog/Blog";
 import BlogPost from "./Profile/Content/Main/Details/Right/Blog/Post/Post";
 import Friends from "./Profile/Content/Main/Details/Right/Friends/Friends";
 import FavouritePages from "./Profile/Content/Main/Details/Right/FavouritePages/FavouritePages";
@@ -128,7 +128,7 @@ export {
   TwitterFeedTwitItem,
   Photos,
   PhotosItem,
-  Blog,
+  BlogPosts,
   BlogPost,
   Friends,
   FavouritePages,

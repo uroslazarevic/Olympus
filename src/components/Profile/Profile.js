@@ -2,9 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Query } from "react-apollo";
+import { adopt } from "react-adopt";
 
 // Queries
 import { ALL_USERS } from "queries/auth";
+import { PROFILE_DATA } from "queries/profile";
 // Socket
 import * as socketClient from "socket";
 // Actions
@@ -91,6 +93,14 @@ class Profile extends React.Component {
   };
 
   render() {
+    const Composed = adopt({
+      allUsersQuery: ({ render }) => (
+        <Query query={ALL_USERS} variables={{ id: this.state.userId }}>
+          {render}
+        </Query>
+      ),
+      profileDataQuery: ({ render }) => <Query query={PROFILE_DATA}>{render}</Query>,
+    });
     const { user, socketData, ...rest } = this.props;
     const actions = {
       onRoomJoin: rest.onRoomJoin,
@@ -102,27 +112,29 @@ class Profile extends React.Component {
     }
 
     return (
-      <Query query={ALL_USERS} variables={{ id: this.state.userId }}>
-        {({ loading, error, data, refetch }) => {
-          if (loading) return <PageLoader />;
-          if (error) return `Error! ${error.message}`;
+      <Composed>
+        {({ allUsersQuery, profileDataQuery }) => {
+          if (allUsersQuery.loading || profileDataQuery.loading) return <PageLoader />;
+          if (allUsersQuery.error || profileDataQuery.error)
+            return `Error! ${allUsersQuery.error.message || profileDataQuery.error.message}`;
           // Refetch data due to redirect
-          refetch();
-          const friends = data.allUsers.filter((user) => user.id !== this.state.userId);
-          const me = data.allUsers.find((user) => user.id === this.state.userId);
-          const combinedUserData = { ...user, mainInfo: { ...user.mainInfo, ...me } };
-
+          allUsersQuery.refetch();
+          const friends = allUsersQuery.data.allUsers.filter((user) => user.id !== this.state.userId);
+          const me = allUsersQuery.data.allUsers.find((user) => user.id === this.state.userId);
+          const combinedUserData = { me, profileData: profileDataQuery.data.profileData };
           return (
             <div className="profile">
               {this.renderChats(friends)}
-              <UserContext.Provider value={{ user: combinedUserData, friends, chatRoomsData: [], actions }}>
-                <ProfileHeader user={combinedUserData} />
+              <UserContext.Provider
+                value={{ user: combinedUserData, friends, chatRoomsData: [], actions, posts: user }}
+              >
+                <ProfileHeader user={me} />
                 <ProfileContent />
               </UserContext.Provider>
             </div>
           );
         }}
-      </Query>
+      </Composed>
     );
   }
 }

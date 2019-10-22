@@ -11,8 +11,9 @@ class Footer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.post.likes.list.forEach(endorser => {
-      endorser.name === "You" && this.setState({ personalEndorsment: true });
+    const myId = JSON.parse(localStorage.getItem("userData")).id;
+    this.props.post.likes.list.forEach((userId) => {
+      userId === myId && this.setState({ personalEndorsment: true });
     });
   }
 
@@ -24,25 +25,15 @@ class Footer extends React.Component {
         <div className="post-footer-left">
           <PostBtn
             icon={<i className="far fa-heart" />}
-            className={`like-btn ${
-              this.state.personalEndorsment ? "my-endorse" : ""
-            }`}
+            className={`like-btn ${this.state.personalEndorsment ? "my-endorse" : ""}`}
             count={post.likes.count}
           />
           <FriendsVoted voters={post.likes.list} />
           <EndorsedBy endorse={post.likes} />
         </div>
         <div className="post-footer-right">
-          <PostBtn
-            icon={<i className="far fa-comment" />}
-            className="comment-btn"
-            count={post.comments.count}
-          />
-          <PostBtn
-            icon={<i className="fas fa-share" />}
-            className="share-btn"
-            count={post.shares.count}
-          />
+          <PostBtn icon={<i className="far fa-comment" />} className="comment-btn" count={post.comments.list.length} />
+          <PostBtn icon={<i className="fas fa-share" />} className="share-btn" count={post.shares} />
         </div>
       </div>
     );

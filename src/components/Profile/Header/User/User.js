@@ -19,10 +19,11 @@ class User extends React.Component {
   render() {
     const { user, signOut } = this.props;
     const { showUserOptList, switchBtn } = this.state;
+
     return (
       <div className="user">
         <UserAvatar
-          imgSrc={`data:image/jpeg;base64,${user.mainInfo.avatar}`}
+          imgSrc={`data:image/jpeg;base64,${user.profileSettings.avatar}`}
           className="user-avatar"
           badge={{
             badgePosition: "small small-tl",
@@ -31,8 +32,8 @@ class User extends React.Component {
         />
         <div className="user-details">
           <div className="initials">
-            <div className="fullname">{user.mainInfo.name}</div>
-            <div className="pseudonym">{user.mainInfo.pseudonym}</div>
+            <div className="fullname">{user.profileSettings.name}</div>
+            <div className="pseudonym">{user.profileSettings.pseudonym}</div>
           </div>
           {showUserOptList && (
             <ul className="user-options-list">
@@ -58,9 +59,9 @@ class User extends React.Component {
           </span>
         </div>
         {/* Rounded switch  */}
-        <label class="switch" for="switch" onClick={(e) => this.setState({ switchBtn: !switchBtn })}>
-          <input type="checkbox" checked={switchBtn} />
-          <span class="slider round"></span>
+        <label className="switch" htmlFor="switch" onClick={(e) => this.setState({ switchBtn: !switchBtn })}>
+          <input type="checkbox" checked={switchBtn} onChange={() => {}} />
+          <span className="slider round"></span>
         </label>
         <div className={`users-online-notification ${!switchBtn ? "notification-off" : "notification-on"}`}>
           Users online: {this.props.onlineUsers}

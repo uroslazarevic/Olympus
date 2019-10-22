@@ -10,15 +10,14 @@ class Video extends React.Component {
     const { post } = this.props;
     return (
       <div className="video-content">
-        <div className="post-description">{post.content}</div>
+        <div className="post-description">{post.description}</div>
         <div className="video-item">
           <div className="video-record">
-            <YouTube videoId={post.video.yt_video_code} className="post-youtube" onReady={this._onReady} />
+            <YouTube videoId={post.videoLink.videoCode} className="post-youtube" onReady={this._onReady} />
           </div>
           <div className="video-details">
-            <div className="video-title">{post.video.title}</div>
-            <div className="video-description">{post.video.description}</div>
-            <div className="video-origin">{post.video.origin}</div>
+            <div className="video-title">NASLOV SNIMKA</div>
+            <div className="video-description">OPIS SNIMKA</div>
           </div>
         </div>
       </div>

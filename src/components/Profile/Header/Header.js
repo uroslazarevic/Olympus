@@ -5,8 +5,6 @@ import { SearchBar, SocialNotifications, User } from "components";
 
 class Header extends Component {
   render() {
-    const { mainInfo } = this.props.user;
-
     return (
       <header className="profile-header">
         <div className="logo">
@@ -15,7 +13,7 @@ class Header extends Component {
         <div className="page-name">Profile page</div>
         <SearchBar />
         <div className="find-friends">Find Friends</div>
-        <SocialNotifications notificationCount={mainInfo.notifications} />
+        {/* <SocialNotifications notificationCount={mainInfo.notifications} /> */}
         <User user={this.props.user} />
       </header>
     );

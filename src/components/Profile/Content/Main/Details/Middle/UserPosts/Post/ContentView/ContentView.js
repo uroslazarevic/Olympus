@@ -6,13 +6,13 @@ class ContentView extends React.Component {
   renderContentView() {
     const { post } = this.props;
 
-    if (post.shareType === "text") {
+    if (post.type === "text") {
       return <TextContent post={post} />;
     }
-    if (post.shareType === "image") {
+    if (post.type === "image") {
       return <ImageContent post={post} />;
     }
-    if (post.shareType === "video") {
+    if (post.type === "video") {
       return <VideoContent post={post} />;
     }
   }
