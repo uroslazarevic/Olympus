@@ -13,7 +13,7 @@ class Video extends React.Component {
         <div className="post-description">{post.description}</div>
         <div className="video-item">
           <div className="video-record">
-            <YouTube videoId={post.videoLink.videoCode} className="post-youtube" onReady={this._onReady} />
+            {/*  <YouTube videoId={post.videoLink.videoCode} className="post-youtube" onReady={this._onReady} /> */}
           </div>
           <div className="video-details">
             <div className="video-title">NASLOV SNIMKA</div>

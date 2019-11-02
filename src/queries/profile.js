@@ -93,3 +93,9 @@ export const PROFILE_DATA = gql`
     }
   }
 `;
+
+export const LOCAL_PROFILE_DATA = gql`
+  query profileData {
+    profileData @client
+  }
+`;

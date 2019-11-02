@@ -69,7 +69,7 @@ import CommentContent from "./Profile/Content/Main/Details/Middle/UserPosts/Comm
 import CommentOptions from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comment/Options/Options";
 import SubComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/SubComments/SubComments";
 import PostComments from "./Profile/Content/Main/Details/Middle/UserPosts/Comments/Comments";
-// Not Found Page
+// Page Not Found
 import NotFound from "./NotFound/NotFound";
 // Chat
 import { Chat } from "./Profile/Chat/Chat";
@@ -79,6 +79,7 @@ import { ChatMessage } from "./Profile/Chat/Message/Message";
 import { Modal } from "./Profile/Modals/Modal/Modal";
 import { DeleteMsgModal } from "./Profile/Modals/DeleteMsgModal/DeleteMsgModal";
 import { SettingsModal } from "./Profile/Modals/SettingsModal/SettingsModal";
+import { ProfileIntroModal } from "./Profile/Modals/ProfileIntroModal/ProfileIntroModal";
 // Settings
 import { Settings } from "./Settings/Settings";
 
@@ -162,5 +163,6 @@ export {
   Modal,
   DeleteMsgModal,
   SettingsModal,
+  ProfileIntroModal,
   Settings,
 };

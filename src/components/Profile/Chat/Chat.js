@@ -24,10 +24,12 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
       roomName: room,
     };
     socket.emit("join_room", data);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     setMessages(chatHistory[room]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatHistory]);
 
   const sendMsg = () => {
@@ -79,7 +81,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
     if (e.shiftKey && e.keyCode === 13) sendMsg();
   };
 
-  const RoomLeave = () => {
+  const roomLeave = () => {
     onRoomLeave(room, socket);
   };
 
@@ -99,7 +101,7 @@ export const Chat = ({ room, chatHistory, onRoomLeave, editMessage, deleteMessag
           {friendData.badgeColor === "bg-success" && <div className={`status active`}>Active now</div>}
           {friendData.badgeColor !== "bg-success" && <div className={`status inactive`}>Inactive</div>}
         </div>
-        <span onClick={RoomLeave} className="remove">
+        <span onClick={roomLeave} className="remove">
           &times;
         </span>
       </div>

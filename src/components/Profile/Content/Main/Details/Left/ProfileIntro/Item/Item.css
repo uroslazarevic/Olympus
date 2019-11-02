@@ -1,5 +1,6 @@
 .profile-intro-item {
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  position: relative; }
   .profile-intro-item .profile-intro-item-title {
     color: #404257;
     text-transform: capitalize;

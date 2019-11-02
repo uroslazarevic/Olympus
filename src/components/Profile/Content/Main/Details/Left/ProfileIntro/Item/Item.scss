@@ -1,5 +1,6 @@
 .profile-intro-item {
   margin-bottom: 25px;
+  position: relative;
   .profile-intro-item-title {
     color: #404257;
     text-transform: capitalize;
@@ -16,4 +17,23 @@
     color: #ccc;
     font-size: 15px;
   }
+  // &::before {
+  //   content: "";
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   top: 0px;
+  //   left: 0px;
+  //   background: #404257;
+  // }
+
+  // &.draggable::before {
+  //   top: 0px;
+  //   left: 0px;
+  //   content: "";
+  //   height: 100%;
+  //   width: 100%;
+  //   position: absolute;
+  //   background: rgb(244, 242, 242);
+  // }
 }

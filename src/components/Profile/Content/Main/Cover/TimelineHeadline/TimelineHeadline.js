@@ -8,31 +8,29 @@ const TimelineHeadline = () => {
     <nav className="timeline-headline">
       <ul className="list">
         <li className="item">
-          <a href="javascript:void(0)" className="active-profile-nav-item">
-            Timeline
-          </a>
+          <button className="active-profile-nav-item">Timeline</button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">About</a>
+          <button>About</button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">Friends</a>
+          <button>Friends</button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">
+          <button>
             <TimelineHeadlineUser />
-          </a>
+          </button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">Photos</a>
+          <button>Photos</button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">Videos</a>
+          <button>Videos</button>
         </li>
         <li className="item">
-          <a href="javascript:void(0)">
+          <button>
             <TimelineHeadlinOptions />
-          </a>
+          </button>
         </li>
       </ul>
       <TimelineHeadlineSocialBtns />

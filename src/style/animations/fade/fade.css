@@ -15,20 +15,20 @@
   transform: scale(0.9);
   transition: opacity 300ms, transform 300ms; }
 
-.item-enter {
+.chat-enter {
   opacity: 0;
   transform: translateY(350px);
   transition: all 350ms ease-in; }
 
-.item-enter-active {
+.chat-enter-active {
   transform: translateY(0px);
   opacity: 1;
   transition: all 350ms ease-in; }
 
-.item-exit {
+.chat-exit {
   transform: translateY(0px); }
 
-.item-exit-active {
+.chat-exit-active {
   opacity: 0;
   transform: translateY(350px);
   transition: all 350ms ease-in; }

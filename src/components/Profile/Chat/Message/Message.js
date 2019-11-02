@@ -45,7 +45,7 @@ export const ChatMessage = ({ msg, username, onEditMessage, onDeleteMessage }) =
     return date;
   };
 
-  if (msg.from === "admin" && msg.for != myId) {
+  if (msg.from === "admin" && msg.for !== myId) {
     return null;
   }
 

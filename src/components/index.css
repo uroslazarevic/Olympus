@@ -506,9 +506,10 @@
       text-align: center;
       font-weight: 500;
       font-size: 15px; }
-      .timeline-headline .list .item a {
-        color: #ccc; }
-        .timeline-headline .list .item a:hover {
+      .timeline-headline .list .item button {
+        color: #ccc;
+        border: none; }
+        .timeline-headline .list .item button:hover {
           color: #000 !important; }
 
 .headline-timeline-user {
@@ -541,7 +542,8 @@
   grid-column-gap: 30px; }
 
 .profile-intro-item {
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  position: relative; }
   .profile-intro-item .profile-intro-item-title {
     color: #404257;
     text-transform: capitalize;

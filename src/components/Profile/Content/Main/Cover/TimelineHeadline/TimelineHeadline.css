@@ -10,7 +10,8 @@
       text-align: center;
       font-weight: 500;
       font-size: 15px; }
-      .timeline-headline .list .item a {
-        color: #ccc; }
-        .timeline-headline .list .item a:hover {
+      .timeline-headline .list .item button {
+        color: #ccc;
+        border: none; }
+        .timeline-headline .list .item button:hover {
           color: #000 !important; }

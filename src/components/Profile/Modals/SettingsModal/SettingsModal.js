@@ -11,7 +11,7 @@ import { history } from "utilis";
 // Components
 import { Avatar as UserAvatar } from "components/UI";
 // Data
-import avatar from "../../../../imgs/avatar.png";
+import avatar from "imgs/avatar.png";
 import { countryList } from "apis/index";
 
 export const SettingsModal = ({ id }) => {
@@ -48,7 +48,6 @@ export const SettingsModal = ({ id }) => {
       country,
       id,
     };
-    console.log("ProfileSettingsInput: ", ProfileSettingsInput);
     try {
       await setProfileSettings({
         variables: { settings: ProfileSettingsInput },
@@ -82,7 +81,7 @@ export const SettingsModal = ({ id }) => {
     setValues((prev) => ({ ...prev, [name]: country }));
     // Prepare country list for rendering
     const newCountryList = countryList.reduce((acc, c) => {
-      if (c.substr(0, country.length).toUpperCase() == country.toUpperCase()) {
+      if (c.substr(0, country.length).toUpperCase() === country.toUpperCase()) {
         const bold = (
           <span>
             <strong>{c.substr(0, country.length)}</strong>
@@ -108,19 +107,19 @@ export const SettingsModal = ({ id }) => {
 
   const onKeyCombo = (e) => {
     let currentFocus = countryData.currentFocus;
-    if (e.keyCode == 40) {
+    if (e.keyCode === 40) {
       currentFocus++;
       /*If the arrow DOWN key is pressed, increase the currentFocus variable:*/
       /*and and make the current item more visible:*/
       setCountryData((prev) => ({ ...prev, currentFocus }));
       if (currentFocus >= countryData.list.length) setCountryData((prev) => ({ ...prev, currentFocus: 0 }));
-    } else if (e.keyCode == 38) {
+    } else if (e.keyCode === 38) {
       currentFocus--;
       /*If the arrow UP key is pressed, decrease the currentFocus variable:*/
       /*and and make the current item more visible:*/
       setCountryData((prev) => ({ ...prev, currentFocus }));
       if (currentFocus < 0) setCountryData((prev) => ({ ...prev, currentFocus: countryData.list.length - 1 }));
-    } else if (e.keyCode == 13) {
+    } else if (e.keyCode === 13) {
       /*If the ENTER key is pressed, prevent the form from being submitted,*/
       e.preventDefault();
       if (currentFocus > -1) {

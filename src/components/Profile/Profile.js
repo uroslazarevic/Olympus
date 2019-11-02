@@ -2,7 +2,6 @@ import React from "react";
 import { connect } from "react-redux";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { Query } from "react-apollo";
-import { adopt } from "react-adopt";
 
 // Queries
 import { ALL_USERS } from "queries/auth";
@@ -49,7 +48,6 @@ class Profile extends React.Component {
     });
 
     socket.on("send_msg", (newMsg) => {
-      console.log("newMsg", newMsg);
       this.props.onSentMessage(newMsg);
     });
 
@@ -76,7 +74,7 @@ class Profile extends React.Component {
           const friendData = friends.find((fr) => fr.id === Number(room.split("-")[1]));
           friendData.badgeColor = "bg-success";
           return (
-            <CSSTransition key={room} timeout={350} classNames="item">
+            <CSSTransition key={room} timeout={350} classNames="chat">
               <Chat
                 room={room}
                 friendData={friendData}
@@ -92,15 +90,9 @@ class Profile extends React.Component {
     );
   };
 
+  updateProfileData() {}
+
   render() {
-    const Composed = adopt({
-      allUsersQuery: ({ render }) => (
-        <Query query={ALL_USERS} variables={{ id: this.state.userId }}>
-          {render}
-        </Query>
-      ),
-      profileDataQuery: ({ render }) => <Query query={PROFILE_DATA}>{render}</Query>,
-    });
     const { user, socketData, ...rest } = this.props;
     const actions = {
       onRoomJoin: rest.onRoomJoin,
@@ -112,29 +104,42 @@ class Profile extends React.Component {
     }
 
     return (
-      <Composed>
-        {({ allUsersQuery, profileDataQuery }) => {
-          if (allUsersQuery.loading || profileDataQuery.loading) return <PageLoader />;
-          if (allUsersQuery.error || profileDataQuery.error)
-            return `Error! ${allUsersQuery.error.message || profileDataQuery.error.message}`;
-          // Refetch data due to redirect
-          allUsersQuery.refetch();
-          const friends = allUsersQuery.data.allUsers.filter((user) => user.id !== this.state.userId);
-          const me = allUsersQuery.data.allUsers.find((user) => user.id === this.state.userId);
-          const combinedUserData = { me, profileData: profileDataQuery.data.profileData };
+      <Query query={ALL_USERS}>
+        {({ loading: allUsersLoading, error: allUsersError, data: allUsersData, refetch: refetchAllUsers }) => {
+          if (allUsersLoading) return <PageLoader />;
+          if (allUsersError) return `Error! ${allUsersError.message}`;
+          refetchAllUsers();
           return (
-            <div className="profile">
-              {this.renderChats(friends)}
-              <UserContext.Provider
-                value={{ user: combinedUserData, friends, chatRoomsData: [], actions, posts: user }}
-              >
-                <ProfileHeader user={me} />
-                <ProfileContent />
-              </UserContext.Provider>
-            </div>
+            <Query query={PROFILE_DATA}>
+              {({ loading: profileDataLoading, error: profileDataError, data: profileDataData }) => {
+                if (profileDataLoading) return <PageLoader />;
+                if (profileDataError) return `Error! ${profileDataError.message}`;
+
+                const friends = allUsersData.allUsers.filter((user) => user.id !== this.state.userId);
+                const me = allUsersData.allUsers.find((user) => user.id === this.state.userId);
+                const combinedUserData = { me, profileData: profileDataData.profileData };
+                return (
+                  <div className="profile">
+                    {this.renderChats(friends)}
+                    <UserContext.Provider
+                      value={{
+                        user: combinedUserData,
+                        friends,
+                        chatRoomsData: [],
+                        actions,
+                        posts: user,
+                      }}
+                    >
+                      <ProfileHeader user={me} />
+                      <ProfileContent />
+                    </UserContext.Provider>
+                  </div>
+                );
+              }}
+            </Query>
           );
         }}
-      </Composed>
+      </Query>
     );
   }
 }
